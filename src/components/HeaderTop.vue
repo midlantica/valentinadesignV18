@@ -1,0 +1,40 @@
+<template>
+  <header>
+    <a href="/" title="home">
+      <div class="headerArt"></div>
+    </a>
+  </header>
+</template>
+
+<script>
+
+</script>
+
+<style lang="scss">
+// @import 'assets/css/base';
+.headerArt {
+  width: 100%;
+  background-image: url(../assets/img/headerC.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 0;
+  padding: 0; /* reset */
+  padding-bottom: 33%;
+  margin-top: -2px;
+
+  @include media($mobile) {
+    background-image: url(../assets/img/header_mobile.svg);
+    // background-image: url(../assets/img/headerC.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 83%;
+    height: 0;
+    padding: 0;
+    padding-bottom: 66%;
+    margin-top: -3em;
+    margin-bottom: 0em;
+  }
+}
+
+</style>
+

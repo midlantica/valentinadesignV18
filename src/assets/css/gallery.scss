@@ -1,0 +1,123 @@
+section.gallery {
+  text-align: center;
+  // display: block;
+  // float:left;
+  // width:620px;
+  margin:0;
+
+  ul {
+    padding: 0;
+    margin: 0.5em;
+    @include clearfix;
+
+    @include media($mobile) {
+      margin: 0;
+    }
+
+    li.hero {
+      @include span-columns(12);
+      // @include omega(4n);
+      background: $beige;
+      margin-bottom: 1em;
+      // height: 180px;
+      // width: 100%;
+      // @include box-shadow($grey 0px 2px 6px -2px);
+      border-radius: 2px;
+      border: 1px solid $greyLighter;
+
+      a {
+        border: none;
+      }
+
+      @include media($mobile) {
+        @include span-columns(10 of 10);
+        // @include omega(6n);
+        // @include shift(1);
+        // box-shadow: none;
+        // margin-bottom: 0;
+        margin-bottom: 1em;
+        padding: 0;
+        &:nth-child(even) {
+          margin-right: 0em;
+        }
+      }
+
+      &.hero {
+        text-align: center;
+        // background: transparentize($orange,.5);
+
+        @include media($mobile) {
+          margin-bottom: 0.75em;
+        }
+        img {
+          @include fill-parent();
+          // border-top-left-radius: 0.5em;
+          // border-top-right-radius: 0.5em;
+          border-radius: 2px;
+          // margin: .5em .5em;
+        }
+        p {
+          margin: 0.5em auto;
+        }
+      }
+    }
+
+    li {
+      @include span-columns(3);
+      @include omega(4n);
+      background: $beige;
+      margin-bottom: 1em;
+      // height: 180px;
+      // width: 100%;
+      // @include box-shadow($grey 0px 2px 6px -2px);
+      border-radius: 2px;
+      border: 1px solid $greyLighter;
+
+      // @include media($med-width) {
+      //   @include span-columns(1);
+      //   @include omega(2n);
+      //   margin-bottom: 1em;
+      // }
+
+      a {
+        border: none;
+      }
+
+      @include media($mobile) {
+        @include span-columns(5 of 10);
+        @include omega(6n);
+        // @include shift(1);
+        // box-shadow: none;
+        // margin-bottom: 0;
+        margin-bottom: 1em;
+        padding: 0;
+        &:nth-child(even) {
+          margin-right: 0em;
+        }
+      }
+
+      &.galleryGrid {
+        text-align: center;
+        // background: transparentize($orange,.5);
+
+        @include media($mobile) {
+          margin-bottom: 0.75em;
+        }
+        img {
+          @include fill-parent();
+          // border-top-left-radius: 0.5em;
+          // border-top-right-radius: 0.5em;
+          border-radius: 2px;
+          // margin: .5em .5em;
+          cursor: pointer;
+        }
+        p {
+          margin: 0.5em auto;
+        }
+      }
+    }
+  }
+
+}
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="113px" height="113px"
+	 viewBox="0 0 113 113" enable-background="new 0 0 113 113" xml:space="preserve">
+<title>Flickr_hv</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Flickr_hv" transform="translate(-0.500000, 0.062085)" sketch:type="MSLayerGroup">
+		<path id="Flickr-Copy-2" sketch:type="MSShapeGroup" fill="#D7D7D7" d="M0.697,56c0,30.933,25.071,56,56,56
+			c30.93,0,56-25.067,56-56c0-30.926-25.07-56-56-56C25.768,0,0.697,25.074,0.697,56z"/>
+
+			<linearGradient id="Flickr_1_" gradientUnits="userSpaceOnUse" x1="-245.7158" y1="449.8276" x2="-245.7158" y2="448.8276" gradientTransform="matrix(109 0 0 -109 26839.6875 49032.7344)">
+			<stop  offset="0" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#DBDBDB"/>
+		</linearGradient>
+		<path id="Flickr" sketch:type="MSShapeGroup" fill="url(#Flickr_1_)" d="M2.197,56c0,30.104,24.399,54.5,54.5,54.5
+			s54.5-24.396,54.5-54.5c0-30.098-24.399-54.5-54.5-54.5S2.197,25.902,2.197,56z"/>
+
+			<linearGradient id="Path_2_" gradientUnits="userSpaceOnUse" x1="-237.9756" y1="439.2924" x2="-237.9756" y2="438.2924" gradientTransform="matrix(24.8395 0 0 -24.843 5952.3184 10956.916)">
+			<stop  offset="0" style="stop-color:#0061D0"/>
+			<stop  offset="1" style="stop-color:#0C38CD"/>
+		</linearGradient>
+		<path id="Path" sketch:type="MSShapeGroup" fill="url(#Path_2_)" stroke="#E5E5E5" d="M41.115,68.421
+			c-6.86,0-12.418-5.565-12.418-12.421c0-6.856,5.558-12.421,12.418-12.421c6.857,0,12.422,5.565,12.422,12.421
+			C53.537,62.856,47.972,68.421,41.115,68.421L41.115,68.421z"/>
+
+			<linearGradient id="Path_3_" gradientUnits="userSpaceOnUse" x1="-237.9756" y1="439.2924" x2="-237.9756" y2="438.2924" gradientTransform="matrix(24.8395 0 0 -24.843 5983.4741 10956.916)">
+			<stop  offset="0" style="stop-color:#EC017F"/>
+			<stop  offset="1" style="stop-color:#F70466"/>
+		</linearGradient>
+		<path id="Path_1_" sketch:type="MSShapeGroup" fill="url(#Path_3_)" stroke="#E5E5E5" d="M72.275,68.421
+			c-6.856,0-12.418-5.565-12.418-12.421c0-6.856,5.562-12.421,12.418-12.421c6.859,0,12.422,5.565,12.422,12.421
+			C84.697,62.856,79.135,68.421,72.275,68.421L72.275,68.421z"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,109 @@
+// @import "~assets/css/_base.scss";
+
+//  GRID SETTINGS
+
+// $local-max-width: 400px;
+$max-width: em(1024) !default;
+$med-width: new-breakpoint(min-width 760px);
+// $med-width: new-breakpoint(min-width 800);
+$mobile: new-breakpoint(max-width 760px);
+// $mobile: new-breakpoint(max-width 480px 4);
+
+html {
+  // background: red;
+  height: 100%;
+}
+
+body {
+  @include span-columns(12);
+  // @include outer-container;
+  background: $purple;
+
+  @include media($mobile) {
+      // @include span-columns(12);
+      background: $white;
+  }
+}
+
+.wrapper {
+  // @include span-columns(12);
+  @include outer-container;
+  // margin: 0 auto;
+  // text-align: center;
+  background-image: url(/static/img/white_back_patt.png);
+  background-repeat: repeat-y;
+  background-position: center top;
+  margin-top: -8px;
+  // position: absolute;
+  @include media($mobile) {
+    background: $white;
+    background-image: none;
+  }
+}
+
+header, footer {
+  @include span-columns(12);
+  // background: aqua;
+  clear: both;
+  @include clearfix;
+  text-align: center;
+
+  @include media($mobile) {
+    // @include span-columns(12);
+  }
+}
+
+main {
+  @include span-columns(10);
+  @include shift(1);
+  padding: 0;
+  @include clearfix;
+  overflow: hidden;
+
+  // @media screen and (max-width: 760px) {
+  //   margin-left: inherit;
+  // }
+
+  aside.col1 {
+    @include span-columns(3 of 10);
+    // @include shift(1);
+    // background: pink;
+
+    @include media($mobile) {
+        @include span-columns(12);
+        // @include shift(2);
+        margin-bottom: 1em;
+    }
+  }
+  section.home {
+    @include span-columns(6 of 10);
+    // background: $greyLightest;
+
+    @include media($mobile) {
+        @include span-columns(9 of 10);
+    }
+  }
+
+  // 2 Columns
+  main.twoColMain {
+    @include span-columns(10 of 10);
+
+    @include media($mobile) {
+      @include span-columns(10 of 10);
+    }
+  }
+
+  // 3rd Column - Social Icons
+  aside.col3 {
+    @include span-columns(1 of 10);
+    @include omega();
+    // background: aliceblue;
+    margin-bottom: 1em;
+
+    @include media($mobile) {
+        @include span-columns(1 of 10);
+        @include omega();
+    }
+  }
+}
+

@@ -1,0 +1,90 @@
+<template>
+  <nav class="nav_gall">
+    <ul>
+      <li class="oe_art">
+        <nuxt-link to="./Pages/GalleryOriginalArtwork" title="Original Artwork">Original Artwork</nuxt-link>
+      </li>
+      <li class="da_art">
+        <nuxt-link to="./Pages/GalleryDigitalArtwork" title="Digital Artwork">Digital Artwork</nuxt-link>
+      </li>
+      <li class="patt_art">
+        <nuxt-link to="./Pages/GalleryPatterns" title="Patterns">Patterns</nuxt-link>
+      </li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+
+</script>
+
+<style lang="scss">
+  // @import '~assets/css/base';
+
+  .nav_gall {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+  }
+
+  .nav_gall ul {
+    font-family: Register;
+    // font-size: 1em;
+    height: auto;
+    display:block;
+    background-image:none;
+    display: block;
+    @include clearfix;
+    margin: 0 0 2em;
+    padding: 0;
+
+    @include media($mobile) {
+      margin: 0 0em 1.5em;
+    }
+  }
+
+  .nav_gall ul li {
+    font-family: $copy-bold, Arial, sans-serif;
+    font-size: 1em;
+    height: 30px;
+    // float: left;
+    letter-spacing: 0.1em;
+    background-image: none;
+    display: inline;
+    list-style-type: none;
+    padding: .25em .5em ;
+    margin: 0 1em 1em 0;
+    text-align: center;
+
+    @include media($mobile) {
+      font-size: .8em;
+      margin: 0 0em 1em;
+      }
+
+  }
+
+  .nav_gall li a {
+    color: $green;
+    padding:.2em 0;
+    border-bottom: 2px dotted $orange;
+    margin: 0 0 2em 0;
+  }
+
+  .nav_gall li a:hover {
+    color: $purple;
+  }
+
+  .original-artwork .nav_gall li.oe_art a {
+    color: $grey;
+  }
+
+  .digital-artwork .nav_gall li.da_art a {
+    color: $grey;
+  }
+
+  .patterns .nav_gall li.patt_art a {
+    color: $grey;
+  }
+
+</style>

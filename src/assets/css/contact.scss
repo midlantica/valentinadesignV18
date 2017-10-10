@@ -1,0 +1,159 @@
+.contact .content aside.col1 {
+  @include span-columns(3 of 10);
+  background-image: url(../assetsimg/contact_bird.png);
+  background-repeat: no-repeat;
+  background-position: -90px 20px;
+  // @include fill-parent();
+  // background: $beige;
+  height: 300px;
+
+  @include media($mobile) {
+    display: none;
+    // @include shift(2);
+  }
+
+}
+
+.contactTable {
+  width: 100%;
+  // max-width: 600px;
+  @include media($mobile) {
+  width: 100%;
+  }
+}
+
+main.contactContent {
+  @include span-columns(6 of 10);
+  // @include shift(2);
+
+  @include media($mobile) {
+    @include span-columns(9 of 10);
+    // @include shift(2);
+  }
+}
+
+.contact .social-icons {
+  margin-top: 0.8em;
+}
+
+h2.emailHead {
+  margin-bottom: 0.2em;
+}
+
+
+
+.contact aside.social {
+  margin-top: 5.25em;
+}
+
+#contactForm .email {
+  margin: 0;
+  text-align: left;
+  @include media($mobile) {
+  font-size: 0.8em;
+  text-align: left;
+  }
+  a { text-decoration: none;
+  }
+}
+
+#contactForm .emailLeft {
+  margin: 0;
+  text-align: left;
+  margin-bottom: .5em;
+  @include media($mobile) {
+  font-size: 0.8em;
+  text-align: left;
+  margin-bottom: .5em;
+  }
+}
+
+/* FORM */
+
+#contactForm {
+  margin: .75em 0 0em 0;
+}
+
+#contactForm .tr-cells td {
+  padding: 0;
+  margin: 0;
+  height: 2em;
+  // width: 80%;
+}
+
+#contactForm .tr-cells_message td {
+  padding: 0;
+  margin: 0;
+  height: 60px;
+}
+
+#contactForm p {
+  font-family: Register;
+  color: $grey;
+  font-size: 1em;
+  letter-spacing: 0.065em;
+  margin: 0 .5em 0 0;
+  padding: 0;
+  text-align: top;
+  text-align: right;
+}
+
+#contactForm .left {
+  font-family: Register;
+  color: $grey;
+  font-size: 1em;
+  letter-spacing: 0.065em;
+  margin: 0 .5em 0 0;
+  padding: 0;
+  text-align: top;
+  text-align: left;
+  display: block;
+}
+
+.asterisk {
+  color: red;
+  margin: 0 0 0 0;
+}
+
+#contactForm input {
+  height: 1.7em;
+}
+
+#contactForm input, select, textarea {
+  border: 1px dashed $purple;
+  margin: .5em 0 0 0;
+  width: 100%;
+  background-color: tint(orange, 95%);
+  font-family: $copy-bold;
+  color: $purple;
+  font-size: 1em;
+  padding: 0 0 0 .3em;
+  outline: none;
+  @include border-radius(6px);
+
+  @include media($mobile) {
+    width: 80%;
+  }
+}
+
+#contactForm textarea {
+  padding: .3em 0 0 .3em;
+}
+
+#contactForm button {
+  background-color: $orange;
+  display: block;
+  width: 80px;
+  border: none;
+  font-family: $copy;
+  color: white;
+  font-size: 1.25em;
+  margin: .5em 0 0 0;
+  letter-spacing: 0.05em;
+  padding: 2px 0 2px 0;
+  @include border-radius(6px);
+}
+
+#contactForm button:hover {
+  background-color: $purple;
+}

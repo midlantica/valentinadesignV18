@@ -1,0 +1,62 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity .25s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+h1, h2, h3 {
+  font-family: $copy-bold;
+  color:$purple;
+  font-weight: normal;
+  letter-spacing: 0em;
+  margin: .1em 0 0 0;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+
+    @include media($mobile) {
+      font-size: 1.05em;
+    }
+}
+
+h3, h4, h5 {
+  font-family: $copy-bold;
+  color:$purple;
+  letter-spacing: 0.06em;
+  margin: 1em 0 -.25em 0;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+}
+
+h2:first-child {
+  margin: 0 0 .5em 0;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-family: Register;
+  color: $grey;
+  font: 1em;
+  letter-spacing: 0.065em;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+  line-height: 1.4;
+  // margin: 0 0 0 0;
+
+  b {
+    color: $grey;
+  }
+
+}
+
+.centerContent {
+  text-align: center;
+  @include clearfix;
+}
+
+.delinky {
+  margin: 0;
+  a {
+    border: none;
+  }
+}

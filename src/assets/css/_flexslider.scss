@@ -1,0 +1,52 @@
+//  ######################
+//  ######################
+//  FLEXSLIDER
+.flexslider {
+  background: $ivory;
+  float: left;
+  display: block;
+  clear: both;
+  @include shadow;
+  @include clearfix;
+  width: span(95%);
+  margin: 0 0 .75em 0em;
+
+  @include breakpoint($sm) {
+    width: span(95%);
+    margin-left: .4em;
+  }
+
+  @include breakpoint($md) {
+    // margin: 0 0 .75em 0em;
+  }
+
+  @include breakpoint($bg) {
+    // margin: 0 0 .75em 0em;
+  }
+
+}
+
+.flexslider {
+  //
+  .about,
+  .quote {
+    margin-left: .5em;
+  }
+}
+
+.flexslider .slides > li {
+  margin: 0em;
+  display: block !important; // CHANGE TO 'NONE' LATER
+  img {
+    display: inline-block;
+    height: auto;
+    float: left;
+    width: 100%;
+  }
+}
+
+// .flex-control-nav {
+//   display: none;
+// }
+
+// <<<<<<<<<

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="113px" height="113px"
+	 viewBox="0 0 113 113" enable-background="new 0 0 113 113" xml:space="preserve">
+<title>Flickr</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Flickr" transform="translate(0.000000, 0.062085)" sketch:type="MSLayerGroup">
+		<path sketch:type="MSShapeGroup" fill="#906290" d="M72.275,68.421c-6.856,0-12.418-5.565-12.418-12.421
+			c0-6.856,5.562-12.421,12.418-12.421c6.859,0,12.422,5.565,12.422,12.421C84.697,62.856,79.135,68.421,72.275,68.421
+			L72.275,68.421z M41.115,68.421c-6.86,0-12.418-5.565-12.418-12.421c0-6.856,5.558-12.421,12.418-12.421
+			c6.857,0,12.422,5.565,12.422,12.421C53.537,62.856,47.972,68.421,41.115,68.421L41.115,68.421z M56.697,0
+			c-30.929,0-56,25.074-56,56c0,30.933,25.071,56,56,56c30.93,0,56-25.067,56-56C112.697,25.074,87.627,0,56.697,0L56.697,0z"/>
+	</g>
+</g>
+</svg>
