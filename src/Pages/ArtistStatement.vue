@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Bio from '~/components/Bio'
+import Bio from '../components/Bio'
 
 export default {
   components: {

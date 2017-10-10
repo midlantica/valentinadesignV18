@@ -3,12 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
+import Routes from './routes'
+
+import VueHead from 'vue-head'
+Vue.use(VueHead)
 
 // ROUTING
-import Routes from './routes'
 Vue.use(VueRouter)
 const router = new VueRouter({
-  routes: Routes
+  routes: Routes,
+  mode: 'history'
 })
 
 Vue.config.productionTip = false
@@ -28,9 +32,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<App/>',
-  components: {
-    App
-  },
+  // template: '<App/>',
+  render: h => h(App),
   router: router
 })

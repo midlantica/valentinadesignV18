@@ -2,24 +2,24 @@
   <nav class="mainNav">
     <ul>
       <li>
-        <a href="/" title="Home">
+        <router-link to="/" title="home">
           <div class="navBtns homeBtn">Home</div>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="/GalleryOriginalArtwork" title="GalleryOriginalArtwork">
+        <router-link to="/Gallery" title="Gallery">
           <div class="navBtns galleryBtn">Gallery</div>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="/Shop" title="Shop">
+        <router-link to="/Shop" title="Shop">
           <div class="navBtns shopBtn">Shop</div>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="/Contact" title="Contact">
+        <router-link to="/Contact" title="Contact">
           <div class="navBtns contactBtn">Contact</div>
-        </a>
+        </router-link>
       </li>
     </ul>
   </nav>
