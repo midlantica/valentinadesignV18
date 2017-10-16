@@ -94,10 +94,7 @@
 <script>
 export default {
   components: {
-    // HeaderTop,
-    // Navvy,
-    // Social,
-    // Footy
+    //
   },
   metaInfo: {
     bodyAttrs: {
@@ -115,7 +112,7 @@ export default {
     .wrapper aside.col1 {
       @include span-columns(3 of 10);
       @include shift(0);
-      background-image: url(~/assets/img/contact_bird.png);
+      background-image: url(/static/img/contact_bird.png);
       background-repeat: no-repeat;
       background-position: 50px 20px;
       // @include fill-parent();
@@ -138,7 +135,6 @@ export default {
       }
     }
   }
-
 
   .contactTable {
     width: 100%;
@@ -270,6 +266,7 @@ export default {
     margin: .5em 0 0 0;
     letter-spacing: 0.05em;
     padding: 2px 0 2px 0;
+    cursor: pointer;
     @include border-radius(6px);
   }
 

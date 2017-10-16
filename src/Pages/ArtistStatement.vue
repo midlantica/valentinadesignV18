@@ -27,7 +27,7 @@ export default {
   components: {
     Bio
   },
-  head: {
+  metaInfo: {
     bodyAttrs: {
       class: 'index'
     }
@@ -36,8 +36,5 @@ export default {
 </script>
 
 <style lang="scss">
-// @import '~assets/css/base';
-// @import '~assets/css/colors';
-// @import '~assets/css/main';
-// @import '~assets/css/styles';
+
 </style>

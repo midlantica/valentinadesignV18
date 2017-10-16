@@ -10,8 +10,8 @@
           </a>
         </li>
       </ul>
-      <ul>
 
+      <ul>
         <li class="galleryGrid">
           <a href="../../static/img/lightbox/gallery/original_artwork/aaron.jpg" rel="lightbox[original_artwork]" title="Aaron">
             <img src="../../static/img/lightbox/gallery/original_artwork/aaron_sm.jpg">

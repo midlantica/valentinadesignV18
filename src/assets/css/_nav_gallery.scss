@@ -44,7 +44,8 @@
 }
 
 .nav_gall li a {
-    color: $green;
+    color: darken($green,20);
+    // color: $green;
     padding:.2em 0;
     border-bottom: 2px dotted $orange;
     margin: 0 0 2em 0;

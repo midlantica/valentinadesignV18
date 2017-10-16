@@ -23,18 +23,17 @@
 </template>
 
 <script>
-// import './assets/img/white_back_patt.png'
-import Bio from '../components/Bio'
-export default {
-  components: {
-    Bio
-  },
-  metaInfo: {
-    bodyAttrs: {
-      class: 'index'
+  import Bio from '../components/Bio'
+  export default {
+    components: {
+      Bio
+    },
+    metaInfo: {
+      bodyAttrs: {
+        class: 'index'
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">

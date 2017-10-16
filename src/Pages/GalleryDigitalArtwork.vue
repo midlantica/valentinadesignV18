@@ -3,353 +3,29 @@
   <main>
     <NavGallery/>
     <section class="twoColMain gallery">
+
       <ul>
-        <!-- <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/ampersand.jpg" rel="lightbox[digital_prints]" title="Ampersand">
-            <img src="../../static/img/lightbox/gallery/prints/ampersand_sm.jpg">
-          </a>
-        </li> -->
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/barkysimeto.jpg" rel="lightbox[digital_prints]" title="Barkysimeto">
-            <img src="../../static/img/lightbox/gallery/prints/barkysimeto_sm.jpg">
-          </a>
+        <li class = "galleryGrid" v-for="(image, index) in images">
+          <img
+            v-lazy="image.thumb"
+            style="@include fill-parent(),
+                   border-radius: 2px,
+                   cursor: pointer;"
+            @click="openGallery(index)"
+          >
         </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/emaline.jpg" rel="lightbox[digital_prints]" title="Emaline">
-            <img src="../../static/img/lightbox/gallery/prints/emaline_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/frisky_christy.jpg" rel="lightbox[digital_prints]" title="Frisky Christy">
-            <img src="../../static/img/lightbox/gallery/prints/frisky_christy_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/hello_person.jpg" rel="lightbox[digital_prints]" title="Hello Person">
-            <img src="../../static/img/lightbox/gallery/prints/hello_person_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/hippotastique.jpg" rel="lightbox[digital_prints]" title="Hippotastique">
-            <img src="../../static/img/lightbox/gallery/prints/hippotastique_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/humming_heaven.jpg" rel="lightbox[digital_prints]" title="Humming Heaven">
-            <img src="../../static/img/lightbox/gallery/prints/humming_heaven_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/little_fish.jpg" rel="lightbox[digital_prints]" title="Little Fish">
-            <img src="../../static/img/lightbox/gallery/prints/little_fish_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/lovebirds.jpg" rel="lightbox[digital_prints]" title="Lovebirds">
-            <img src="../../static/img/lightbox/gallery/prints/lovebirds_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/milo.jpg" rel="lightbox[digital_prints]" title="Milo">
-            <img src="../../static/img/lightbox/gallery/prints/milo_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/phileus_frog.jpg" rel="lightbox[digital_prints]" title="Phileus Frog">
-            <img src="../../static/img/lightbox/gallery/prints/phileus_frog_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/ruby.jpg" rel="lightbox[digital_prints]" title="Ruby">
-            <img src="../../static/img/lightbox/gallery/prints/ruby_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/shower_of_joy.jpg" rel="lightbox[digital_prints]" title="Shower Of Joy">
-            <img src="../../static/img/lightbox/gallery/prints/shower_of_joy_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/sugar_skull.jpg" rel="lightbox[digital_prints]" title="Sugar Skull">
-            <img src="../../static/img/lightbox/gallery/prints/sugar_skull_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/aaron.jpg" rel="lightbox[digital_prints]" title="Aaron">
-            <img src="../../static/img/lightbox/gallery/prints/aaron_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/alcahofa.jpg" rel="lightbox[digital_prints]" title="Alcahofa">
-            <img src="../../static/img/lightbox/gallery/prints/alcahofa_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/alexis.jpg" rel="lightbox[digital_prints]" title="Alexis">
-            <img src="../../static/img/lightbox/gallery/prints/alexis_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/always_be_yourself.jpg" rel="lightbox[digital_prints]" title="Always Be Yourself">
-            <img src="../../static/img/lightbox/gallery/prints/always_be_yourself_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/arabella_and_the_flowers.jpg" rel="lightbox[digital_prints]" title="Arabella and the Flowers">
-            <img src="../../static/img/lightbox/gallery/prints/arabella_and_the_flowers_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/beatriz.jpg" rel="lightbox[digital_prints]" title="Beatriz">
-            <img src="../../static/img/lightbox/gallery/prints/beatriz_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/dear_deer.jpg" rel="lightbox[digital_prints]" title="Dear Deer">
-            <img src="../../static/img/lightbox/gallery/prints/dear_deer_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/deep_blue_me.jpg" rel="lightbox[digital_prints]" title="Deep Blue Me">
-            <img src="../../static/img/lightbox/gallery/prints/deep_blue_me_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/deep_violet.jpg" rel="lightbox[digital_prints]" title="Deep Violet">
-            <img src="../../static/img/lightbox/gallery/prints/deep_violet_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/emilia.jpg" rel="lightbox[digital_prints]" title="Emilia">
-            <img src="../../static/img/lightbox/gallery/prints/emilia_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/escargopolooza.jpg" rel="lightbox[digital_prints]" title="Escargopolooza">
-            <img src="../../static/img/lightbox/gallery/prints/escargopolooza_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/eva.jpg" rel="lightbox[digital_prints]" title="Eva">
-            <img src="../../static/img/lightbox/gallery/prints/eva_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/everything_always_starts_with_a_dream.jpg" rel="lightbox[digital_prints]" title="Everything Always Starts with a Dream">
-            <img src="../../static/img/lightbox/gallery/prints/everything_always_starts_with_a_dream_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/feather_heaven.jpg" rel="lightbox[digital_prints]"
-            title="Feather Heaven">
-            <img src="../../static/img/lightbox/gallery/prints/feather_heaven_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/follow_your_dreams.jpg" rel="lightbox[digital_prints]"
-            title="Follow Your Dreams">
-            <img src="../../static/img/lightbox/gallery/prints/follow_your_dreams_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/ganesha.jpg" rel="lightbox[digital_prints]"
-            title="Ganesha">
-            <img src="../../static/img/lightbox/gallery/prints/ganesha_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/giraffe.jpg" rel="lightbox[digital_prints]"
-            title="Giraffe">
-            <img src="../../static/img/lightbox/gallery/prints/giraffe_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/have_some_coffee.jpg" rel="lightbox[digital_prints]"
-            title="Have Some Coffee">
-            <img src="../../static/img/lightbox/gallery/prints/have_some_coffee_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/helios.jpg" rel="lightbox[digital_prints]"
-            title="Helios">
-            <img src="../../static/img/lightbox/gallery/prints/helios_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/hello_bird.jpg" rel="lightbox[digital_prints]"
-            title="Hello Bird">
-            <img src="../../static/img/lightbox/gallery/prints/hello_bird_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/honcho.jpg" rel="lightbox[digital_prints]"
-            title="Honcho">
-            <img src="../../static/img/lightbox/gallery/prints/honcho_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/i_was_a_dinosaur.jpg" rel="lightbox[digital_prints]"
-            title="I Was A Dinosaur">
-            <img src="../../static/img/lightbox/gallery/prints/i_was_a_dinosaur_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/its_all_in_your_head.jpg" rel="lightbox[digital_prints]"
-            title="Its all in your head">
-            <img src="../../static/img/lightbox/gallery/prints/its_all_in_your_head_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/lets_cook.jpg" rel="lightbox[digital_prints]"
-            title="Lets Cook">
-            <img src="../../static/img/lightbox/gallery/prints/lets_cook_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/love_owls_in_the_tree.jpg" rel="lightbox[digital_prints]"
-            title="Love Owls in the Tree">
-            <img src="../../static/img/lightbox/gallery/prints/love_owls_in_the_tree_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/masamiosa.jpg" rel="lightbox[digital_prints]"
-            title="Masamiosa">
-            <img src="../../static/img/lightbox/gallery/prints/masamiosa_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/mr_pavo_real.jpg" rel="lightbox[digital_prints]"
-            title="Mr Pavo Real">
-            <img src="../../static/img/lightbox/gallery/prints/mr_pavo_real_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/octopus_bloom.jpg" rel="lightbox[digital_prints]"
-            title="Octopus Bloom">
-            <img src="../../static/img/lightbox/gallery/prints/octopus_bloom_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/out_of_sight.jpg" rel="lightbox[digital_prints]"
-            title="Out of Sight">
-            <img src="../../static/img/lightbox/gallery/prints/out_of_sight_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/paisley_piggy.jpg" rel="lightbox[digital_prints]"
-            title="Paisley Piggy">
-            <img src="../../static/img/lightbox/gallery/prints/paisley_piggy_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/peter.jpg" rel="lightbox[digital_prints]"
-            title="Peter">
-            <img src="../../static/img/lightbox/gallery/prints/peter_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/random_talking.jpg" rel="lightbox[digital_prints]"
-            title="Random Talking">
-            <img src="../../static/img/lightbox/gallery/prints/random_talking_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/rosebud.jpg" rel="lightbox[digital_prints]"
-            title="Rosebud">
-            <img src="../../static/img/lightbox/gallery/prints/rosebud_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/royal_flamingo.jpg" rel="lightbox[digital_prints]"
-            title="Royal Flamingo">
-            <img src="../../static/img/lightbox/gallery/prints/royal_flamingo_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/shiny_shannon.jpg" rel="lightbox[digital_prints]"
-            title="Shiny Shannon">
-            <img src="../../static/img/lightbox/gallery/prints/shiny_shannon_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/sitting_buddha.jpg" rel="lightbox[digital_prints]"
-            title="Sitting Buddha">
-            <img src="../../static/img/lightbox/gallery/prints/sitting_buddha_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/sushi.jpg" rel="lightbox[digital_prints]"
-            title="Sushi">
-            <img src="../../static/img/lightbox/gallery/prints/sushi_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/take_some_pictures.jpg" rel="lightbox[digital_prints]"
-            title="Take Some Pictures">
-            <img src="../../static/img/lightbox/gallery/prints/take_some_pictures_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/the_elephant.jpg" rel="lightbox[digital_prints]"
-            title="The Elephant">
-            <img src="../../static/img/lightbox/gallery/prints/the_elephant_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/tiberio.jpg" rel="lightbox[digital_prints]"
-            title="Tiberio">
-            <img src="../../static/img/lightbox/gallery/prints/tiberio_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/unicornicopia.jpg" rel="lightbox[digital_prints]"
-            title="Unicornicopia">
-            <img src="../../static/img/lightbox/gallery/prints/unicornicopia_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/vera.jpg" rel="lightbox[digital_prints]"
-            title="Vera">
-            <img src="../../static/img/lightbox/gallery/prints/vera_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/victor.jpg" rel="lightbox[digital_prints]"
-            title="Victor">
-            <img src="../../static/img/lightbox/gallery/prints/victor_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/vw.jpg" rel="lightbox[digital_prints]"
-            title="VW">
-            <img src="../../static/img/lightbox/gallery/prints/vw_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/walking_in_paradise.jpg" rel="lightbox[digital_prints]"
-            title="Walking in Paradise">
-            <img src="../../static/img/lightbox/gallery/prints/walking_in_paradise_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/you_and_me.jpg" rel="lightbox[digital_prints]"
-            title="You and Me">
-            <img src="../../static/img/lightbox/gallery/prints/you_and_me_sm.jpg">
-          </a>
-        </li>
-        <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/you_are_awesome.jpg" rel="lightbox[digital_prints]"
-            title="You are Awesome">
-            <img src="../../static/img/lightbox/gallery/prints/you_are_awesome_sm.jpg">
-          </a>
-        </li>
-        <!-- <li class="galleryGrid">
-          <a href="../../static/img/lightbox/gallery/prints/you_are_right_where_you_should_be.jpg" rel="lightbox[digital_prints]"
-            title="You Are Right Where You Should Be">
-            <img src="../../static/img/lightbox/gallery/prints/you_are_right_where_you_should_be_sm.jpg">
-          </a>
-        </li> -->
       </ul>
+
+      <lightbox ref="lightbox"
+        :showLightBox="false"
+        :images="images"
+        :show-caption="true"
+        :nav="false"
+        :showThumbs="false"
+        :autoPlay="false"
+        :autoPlayTime=8000
+      ></lightbox>
+
     </section>
   </main>
 </div>
@@ -357,18 +33,336 @@
 </template>
 
 <script>
-import NavGallery from '../components/NavGallery'
-export default {
-  components: {
-    NavGallery
-  },
-  metaInfo: {
-    bodyAttrs: {
-      class: 'digital-artwork'
+  import NavGallery from '../components/NavGallery'
+  import Lightbox from 'vue-image-lightbox'
+  import siteLoading from '../../static/img/siteloading.gif'
+  const images = [
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/barkysimeto_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/barkysimeto.jpg',
+      caption: 'Barkysimeto'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/emaline_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/emaline.jpg',
+      caption: 'Emaline'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/frisky_christy_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/frisky_christy.jpg',
+      caption: 'Frisky Christy'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/hello_person_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/hello_person.jpg',
+      caption: 'Hello Person'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/hippotastique_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/hippotastique.jpg',
+      caption: 'Hippotastique'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/humming_heaven_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/humming_heaven.jpg',
+      caption: 'Humming Heaven'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/little_fish_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/little_fish.jpg',
+      caption: 'Little Fish'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/lovebirds_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/lovebirds.jpg',
+      caption: 'Lovebirds'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/milo_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/milo.jpg',
+      caption: 'Milo'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/phileus_frog_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/phileus_frog.jpg',
+      caption: 'Phileus Frog'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/ruby_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/ruby.jpg',
+      caption: 'Ruby'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/shower_of_joy_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/shower_of_joy.jpg',
+      caption: 'Shower Of Joy'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/sugar_skull_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/sugar_skull.jpg',
+      caption: 'Sugar Skull'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/aaron_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/aaron.jpg',
+      caption: 'Aaron'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/alcahofa_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/alcahofa.jpg',
+      caption: 'Alcahofa'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/alexis_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/alexis.jpg',
+      caption: 'Alexis'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/always_be_yourself_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/always_be_yourself.jpg',
+      caption: 'Always Be Yourself'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/arabella_and_the_flowers_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/arabella_and_the_flowers.jpg',
+      caption: 'Arabella and the Flowers'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/beatriz_sm.jp',
+      src: '../../static/img/lightbox/gallery/prints/beatriz.jpg',
+      caption: 'Beatriz'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/dear_deer_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/dear_deer.jpg',
+      caption: 'Dear Deer'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/deep_blue_me_sm.jp',
+      src: '../../static/img/lightbox/gallery/prints/deep_blue_me.jpg',
+      caption: 'Deep Blue Me'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/deep_violet_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/deep_violet.jpg',
+      caption: 'Deep Violet'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/emilia_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/emilia.jpg',
+      caption: 'Emilia'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/escargopolooza_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/escargopolooza.jpg',
+      caption: 'Escargopolooza'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/eva_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/eva.jpg',
+      caption: 'Eva'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/everything_always_starts_with_a_dream_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/everything_always_starts_with_a_dream.jpg',
+      caption: 'Everything Always Starts with a Dream'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/feather_heaven_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/feather_heaven.jpg',
+      caption: 'Feather Heaven'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/follow_your_dreams_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/follow_your_dreams.jpg',
+      caption: 'Follow Your Dreams'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/ganesha_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/ganesha.jpg',
+      caption: 'Ganesha'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/giraffe_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/giraffe.jpg',
+      caption: 'Giraffe'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/have_some_coffee_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/have_some_coffee.jpg',
+      caption: 'Have Some Coffee'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/helios_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/helios.jpg',
+      caption: 'Helios'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/hello_bird_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/hello_bird.jpg',
+      caption: 'Hello Bird'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/honcho_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/honcho.jpg',
+      caption: 'Honcho'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/i_was_a_dinosaur_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/i_was_a_dinosaur.jpg',
+      caption: 'I Was A Dinosaur'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/its_all_in_your_head_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/its_all_in_your_head.jpg',
+      caption: 'Its all in your head'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/lets_cook_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/lets_cook.jpg',
+      caption: 'Lets Cook'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/love_owls_in_the_tree_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/love_owls_in_the_tree.jpg',
+      caption: 'Love Owls in the Tree'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/masamiosa_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/masamiosa.jpg',
+      caption: 'Masamiosa'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/mr_pavo_real_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/mr_pavo_real.jpg',
+      caption: 'Mr Pavo Real'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/octopus_bloom_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/octopus_bloom.jpg',
+      caption: 'Octopus Bloom'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/out_of_sight_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/out_of_sight.jpg',
+      caption: 'Out of Sight'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/paisley_piggy_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/paisley_piggy.jpg',
+      caption: 'Paisley Piggy'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/peter_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/peter.jpg',
+      caption: 'Peter'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/random_talking_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/random_talking.jpg',
+      caption: 'Random Talking'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/rosebud_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/rosebud.jpg',
+      caption: 'Rosebud'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/royal_flamingo_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/royal_flamingo.jpg',
+      caption: 'Royal Flamingo'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/shiny_shannon_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/shiny_shannon.jpg',
+      caption: 'Shiny Shannon'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/sitting_buddha_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/sitting_buddha.jpg',
+      caption: 'Sitting Buddha'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/sushi_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/sushi.jpg',
+      caption: 'Sushi'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/take_some_pictures_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/take_some_pictures.jpg',
+      caption: 'Take Some Pictures'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/the_elephant_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/the_elephant.jpg',
+      caption: 'The Elephant'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/tiberio_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/tiberio.jpg',
+      caption: 'Tiberio'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/unicornicopia_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/unicornicopia.jpg',
+      caption: 'Unicornicopia'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/vera_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/vera.jpg',
+      caption: 'Vera'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/victor_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/victor.jpg',
+      caption: 'Victor'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/vw_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/vw.jpg',
+      caption: 'VW'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/walking_in_paradise_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/walking_in_paradise.jpg',
+      caption: 'Walking in Paradise'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/you_and_me_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/you_and_me.jpg',
+      caption: 'You and Me'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/prints/you_are_awesome_sm.jpg',
+      src: '../../static/img/lightbox/gallery/prints/you_are_awesome.jpg',
+      caption: 'You are Awesome'
+    }
+  ]
+
+  export default {
+    components: {
+      NavGallery,
+      Lightbox
+    },
+    metaInfo: {
+      bodyAttrs: {
+        class: 'digital-artwork'
+      }
+    },
+    data () {
+      return {
+        images,
+        siteLoading
+      }
+    },
+    methods: {
+      openGallery (index) {
+        this.$refs.lightbox.showImage(index)
+      }
     }
   }
-}
 </script>
 <style lang="scss">
-@import '../assets/css/gallery';
+  @import '../assets/css/gallery';
+  @import '../assets/css/nav_gallery';
 </style>

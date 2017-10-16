@@ -110,6 +110,7 @@ section.gallery {
           border-radius: 2px;
           // margin: .5em .5em;
           cursor: pointer;
+          margin-bottom: -4px; // BAD
         }
         p {
           margin: 0.5em auto;
@@ -120,4 +121,83 @@ section.gallery {
 
 }
 
+/*
+    All of the CSS is customizable.
+    Every property is prefixed with a 'lightbox' keyword
+    All default CSS classes are:
+  */
+  // .lightbox {
+  //   background: red;
+  //   border: green solid 10px;
+  // }
 
+  // .lightbox__thumbnail {
+  //   // background: red;
+  //   // border: green solid 10px;
+  // }
+  // .lightbox__thumbnail img {
+
+  // }
+
+  // .lightbox__close {
+
+  // }
+
+  // .lightbox__arrow--invisible {
+
+  // }
+
+  // .lightbox__element {
+
+  // }
+
+  // .lightbox__arrow {
+  //     fill: red;
+  // }
+
+  // .lightbox__arrow svg {
+  //   fill: red;
+  // }
+
+  // .lightbox__image {
+
+  // }
+
+  // .lightbox__image img {
+
+  // }
+
+.vue-lb-figure {
+  box-shadow: 6px 6px 13px rgba(0, 0, 0, 0.5);
+}
+
+.vue-lb-info {
+  font-family: Register;
+  color: transparentize($white,.25);
+  font-size: 1em;
+  letter-spacing: 0.065em;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+  line-height: 2.4;
+  // bottom: -15px;
+  height: 40px;
+  // margin: 0 0 0 0;
+  margin-bottom: -40px;
+  background: rgba(0, 0, 0, .85);
+}
+
+.vue-lb-footer-count {
+  font-family: Register;
+  color: transparentize($white,.5);
+  font-size: .75em;
+  letter-spacing: 0.065em;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+  // line-height: 2.4;
+  // bottom: -12px;
+  z-index: 10;
+  // padding-right: .25em;
+  // padding-top: .25em;
+  padding-right: 1em;
+  // height: 40px;
+}

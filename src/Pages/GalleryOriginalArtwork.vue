@@ -7,7 +7,10 @@
       <ul>
         <li class = "galleryGrid" v-for="(image, index) in images">
           <img
-            v-lazy="image.src"
+            v-lazy="image.thumb"
+            style="@include fill-parent(),
+                   border-radius: 2px,
+                   cursor: pointer;"
             @click="openGallery(index)"
           >
         </li>
@@ -17,7 +20,7 @@
         :showLightBox="false"
         :images="images"
         :show-caption="true"
-        :nav="true"
+        :nav="false"
         :showThumbs="false"
         :autoPlay="false"
         :autoPlayTime=8000
@@ -33,6 +36,11 @@
   import Lightbox from 'vue-image-lightbox'
   import siteLoading from '../../static/img/siteloading.gif'
   const images = [
+    {
+      thumb: '../../static/img/lightbox/gallery/original_artwork/nashville_airport_2016_sm.jpg',
+      src: '../../static/img/lightbox/gallery/original_artwork/nashville_airport_2016.jpg',
+      caption: 'Nashville Airport Show'
+    },
     {
       thumb: '../../static/img/lightbox/gallery/original_artwork/aaron_sm.jpg',
       src: '../../static/img/lightbox/gallery/original_artwork/aaron.jpg',
@@ -56,7 +64,7 @@
     {
       thumb: '../../static/img/lightbox/gallery/original_artwork/be_awesome_sm.jpg',
       src: '../../static/img/lightbox/gallery/original_artwork/be_awesome.jpg',
-      caption: 'Be Aawesome'
+      caption: 'Be Awesome'
     },
     {
       thumb: '../../static/img/lightbox/gallery/original_artwork/eric_sm.jpg',
@@ -223,19 +231,19 @@
       src: '../../static/img/lightbox/gallery/original_artwork/the_van.jpg',
       caption: 'The VW Van'
     },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/melissa_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/melissa.jpg',
-      caption: 'Melissa'
-    },
+    // {
+    //   thumb: '../../static/img/lightbox/gallery/original_artwork/melissa_sm.jpg',
+    //   src: '../../static/img/lightbox/gallery/original_artwork/melissa.jpg',
+    //   caption: 'Melissa'
+    // },
     {
       thumb: '../../static/img/lightbox/gallery/original_artwork/why_hello_there_gorgeous_sm.jpg',
       src: '../../static/img/lightbox/gallery/original_artwork/why_hello_there_gorgeous.jpg',
       caption: 'Why Hello There Gorgeous'
     }
-]
+  ]
 
-export default {
+  export default {
     components: {
       NavGallery,
       Lightbox
@@ -260,22 +268,5 @@ export default {
 </script>
 <style lang="scss">
   @import '../assets/css/gallery';
-  /*
-    All of the CSS is customizable.
-    Every property is prefixed with a 'lightbox' keyword
-    All default CSS classes are:
-  */
-  .lightbox {}
-  .lightbox__thumbnail {
-    background: red;
-    border: green solid 10px;
-  }
-  .lightbox__thumbnail img {}
-  .lightbox__close {}
-  .lightbox__arrow--invisible {}
-  .lightbox__element {}
-  .lightbox__arrow {}
-  .lightbox__arrow svg {}
-  .lightbox__image {}
-  .lightbox__image img {}
+  @import '../assets/css/nav_gallery';
 </style>
