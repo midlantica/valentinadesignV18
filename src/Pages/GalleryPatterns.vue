@@ -281,23 +281,19 @@
 </template>
 
 <script>
-import NavGallery from '~/components/NavGallery'
-
+import NavGallery from '../components/NavGallery'
 export default {
   components: {
     NavGallery
   },
-  head: {
+  metaInfo: {
     bodyAttrs: {
       class: 'patterns'
     }
   }
 }
-
 </script>
 
 <style lang="scss">
-// @import '../static/css/base';
-@import '../static/css/gallery';
-
+@import '../assets/css/gallery';
 </style>

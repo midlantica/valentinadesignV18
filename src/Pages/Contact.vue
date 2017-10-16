@@ -98,6 +98,11 @@ export default {
     // Navvy,
     // Social,
     // Footy
+  },
+  metaInfo: {
+    bodyAttrs: {
+      class: 'contact'
+    }
   }
 }
 </script>

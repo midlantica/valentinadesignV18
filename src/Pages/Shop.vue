@@ -59,6 +59,11 @@ export default {
     bodyAttrs: {
       class: 'shop'
     }
+  },
+  metaInfo: {
+    bodyAttrs: {
+      class: 'shop'
+    }
   }
 }
 // const daTitle = 'digital_prints'

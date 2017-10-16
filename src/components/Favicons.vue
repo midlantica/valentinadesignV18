@@ -15,6 +15,5 @@
 <meta name="msapplication-TileColor" content="#b9d54a">
 <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
 <meta name="theme-color" content="#b9d54a">
-
 <link rel="shortcut icon" href="~assets/img/favicons/favicon.ico" type="image/x-icon">
 <link rel="icon" href="~assets/img/favicons/favicon.ico" type="image/x-icon">

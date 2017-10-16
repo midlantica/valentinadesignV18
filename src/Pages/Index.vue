@@ -29,15 +29,11 @@ export default {
   components: {
     Bio
   },
-  head: {
-    meta: [
-      { name: 'application-name', content: 'XXXXXXXXXXXXXXXXXXX' },
-      { name: 'description', content: 'A description of the page', id: 'desc' } // id to replace intead of create element
-    ]
-  },
-  style: [
-    { class: 'index' }
-  ]
+  metaInfo: {
+    bodyAttrs: {
+      class: 'index'
+    }
+  }
 }
 </script>
 

@@ -2,13 +2,13 @@
   <nav class="nav_gall">
     <ul>
       <li class="oe_art">
-        <nuxt-link to="./Pages/GalleryOriginalArtwork" title="Original Artwork">Original Artwork</nuxt-link>
+        <router-link to="./GalleryOriginalArtwork" title="Original Artwork">Original Artwork</router-link>
       </li>
       <li class="da_art">
-        <nuxt-link to="./Pages/GalleryDigitalArtwork" title="Digital Artwork">Digital Artwork</nuxt-link>
+        <router-link to="./GalleryDigitalArtwork" title="Digital Artwork">Digital Artwork</router-link>
       </li>
       <li class="patt_art">
-        <nuxt-link to="./Pages/GalleryPatterns" title="Patterns">Patterns</nuxt-link>
+        <router-link to="./GalleryPatterns" title="Patterns">Patterns</router-link>
       </li>
     </ul>
   </nav>
@@ -19,8 +19,6 @@
 </script>
 
 <style lang="scss">
-  // @import '~assets/css/base';
-
   .nav_gall {
     text-align: center;
     margin: 0 auto;
@@ -86,5 +84,4 @@
   .patterns .nav_gall li.patt_art a {
     color: $grey;
   }
-
 </style>

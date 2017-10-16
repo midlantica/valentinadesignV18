@@ -4,30 +4,23 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import Routes from './routes'
+import VueLazyLoad from 'vue-lazyload'
+import VueTouch from 'vue-touch'
+import 'vue-image-lightbox/dist/vue-image-lightbox.min.css'
 
-import VueHead from 'vue-head'
-Vue.use(VueHead)
+import Meta from 'vue-meta'
+Vue.use(Meta)
 
-// ROUTING
 Vue.use(VueRouter)
 const router = new VueRouter({
   routes: Routes,
   mode: 'history'
 })
 
-Vue.config.productionTip = false
+Vue.use(VueLazyLoad)
+Vue.use(VueTouch, { name: 'v-touch' })
 
-// main.scss imported in build/utils.scss like so:
-// scss: generateLoaders('sass').concat(
-//       {
-//         loader: 'sass-resources-loader',
-//         options: {
-//           resources: path.resolve(__dirname, '../src/assets/css/main.scss')
-//         }
-//       }
-//     ),
-// import './assets/css/main.scss'
-// import './src/assets/css/main.scss'
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
