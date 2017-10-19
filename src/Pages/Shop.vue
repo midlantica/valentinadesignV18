@@ -44,21 +44,9 @@
 </template>
 
 <script>
-// import HeaderTop from '~/components/HeaderTop'
-// import Navvy from '~/components/Navvy'
-// import Social from '~/components/Social'
-// import Footy from '~/components/Footy'
 export default {
   components: {
-    // HeaderTop,
-    // Navvy,
-    // Social,
-    // Footy
-  },
-  head: {
-    bodyAttrs: {
-      class: 'shop'
-    }
+    //
   },
   metaInfo: {
     bodyAttrs: {
@@ -66,8 +54,6 @@ export default {
     }
   }
 }
-// const daTitle = 'digital_prints'
-// const daPath = '../static/img/lightbox/gallery/prints/'
 </script>
 
 <style lang="scss">

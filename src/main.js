@@ -13,8 +13,8 @@ Vue.use(Meta)
 
 Vue.use(VueRouter)
 const router = new VueRouter({
-  routes: Routes,
-  mode: 'history'
+  mode: 'history',
+  routes: Routes
 })
 
 Vue.use(VueLazyLoad)

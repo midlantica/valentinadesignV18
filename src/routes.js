@@ -5,12 +5,22 @@ import ArtistStatement from './Pages/ArtistStatement'
 import GalleryDigitalArtwork from './Pages/GalleryDigitalArtwork'
 import GalleryOriginalArtwork from './Pages/GalleryOriginalArtwork'
 import GalleryPatterns from './Pages/GalleryPatterns'
+import EmailConfirm from './Pages/EmailConfirm'
+import NotFound from './Pages/NotFound'
 
 export default [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/NotFound',
+    component: NotFound
+  },
+  {
+    path: '*',
+    redirect: '/NotFound'
   },
   {
     path: '/ArtistStatement',
@@ -41,5 +51,10 @@ export default [
     path: '/GalleryPatterns',
     name: 'GalleryPatterns',
     component: GalleryPatterns
+  },
+  {
+    path: '/EmailConfirm',
+    name: 'EmailConfirm',
+    component: EmailConfirm
   }
 ]

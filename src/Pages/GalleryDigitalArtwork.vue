@@ -128,7 +128,7 @@
       caption: 'Arabella and the Flowers'
     },
     {
-      thumb: '../../static/img/lightbox/gallery/prints/beatriz_sm.jp',
+      thumb: '../../static/img/lightbox/gallery/prints/beatriz_sm.jpg',
       src: '../../static/img/lightbox/gallery/prints/beatriz.jpg',
       caption: 'Beatriz'
     },
@@ -138,7 +138,7 @@
       caption: 'Dear Deer'
     },
     {
-      thumb: '../../static/img/lightbox/gallery/prints/deep_blue_me_sm.jp',
+      thumb: '../../static/img/lightbox/gallery/prints/deep_blue_me_sm.jpg',
       src: '../../static/img/lightbox/gallery/prints/deep_blue_me.jpg',
       caption: 'Deep Blue Me'
     },
