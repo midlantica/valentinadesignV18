@@ -1,40 +1,46 @@
 <template>
 <div>
   <main>
+
     <aside class="col1">
       <Bio/>
-    </aside>
-    <section class="home">
       <p class="delinky">
         <router-link to="/" title="home">< back</router-link>
       </p>
-      <h2 class="marT1">Artist’s&nbsp;Statement</h2>
-      <p>“My work is primarily driven by the idea of the creation of a unified whole through the use of minute details. The use of pop colors, lines and circles that swirl & undulate result in playful artwork made with passion. I use ink and other mediums to create flowing, intricate and highly detailed patterns, sometimes utilizing words for positive inspiration. Self healing and positive energy are the motivating concepts which ignite my passion to create. Through my work I hope to inspire and help others follow their dreams. I try to bring a fantastical, dreamlike appearance to my artwork, which includes digital drawings, mixed media and pen & ink illustrations.”</p>
+    </aside>
+
+    <section class="home">
+      <Statement/>
     </section>
-    <!-- <aside class="col3">
-      <div class="marT3">
-        <Social/>
-      </div>
-    </aside> -->
+
+    <aside class="col3 marT1H">
+      <Social/>
+    </aside>
+
   </main>
 </div>
 </template>
 
 <script>
-import Bio from '../components/Bio'
-
-export default {
-  components: {
-    Bio
-  },
-  metaInfo: {
-    bodyAttrs: {
-      class: 'index'
+  import Statement from '../components/Statement'
+  import Bio from '../components/Bio'
+  import Social from '../components/Social'
+  export default {
+    components: {
+      Statement,
+      Bio,
+      Social
+    },
+    metaInfo: {
+      bodyAttrs: {
+        class: 'index'
+      }
     }
   }
-}
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+  p {
+    text-align: center;
+  }
 </style>

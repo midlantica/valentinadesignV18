@@ -35,6 +35,7 @@
     @include shift(2);
     position: relative;
     margin-top: -4em;
+    margin-bottom: 0.5em;
     // padding: 0;
 
     @include media($mobile) {

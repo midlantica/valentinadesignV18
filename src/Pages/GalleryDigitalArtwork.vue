@@ -1,41 +1,50 @@
 <template>
-<div>
-  <main>
-    <NavGallery/>
-    <section class="twoColMain gallery">
+  <div>
 
-      <ul>
-        <li class = "galleryGrid" v-for="(image, index) in images">
-          <img
-            v-lazy="image.thumb"
-            style="@include fill-parent(),
-                   border-radius: 2px,
-                   cursor: pointer;"
-            @click="openGallery(index)"
-          >
-        </li>
-      </ul>
+    <main>
 
-      <lightbox ref="lightbox"
-        :showLightBox="false"
-        :images="images"
-        :show-caption="true"
-        :nav="false"
-        :showThumbs="false"
-        :autoPlay="false"
-        :autoPlayTime=8000
-      ></lightbox>
+      <NavGallery/>
 
-    </section>
-  </main>
-</div>
+      <section class="twoColMain gallery">
 
+        <ul>
+          <li class = "galleryGrid" v-for="(image, index) in images">
+            <img
+              v-lazy="image.thumb"
+              style="@include fill-parent(),
+                     border-radius: 2px,
+                     cursor: pointer;"
+              @click="openGallery(index)"
+            >
+          </li>
+        </ul>
+
+        <lightbox ref="lightbox"
+          :showLightBox="false"
+          :images="images"
+          :show-caption="true"
+          :nav="false"
+          :showThumbs="false"
+          :autoPlay="false"
+          :autoPlayTime=8000
+        ></lightbox>
+      </section>
+
+      <aside class="col3 marT3">
+        <Social/>
+      </aside>
+
+    </main>
+
+  </div>
 </template>
 
 <script>
   import NavGallery from '../components/NavGallery'
   import Lightbox from 'vue-image-lightbox'
   import siteLoading from '../../static/img/siteloading.gif'
+  import Social from '../components/Social'
+
   const images = [
     {
       thumb: '../../static/img/lightbox/gallery/prints/barkysimeto_sm.jpg',
@@ -342,7 +351,8 @@
   export default {
     components: {
       NavGallery,
-      Lightbox
+      Lightbox,
+      Social
     },
     metaInfo: {
       bodyAttrs: {
@@ -365,4 +375,8 @@
 <style lang="scss">
   @import '../assets/css/gallery';
   @import '../assets/css/nav_gallery';
+
+  aside {
+    margin-top: 0 !important;
+  }
 </style>

@@ -121,6 +121,18 @@ section.gallery {
 
 }
 
+.original-artwork,
+.digital-artwork,
+.patterns {
+  //
+  .col3 {
+    margin-top: .25em !important;
+    .socialIconsBox {
+      margin-top: .25em !important;
+    }
+  }
+}
+
 /*
     All of the CSS is customizable.
     Every property is prefixed with a 'lightbox' keyword

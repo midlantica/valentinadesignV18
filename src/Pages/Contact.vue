@@ -1,6 +1,7 @@
 <template>
 <div>
   <main>
+
     <aside class="col1">
       &nbsp;
     </aside>
@@ -84,20 +85,21 @@
       <!-- End myContactForm.com Form HTML -->
     </section>
 
-    <!-- <aside class="col3">
-      <div class="marT3">
-        <Social/>
-      </div>
-    </aside> -->
+    <aside class="col3 marT3">
+      <Social/>
+    </aside>
+
   </main>
 
 </div>
 </template>
 
 <script>
+import Social from '../components/Social'
+
 export default {
   components: {
-    //
+    Social
   },
   metaInfo: {
     bodyAttrs: {

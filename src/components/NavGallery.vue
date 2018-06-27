@@ -34,11 +34,11 @@
     background-image:none;
     display: block;
     @include clearfix;
-    margin: 0 0 2em;
+    margin: 0em 0 2em;
     padding: 0;
 
     @include media($mobile) {
-      margin: 0 0em 1.5em;
+      margin: 0 0em 1em;
     }
   }
 
@@ -49,16 +49,27 @@
     // float: left;
     letter-spacing: 0.1em;
     background-image: none;
-    display: inline;
+    // display: block;
+    // clear: left;
     list-style-type: none;
     padding: .25em .5em ;
-    margin: 0 1em 1em 0;
+    margin: 1em 0em 1em 0;
     text-align: center;
 
     @include media($mobile) {
       font-size: .8em;
-      margin: 0 0em 1em;
-      }
+      margin: .5em 0em .5em;
+      display: block;
+    }
+
+    @include media($mobileMini) {
+      font-size: .8em;
+      margin: 1em 0em 1em;
+      display: block;
+      // clear: both;
+      @include clearfix;
+      // background: purple;
+    }
 
   }
 

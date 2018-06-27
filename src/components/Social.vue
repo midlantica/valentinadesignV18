@@ -19,76 +19,75 @@
 
 </script>
 
-<style lang="scss">
-// @import 'assets/css/base';
+<style lang="scss" scoped>
+  // @import 'assets/css/base';
 
-.socialIconsBox  {
-  margin: 0em auto 0;
-  text-align: center;
-  // width: 33px;
-  // margin-top: 0.5em;
-  padding: 0 0.6em;
-  display: block !important;
+  .socialIconsBox  {
+    margin: 0 auto 0;
+    text-align: center;
+    // width: 33px;
+    // margin-top: 0.5em;
+    padding: 0 0.6em;
+    display: block !important;
+    float: right;
 
-  @include media($mobile) {
-    padding: 0;
+    @include media($mobile) {
+      padding: 0;
+    }
   }
-}
 
-.socialIcon {
-  width: 40px !important;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 40px;
-  // padding: 0; /* reset */
-  margin-bottom: .5em;
-  display: block !important;
-
-  @include media($mobile) {
-    width: 100%;
+  .socialIcon {
+    width: 40px !important;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 0;
-    padding: 0; /* reset */
-    padding-bottom: 130%;
-    display: block !important;
-  }
-  &.facebook {
-    background-image: url(../assets/img/icons/facebook.svg);
+    height: 40px;
+    // padding: 0; /* reset */
+    margin-bottom: .5em;
     display: block !important;
 
-    &:hover {
-      background-image: url(../assets/img/icons/facebook_hv.svg);
+    @include media($mobile) {
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 0;
+      padding: 0; /* reset */
+      padding-bottom: 130%;
+      display: block !important;
+    }
+    &.facebook {
+      background-image: url(../assets/img/icons/facebook.svg);
+      display: block !important;
+
+      &:hover {
+        background-image: url(../assets/img/icons/facebook_hv.svg);
+      }
+    }
+
+    &.instagram {
+      background-image: url(../assets/img/icons/instagram.svg);
+      display: block !important;
+
+      &:hover {
+        background-image: url(../assets/img/icons/instagram_hv.svg);
+      }
+    }
+
+    &.flickr {
+      background-image: url(../assets/img/icons/flickr.svg);
+      display: block !important;
+
+      &:hover {
+        background-image: url(../assets/img/icons/flickr_hv.svg);
+      }
+    }
+
+    &.pinterest {
+      background-image: url(../assets/img/icons/pinterest.svg);
+      display: block !important;
+
+      &:hover {
+        background-image: url(../assets/img/icons/pinterest_hv.svg);
+      }
     }
   }
-
-  &.instagram {
-    background-image: url(../assets/img/icons/instagram.svg);
-    display: block !important;
-
-    &:hover {
-      background-image: url(../assets/img/icons/instagram_hv.svg);
-    }
-  }
-
-  &.flickr {
-    background-image: url(../assets/img/icons/flickr.svg);
-    display: block !important;
-
-    &:hover {
-      background-image: url(../assets/img/icons/flickr_hv.svg);
-    }
-  }
-
-  &.pinterest {
-    background-image: url(../assets/img/icons/pinterest.svg);
-    display: block !important;
-
-    &:hover {
-      background-image: url(../assets/img/icons/pinterest_hv.svg);
-    }
-  }
-}
-
-
 </style>

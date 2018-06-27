@@ -70,26 +70,42 @@ main {
     // background: pink;
 
     @include media($mobile) {
-        @include span-columns(12);
-        // @include shift(2);
-        margin-bottom: 1em;
+      @include span-columns(12);
+      // @include shift(2);
+      margin-bottom: 1em;
+    }
+
+    @include media($mobileMini) {
+      @include span-columns(12);
+      // @include shift(2);
+      margin-bottom: 1em;
     }
   }
+
+  // Home
   section.home {
     @include span-columns(6 of 10);
     // background: $greyLightest;
 
     @include media($mobile) {
-        @include span-columns(9 of 10);
+      @include span-columns(9 of 10);
+    }
+
+    @include media($mobileMini) {
+      @include span-columns(8 of 10);
     }
   }
 
   // 2 Columns
-  main.twoColMain {
-    @include span-columns(10 of 10);
+  section.twoColMain {
+    @include span-columns(9 of 10);
 
     @include media($mobile) {
-      @include span-columns(10 of 10);
+      @include span-columns(9 of 10);
+    }
+
+    @include media($mobileMini) {
+      @include span-columns(8 of 10);
     }
   }
 
@@ -101,8 +117,13 @@ main {
     margin-bottom: 1em;
 
     @include media($mobile) {
-        @include span-columns(1 of 10);
-        @include omega();
+      @include span-columns(1 of 10);
+      @include omega();
+    }
+
+    @include media($mobileMini) {
+      @include span-columns(2 of 10);
+      @include omega();
     }
   }
 }
