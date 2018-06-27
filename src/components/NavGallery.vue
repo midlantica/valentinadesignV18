@@ -1,16 +1,14 @@
 <template>
   <nav class="nav_gall">
-    <ul>
-      <li class="oe_art">
-        <router-link to="./GalleryOriginalArtwork" title="Original Artwork">Original Artwork</router-link>
-      </li>
-      <li class="da_art">
-        <router-link to="./GalleryDigitalArtwork" title="Digital Artwork">Digital Artwork</router-link>
-      </li>
-      <li class="patt_art">
-        <router-link to="./GalleryPatterns" title="Patterns">Patterns</router-link>
-      </li>
-    </ul>
+    <div class="oe_art">
+      <router-link to="./GalleryOriginalArtwork" title="Original Artwork">Original Artwork</router-link>
+    </div>
+    <div class="da_art">
+      <router-link to="./GalleryDigitalArtwork" title="Digital Artwork">Digital Artwork</router-link>
+    </div>
+    <div class="patt_art">
+      <router-link to="./GalleryPatterns" title="Patterns">Patterns</router-link>
+    </div>
   </nav>
 </template>
 
@@ -18,81 +16,49 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .nav_gall {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-basis: min-content;
     text-align: center;
-    margin: 0 auto;
-    display: block;
-    clear: both;
+    margin: 0em auto 1em;
   }
 
-  .nav_gall ul {
-    font-family: Register;
-    // font-size: 1em;
-    height: auto;
-    display:block;
-    background-image:none;
-    display: block;
-    @include clearfix;
-    margin: 0em 0 2em;
-    padding: 0;
-
-    @include media($mobile) {
-      margin: 0 0em 1em;
-    }
-  }
-
-  .nav_gall ul li {
+  .nav_gall div {
     font-family: $copy-bold, Arial, sans-serif;
     font-size: 1em;
-    height: 30px;
-    // float: left;
     letter-spacing: 0.1em;
     background-image: none;
-    // display: block;
-    // clear: left;
     list-style-type: none;
-    padding: .25em .5em ;
-    margin: 1em 0em 1em 0;
+    // padding: .25em .5em ;
+    margin: .5em 1em;
     text-align: center;
+    bottom: 1px solid red;
 
-    @include media($mobile) {
-      font-size: .8em;
-      margin: .5em 0em .5em;
-      display: block;
+    a {
+      color: $green;
+      padding:.2em 0;
+      border-bottom: 2px dotted $orange;
+      // margin: 0 0 2em 0;
+      &:hover {
+          color: $purple;
+        }
     }
-
-    @include media($mobileMini) {
-      font-size: .8em;
-      margin: 1em 0em 1em;
-      display: block;
-      // clear: both;
-      @include clearfix;
-      // background: purple;
-    }
-
-  }
-
-  .nav_gall li a {
-    color: $green;
-    padding:.2em 0;
-    border-bottom: 2px dotted $orange;
-    margin: 0 0 2em 0;
   }
 
   .nav_gall li a:hover {
     color: $purple;
   }
 
-  .original-artwork .nav_gall li.oe_art a {
+  .original-artwork .nav_gall .oe_art a,
+  .digital-artwork .nav_gall .da_art a,
+  .patterns .nav_gall .patt_art a {
     color: $grey;
   }
 
-  .digital-artwork .nav_gall li.da_art a {
-    color: $grey;
-  }
-
-  .patterns .nav_gall li.patt_art a {
-    color: $grey;
-  }
 </style>

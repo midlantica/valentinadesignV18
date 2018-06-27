@@ -372,11 +372,12 @@
     }
   }
 </script>
-<style lang="scss">
+
+<style lang="scss" scoped>
   @import '../assets/css/gallery';
-  @import '../assets/css/nav_gallery';
 
   aside {
     margin-top: 0 !important;
   }
+
 </style>

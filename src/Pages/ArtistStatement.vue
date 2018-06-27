@@ -13,7 +13,7 @@
       <Statement/>
     </section>
 
-    <aside class="col3 marT1H">
+    <aside class="col3 marT2">
       <Social/>
     </aside>
 

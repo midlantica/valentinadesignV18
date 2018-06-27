@@ -10,7 +10,7 @@
       <HomeContent/>
     </section>
 
-    <aside class="col3 marT2H">
+    <aside class="col3 marT2">
       <Social/>
     </aside>
 

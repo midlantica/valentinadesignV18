@@ -29,13 +29,13 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .mainNav {
     @include span-columns(8);
     @include shift(2);
     position: relative;
     margin-top: -4em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
     // padding: 0;
 
     @include media($mobile) {

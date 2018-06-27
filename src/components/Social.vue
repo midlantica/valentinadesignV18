@@ -1,16 +1,12 @@
 <template>
   <div class="socialIconsBox">
-    <a href="http://www.facebook.com/ValentinaRamosArt" target="_blank">
-      <div class="socialIcon facebook">&nbsp;</div>
+    <a class="socialIcon facebook" href="http://www.facebook.com/ValentinaRamosArt" target="_blank">
     </a>
-    <a href="https://www.instagram.com/valentinadesign/" target="_blank">
-      <div class="socialIcon instagram">&nbsp;</div>
+    <a class="socialIcon instagram" href="https://www.instagram.com/valentinadesign/" target="_blank">
     </a>
-    <a href="http://www.flickr.com/photos/valentinadesign/" target="_blank">
-      <div class="socialIcon flickr">&nbsp;</div>
+    <a class="socialIcon flickr" href="http://www.flickr.com/photos/valentinadesign/" target="_blank">
     </a>
-    <a href="http://pinterest.com/valentinaharper/" target="_blank">
-      <div class="socialIcon pinterest">&nbsp;</div>
+    <a class="socialIcon pinterest" href="http://pinterest.com/valentinaharper/" target="_blank">
     </a>
   </div>
 </template>
@@ -22,71 +18,62 @@
 <style lang="scss" scoped>
   // @import 'assets/css/base';
 
-  .socialIconsBox  {
-    margin: 0 auto 0;
-    text-align: center;
-    // width: 33px;
-    // margin-top: 0.5em;
-    padding: 0 0.6em;
-    display: block !important;
+  .socialIconsBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: flex-start;
     float: right;
-
-    @include media($mobile) {
-      padding: 0;
-    }
   }
 
-  .socialIcon {
+  a.socialIcon {
     width: 40px !important;
+    height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 40px;
     // padding: 0; /* reset */
     margin-bottom: .5em;
     display: block !important;
+    border-bottom: none;
+    // flex-basis: auto;
+    // flex-grow: 0;
+    //
 
-    @include media($mobile) {
-      width: 100%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 0;
-      padding: 0; /* reset */
-      padding-bottom: 130%;
-      display: block !important;
-    }
     &.facebook {
-      background-image: url(../assets/img/icons/facebook.svg);
-      display: block !important;
+      background-image: url(/static/img/icons/facebook.svg);
+      // display: block !important;
 
       &:hover {
-        background-image: url(../assets/img/icons/facebook_hv.svg);
+        background-image: url(/static/img/icons/facebook_hv.svg);
       }
     }
 
     &.instagram {
-      background-image: url(../assets/img/icons/instagram.svg);
-      display: block !important;
+      background-image: url(/static/img/icons/instagram.svg);
+      // display: block !important;
 
       &:hover {
-        background-image: url(../assets/img/icons/instagram_hv.svg);
+        background-image: url(/static/img/icons/instagram_hv.svg);
       }
     }
 
     &.flickr {
-      background-image: url(../assets/img/icons/flickr.svg);
-      display: block !important;
+      background-image: url(/static/img/icons/flickr.svg);
+      // display: block !important;
 
       &:hover {
-        background-image: url(../assets/img/icons/flickr_hv.svg);
+        background-image: url(/static/img/icons/flickr_hv.svg);
       }
     }
 
     &.pinterest {
-      background-image: url(../assets/img/icons/pinterest.svg);
-      display: block !important;
+      background-image: url(/static/img/icons/pinterest.svg);
+      // display: block !important;
 
       &:hover {
-        background-image: url(../assets/img/icons/pinterest_hv.svg);
+        background-image: url(/static/img/icons/pinterest_hv.svg);
       }
     }
   }
