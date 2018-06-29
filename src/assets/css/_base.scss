@@ -1,9 +1,6 @@
 // VENDOR SASS
-// @import '~susy/sass/susy';
-// @import '~susy/sass/plugins/svg-grid';
 @import './node_modules/compass-mixins/lib/compass';
 @import './node_modules/breakpoint-sass/stylesheets/breakpoint';
-
 @import './node_modules/bourbon/app/assets/stylesheets/bourbon';
 // @import "base/base";   /* Bitters needs to be imported before Neat */
 @import './node_modules/bourbon-neat/app/assets/stylesheets/neat';
@@ -12,9 +9,6 @@
 // @import '../css/vendor/normalize';
 
 // COLORS ##############
-// @import 'colors';
-
-// # Bourbon Stuff
 // $visual-grid         : true;
 $visual-grid-color   : #E6F6FF;
 $visual-grid-opacity : 0.4;
@@ -76,17 +70,6 @@ a {
    border-bottom: 1px dotted #b9d54a;
 }
 
-// a hrefs animation
-// a {
-//   text-decoration: none;
-//   @include transition-property(all);
-//   @include transition-duration(0.2s);
-//   @include transition-timing-function(ease-in);
-//   @include link-colors(
-//     $normal: $purple,
-//     $visited: darken($purple,15),
-//     $hover: darken($purple,15));
-// }
 
 
 

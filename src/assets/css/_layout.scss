@@ -113,8 +113,8 @@ main {
   aside.col3 {
     @include span-columns(1 of 10);
     @include omega();
+    float: right;
     // background: aliceblue;
-    margin-bottom: 1em;
 
     @include media($mobile) {
       @include span-columns(1 of 10);
