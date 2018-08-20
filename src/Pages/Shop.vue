@@ -108,6 +108,21 @@
           }
         }
 
+        @include media($mobileMini) {
+          @include span-columns(9 of 10);
+          @include omega(6n);
+          // @include shift(1);
+          // box-shadow: none;
+          // margin-bottom: 0;
+          margin-bottom: 1em;
+          background: $beige;
+          // @include box-shadow($grey 0px 2px 6px -2px);
+          border-radius: 2px;
+          &:nth-child(even) {
+            margin-right: 0em;
+          }
+        }
+
         &.shopGrid {
           text-align: center;
           // background: transparentize($orange,.5);

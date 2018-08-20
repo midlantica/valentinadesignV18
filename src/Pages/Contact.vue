@@ -95,18 +95,18 @@
 </template>
 
 <script>
-import Social from '../components/Social'
+  import Social from '../components/Social'
 
-export default {
-  components: {
-    Social
-  },
-  metaInfo: {
-    bodyAttrs: {
-      class: 'contact'
+  export default {
+    components: {
+      Social
+    },
+    metaInfo: {
+      bodyAttrs: {
+        class: 'contact'
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
@@ -136,6 +136,10 @@ export default {
       @include span-columns(9 of 10);
       // @include shift(2);
     }
+    @include media($mobileMini) {
+      @include span-columns(7 of 10);
+      // @include shift(2);
+    }
   }
 
   .contactTable {
@@ -144,6 +148,12 @@ export default {
 
     @include media($mobile) {
       width: 100%;
+    }
+    @include media($mobileMini) {
+      // width: 100%;
+      h3 {
+        font-size: .9em;
+      }
     }
   }
 

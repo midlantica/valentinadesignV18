@@ -125,6 +125,7 @@ main {
     @include media($mobileMini) {
       @include span-columns(2 of 10);
       @include omega();
+      float: right;
     }
   }
 }

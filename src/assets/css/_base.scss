@@ -37,6 +37,7 @@ $max-width: em(1024) !default;
 $med-width: new-breakpoint(min-width 760px);
 // $med-width: new-breakpoint(min-width 800);
 $mobile: new-breakpoint(min-width 760px);
+$mobileMini: new-breakpoint(max-width 650px);
 
 // FONTS
 $base-font-size:    0.85em;
