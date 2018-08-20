@@ -17,7 +17,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     height: 0;
-    padding: 0; /* reset */
+    padding: 0;
     padding-bottom: 33%;
     margin-top: -2px;
 

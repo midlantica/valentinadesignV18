@@ -8,6 +8,7 @@ $med-width: new-breakpoint(min-width 760px);
 // $med-width: new-breakpoint(min-width 800);
 $mobile: new-breakpoint(max-width 760px);
 // $mobile: new-breakpoint(max-width 480px 4);
+$mobileMini: new-breakpoint(max-width 650px);
 
 html {
   // background: red;

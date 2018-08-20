@@ -1,17 +1,9 @@
 <template>
   <div class="socialIconsBox">
-    <a href="http://www.facebook.com/ValentinaRamosArt" target="_blank">
-      <div class="socialIcon facebook">&nbsp;</div>
-    </a>
-    <a href="https://www.instagram.com/valentinadesign/" target="_blank">
-      <div class="socialIcon instagram">&nbsp;</div>
-    </a>
-    <a href="http://www.flickr.com/photos/valentinadesign/" target="_blank">
-      <div class="socialIcon flickr">&nbsp;</div>
-    </a>
-    <a href="http://pinterest.com/valentinaharper/" target="_blank">
-      <div class="socialIcon pinterest">&nbsp;</div>
-    </a>
+    <a class="socialIcon facebook" href="http://www.facebook.com/ValentinaRamosArt" target="_blank"></a>
+    <a class="socialIcon instagram" href="https://www.instagram.com/valentinadesign/" target="_blank"></a>
+    <a class="socialIcon flickr" href="http://www.flickr.com/photos/valentinadesign/" target="_blank"></a>
+    <a class="socialIcon pinterest" href="http://pinterest.com/valentinaharper/" target="_blank"></a>
   </div>
 </template>
 
@@ -30,65 +22,54 @@
     align-items: flex-start;
     align-content: stretch;
     float: right;
-    height: 250px;
     width: 40px;
-    @include clearfix;
+    height: 250px;
 
-    a {
-      border-bottom: none !important;
-      width: 40px !important;
-      height: 40px !important;
-      margin-bottom: .5em !important;
-      @include clearfix;
-    }
-  }
+    a.socialIcon {
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 0;
+      margin-bottom: .5em;
+      display: block;
+      // flex-basis: 1;
+      border-bottom: none;
+      // flex-grow: 1;
+      // @include clearfix;
 
-  .socialIcon {
-    width: 40px !important;
-    height: 40px !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    // padding: 0; /* reset */
-    margin-bottom: .5em !important;
-    display: block !important;
-    // flex-basis: auto;
-    // flex-grow: 1;
-    @include clearfix;
+      &.facebook {
+        background-image: url(../assets/img/iconsPNG/facebook.png);
 
-    &.facebook {
-      background-image: url(/static/img/icons/facebook.svg);
-      display: block !important;
-
-      &:hover {
-        background-image: url(/static/img/icons/facebook_hv.svg);
+        &:hover {
+          background-image: url(../assets/img/iconsPNG/facebook_hv.png);
+        }
       }
-    }
 
-    &.instagram {
-      background-image: url(/static/img/icons/instagram.svg);
-      display: block !important;
+      &.instagram {
+        background-image: url(../assets/img/iconsPNG/instagram.png);
 
-      &:hover {
-        background-image: url(/static/img/icons/instagram_hv.svg);
+        &:hover {
+          background-image: url(../assets/img/iconsPNG/instagram_hv.png);
+        }
       }
-    }
 
-    &.flickr {
-      background-image: url(/static/img/icons/flickr.svg);
-      display: block !important;
+      &.flickr {
+        background-image: url(../assets/img/iconsPNG/flickr.png);
 
-      &:hover {
-        background-image: url(/static/img/icons/flickr_hv.svg);
+        &:hover {
+          background-image: url(../assets/img/iconsPNG/flickr_hv.png);
+        }
       }
-    }
 
-    &.pinterest {
-      background-image: url(/static/img/icons/pinterest.svg);
-      display: block !important;
+      &.pinterest {
+        background-image: url(../assets/img/iconsPNG/pinterest.png);
 
-      &:hover {
-        background-image: url(/static/img/icons/pinterest_hv.svg);
+        &:hover {
+          background-image: url(../assets/img/iconsPNG/pinterest_hv.png);
+        }
       }
     }
   }
+
 </style>

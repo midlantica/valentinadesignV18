@@ -1,36 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="113px" height="113px"
-	 viewBox="0 0 113 113" enable-background="new 0 0 113 113" xml:space="preserve">
-<title>Flickr_hv</title>
-<desc>Created with Sketch.</desc>
-<g id="Page-1" sketch:type="MSPage">
-	<g id="Flickr_hv" transform="translate(-0.500000, 0.062085)" sketch:type="MSLayerGroup">
-		<path id="Flickr-Copy-2" sketch:type="MSShapeGroup" fill="#D7D7D7" d="M0.697,56c0,30.933,25.071,56,56,56
-			c30.93,0,56-25.067,56-56c0-30.926-25.07-56-56-56C25.768,0,0.697,25.074,0.697,56z"/>
-
-			<linearGradient id="Flickr_1_" gradientUnits="userSpaceOnUse" x1="-245.7158" y1="449.8276" x2="-245.7158" y2="448.8276" gradientTransform="matrix(109 0 0 -109 26839.6875 49032.7344)">
-			<stop  offset="0" style="stop-color:#FFFFFF"/>
-			<stop  offset="1" style="stop-color:#DBDBDB"/>
-		</linearGradient>
-		<path id="Flickr" sketch:type="MSShapeGroup" fill="url(#Flickr_1_)" d="M2.197,56c0,30.104,24.399,54.5,54.5,54.5
-			s54.5-24.396,54.5-54.5c0-30.098-24.399-54.5-54.5-54.5S2.197,25.902,2.197,56z"/>
-
-			<linearGradient id="Path_2_" gradientUnits="userSpaceOnUse" x1="-237.9756" y1="439.2924" x2="-237.9756" y2="438.2924" gradientTransform="matrix(24.8395 0 0 -24.843 5952.3184 10956.916)">
-			<stop  offset="0" style="stop-color:#0061D0"/>
-			<stop  offset="1" style="stop-color:#0C38CD"/>
-		</linearGradient>
-		<path id="Path" sketch:type="MSShapeGroup" fill="url(#Path_2_)" stroke="#E5E5E5" d="M41.115,68.421
-			c-6.86,0-12.418-5.565-12.418-12.421c0-6.856,5.558-12.421,12.418-12.421c6.857,0,12.422,5.565,12.422,12.421
-			C53.537,62.856,47.972,68.421,41.115,68.421L41.115,68.421z"/>
-
-			<linearGradient id="Path_3_" gradientUnits="userSpaceOnUse" x1="-237.9756" y1="439.2924" x2="-237.9756" y2="438.2924" gradientTransform="matrix(24.8395 0 0 -24.843 5983.4741 10956.916)">
-			<stop  offset="0" style="stop-color:#EC017F"/>
-			<stop  offset="1" style="stop-color:#F70466"/>
-		</linearGradient>
-		<path id="Path_1_" sketch:type="MSShapeGroup" fill="url(#Path_3_)" stroke="#E5E5E5" d="M72.275,68.421
-			c-6.856,0-12.418-5.565-12.418-12.421c0-6.856,5.562-12.421,12.418-12.421c6.859,0,12.422,5.565,12.422,12.421
-			C84.697,62.856,79.135,68.421,72.275,68.421L72.275,68.421z"/>
-	</g>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="113px" height="113px" viewBox="0 0 113 113" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>flickr_hv</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#DBDBDB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#0061D0" offset="0%"></stop>
+            <stop stop-color="#0C38CD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#EC017F" offset="0%"></stop>
+            <stop stop-color="#F70466" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="flickr_hv" transform="translate(-0.500000, 0.062085)">
+            <path d="M0.696969697,56.3556769 C0.696969697,87.2886769 25.7674697,112.355677 56.6969697,112.355677 C87.6264697,112.355677 112.69697,87.2886769 112.69697,56.3556769 C112.69697,25.4296769 87.6264697,0.355676912 56.6969697,0.355676912 C25.7674697,0.355676912 0.696969697,25.4296769 0.696969697,56.3556769 Z" id="Flickr-Copy-2" fill="#D7D7D7"></path>
+            <path d="M2.1969697,56.3556769 C2.1969697,86.4601144 26.5959384,110.855677 56.6969697,110.855677 C86.7980009,110.855677 111.19697,86.4601144 111.19697,56.3556769 C111.19697,26.2580519 86.7980009,1.85567691 56.6969697,1.85567691 C26.5959384,1.85567691 2.1969697,26.2580519 2.1969697,56.3556769 Z" id="Flickr" fill="url(#linearGradient-1)"></path>
+            <g id="Group-3" transform="translate(28.000000, 43.000000)" stroke="#E5E5E5">
+                <path d="M13.1149697,25.7771769 C6.2549697,25.7771769 0.696969697,20.2121769 0.696969697,13.3556769 C0.696969697,6.49917691 6.2549697,0.934176912 13.1149697,0.934176912 C19.9714697,0.934176912 25.5364697,6.49917691 25.5364697,13.3556769 C25.5364697,20.2121769 19.9714697,25.7771769 13.1149697,25.7771769 L13.1149697,25.7771769 Z" id="Path" fill="url(#linearGradient-2)"></path>
+                <path d="M44.2754697,25.7771769 C37.4189697,25.7771769 31.8574697,20.2121769 31.8574697,13.3556769 C31.8574697,6.49917691 37.4189697,0.934176912 44.2754697,0.934176912 C51.1354697,0.934176912 56.6969697,6.49917691 56.6969697,13.3556769 C56.6969697,20.2121769 51.1354697,25.7771769 44.2754697,25.7771769 L44.2754697,25.7771769 Z" id="Path" fill="url(#linearGradient-3)"></path>
+            </g>
+        </g>
+    </g>
 </svg>
