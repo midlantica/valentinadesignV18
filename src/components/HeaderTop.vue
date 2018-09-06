@@ -11,28 +11,44 @@
 </script>
 
 <style lang="scss">
+  header {
+    //
+  }
   .headerArt {
-    width: 100%;
-    background-image: url(../assets/img/headerC.svg);
-    background-size: contain;
+    background-image: url(/static/img/headerC.svg);
     background-repeat: no-repeat;
-    height: 0;
-    padding: 0;
-    padding-bottom: 33%;
-    margin-top: -2px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-bottom: 32.5%; // 3:1
 
-    @include media($mobile) {
-      background-image: url(../assets/img/header_mobile.svg);
-      // background-image: url(../assets/img/headerC.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-size: 100% 83%;
-      height: 0;
-      padding: 0;
-      padding-bottom: 66%;
-      margin-top: -3em;
-      margin-bottom: 0em;
+    @include breakpoint($SmMdLg) {
+      background-image: url(/static/img/header_mobile.svg);
+      background-size: cover;
+      // background-size: 85% 76%;
+      margin-top: -4em;
+      margin-bottom: 4em;
+      padding-bottom: 57%;
     }
+
+    @include breakpoint($SmMd) {
+      background-image: url(/static/img/header_mobile.svg);
+      background-size: cover;
+      // background-size: 85% 76%;
+      margin-top: -3em;
+      margin-bottom: 4em;
+      padding-bottom: 57%;
+    }
+
+    @include breakpoint($sm) {
+      background-image: url(/static/img/header_mobile.svg);
+      background-size: cover;
+      // background-size: 85% 76%;
+      margin-top: -2em;
+      margin-bottom: 3em;
+      padding-bottom: 57%;
+    }
+
   }
 </style>
 

@@ -42,12 +42,12 @@
 
     a {
       color: $green;
-      padding:.2em 0;
+      padding: .2em 0;
       border-bottom: 2px dotted $orange;
       // margin: 0 0 2em 0;
       &:hover {
-          color: $purple;
-        }
+        color: $purple;
+      }
     }
   }
 

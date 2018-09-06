@@ -1,27 +1,22 @@
 <template>
   <nav class="mainNav">
-    <ul>
-      <li>
-        <router-link to="/" title="home">
-          <div class="navBtns homeBtn">Home</div>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/GalleryOriginalArtwork" title="Gallery">
-          <div class="navBtns galleryBtn">Gallery</div>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/Shop" title="Shop">
-          <div class="navBtns shopBtn">Shop</div>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/Contact" title="Contact">
-          <div class="navBtns contactBtn">Contact</div>
-        </router-link>
-      </li>
-    </ul>
+
+    <router-link to="/" title="home">
+      <div class="navBtns homeBtn">Home</div>
+    </router-link>
+
+    <router-link to="/GalleryOriginalArtwork" title="Gallery">
+      <div class="navBtns galleryBtn">Gallery</div>
+    </router-link>
+
+    <router-link to="/Shop" title="Shop">
+      <div class="navBtns shopBtn">Shop</div>
+    </router-link>
+
+    <router-link to="/Contact" title="Contact">
+      <div class="navBtns contactBtn">Contact</div>
+    </router-link>
+
   </nav>
 </template>
 
@@ -31,88 +26,76 @@
 
 <style lang="scss" scoped>
   .mainNav {
-    @include span-columns(8);
-    @include shift(2);
-    position: relative;
-    margin-top: -4em;
-    margin-bottom: 0em;
-    // padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 
-    @include media($mobile) {
-      @include span-columns(8);
-      @include shift(2);
-      margin-top: -1.5em;
-      margin-bottom: 1em;
-    }
+    a {
+      font-family: $header-font;
+      font-size: 1.8em;
+      display: block;
+      width: 120px;
+      height: 120px;
+      margin: 0 .5em;
+      border-bottom: none;
+      align-self: center;
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        @include span-columns(2 of 10, block-collapse);
-        font-family: $header-font;
-        font-size: 1.8em;
-        padding: 0;
-        margin: 0 0 0 .5em;
-        &:last-child {
-          @include omega();
-        }
-
-        @include media($mobile) {
-          font-size: 1.3em;
-          padding-left: .1em;
-          padding-right: .1em;
-          height: 1.5em;
-
-          &:last-child {
-            @include omega();
-          }
-        }
-
-        a {
-          color: $black;
-        }
+      @include breakpoint($SmMdLg) {
+        font-family: $copy;
+        font-size: 1.25em;
+        width: initial;
+        height: initial;
+        margin: 0;
+        // background: pink; ///////////// ------>>>>>>>
       }
+
+      @include breakpoint($SmMd) {
+        font-family: $copy;
+        font-size: .85em;
+        width: initial;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        // background: pink; ///////////// ------>>>>>>>
+      }
+
     }
   }
 
   .navBtns {
-    text-decoration: none;
-    list-style-image: none;
-    height: auto;
-    line-height: 119px;
     color: $black;
+    width: 120px;
+    height: 120px;
+    text-decoration: none;
     text-align: center;
     vertical-align: middle;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    padding: 1.6em 0.5em 0 0em;
 
     &:hover {
       cursor: pointer;
     }
 
-    @include media($mobile) {
-      line-height: 26px;
-      margin-top: -0em;
-      padding: 0.2em 0em 1.3em;
-      line-height: 1em;
+    @include breakpoint($SmMdLg) {
+      width: initial;
+      height: initial;
+      padding: 0.3em 0.75em;
       border: 1px dotted transparent;
       border-radius: 0.5em;
-      background-image: none;
-      height: 1em;
+      background-image: none !important;
+      text-align: center;
+      margin: 0 1em;
       // background: $green;
 
+      @include breakpoint($SmMd) {
+        margin: 1em 1em;
+      }
+
       &:hover {
-        background-image: none;
-        height: 1em;
-        text-align: center;
-        margin: 0 auto;
+        background-image: none !important;
         background: lighten($green,30);
         border: 1px dotted $purple;
-        cursor: pointer;
       }
     }
 
@@ -124,105 +107,81 @@
 
   .homeBtn {
     padding-right: .5em;
+
     &:hover {
       background-image: url(../assets/img/buttons/home_btn.svg);
-      padding-right: .5em;
+      // padding-right: .5em;
     }
 
-    @include media($mobile) {
-      color: $black;
-      padding-right: 0em;
-      background-image: none;
-
-      &:hover {
-        padding-right: 0em;
-        background-image: none;
-      }
+    @include breakpoint($SmMdLg) {
+      padding: 0.4em 0.75em;
+      background-image: none !important;
     }
   }
 
   .galleryBtn {
-    //
+    padding: 1.6em 0.5em 0 0.3em;
+
     &:hover {
       background-image: url(../assets/img/buttons/gallery_btn.svg);
       cursor: pointer;
     }
-    @include media($mobile) {
-      color: $black;
-      background-image: none;
 
-      &:hover {
-        background-image: none;
-      }
+    @include breakpoint($SmMdLg) {
+      padding: 0.4em 0.75em;
+      background-image: none !important;
     }
   }
 
   .shopBtn {
-    padding-left: 0.2em;
+    padding: 1.6em 0.5em 0 0.7em;
+
     &:hover {
       background-image: url(../assets/img/buttons/shop_btn.svg);
       cursor: pointer;
     }
 
-    @include media($mobile) {
-      padding-left: 0em;
-      color: $black;
-      background-image: none;
-
-      &:hover {
-        background-image: none;
-      }
+    @include breakpoint($SmMdLg) {
+      padding: 0.4em 0.75em;
+      background-image: none !important;
     }
   }
 
   .contactBtn {
     //
+
     &:hover {
       background-image: url(../assets/img/buttons/contact_btn.svg);
-      cursor: pointer;
     }
 
-    @include media($mobile) {
-      color: $black;
-      background-image: none;
-
-      &:hover {
-        background-image: none;
-      }
+    @include breakpoint($SmMdLg) {
+      padding: 0.4em 0.75em;
+      background-image: none !important;
     }
   }
 
   .blogBtn {
     padding-left: 0.1em;
+
     &:hover {
       background-image: url(../assets/img/buttons/blog_btn.svg);
-      cursor: pointer;
     }
-    @include media($mobile) {
-      color: $black;
-      background-image: none;
 
-      &:hover {
-        background-image: none;
-      }
+    @include breakpoint($SmMdLg) {
+      padding: 0.4em 0.75em;
+      background-image: none !important;
     }
   }
 
-  // ############################
-  // ############################
   // ############################
   // UPSTATES ON INDIVIDUAL PAGES
   body.index .homeBtn {
     background-image: url(../assets/img/buttons/home_btn.svg);
 
-    @include media($mobile) {
-      color: $black;
-      background-image: none;
+    @include breakpoint($SmMdLg) {
+      background-image: none !important;
       background: lighten($green,30);
-      height: 1em;
-      line-height: 26px;
-      padding: 0.2em 0em 1.3em;
-      line-height: 1em;
+      padding: 0.4em 0.75em;
       border: 1px dotted $purple;
       border-radius: 0.5em;
     }
@@ -231,14 +190,11 @@
   body.artists-statement .homeBtn {
     background-image: url(../assets/img/buttons/home_btn.svg);
 
-    @include media($mobile) {
+    @include breakpoint($SmMdLg) {
       color: $black;
-      background-image: none;
+      background-image: none !important;
       background: lighten($green,30);
-      height: 1em;
-      line-height: 26px;
-      padding: 0.2em 0em 1.3em;
-      line-height: 1em;
+      padding: 0.4em 0.75em;
       border: 1px dotted $purple;
       border-radius: 0.5em;
     }
@@ -249,14 +205,10 @@
   body.patterns .galleryBtn {
     background-image: url(../assets/img/buttons/gallery_btn.svg);
 
-    @include media($mobile) {
-      color: $black;
-      background-image: none;
+    @include breakpoint($SmMdLg) {
+      background-image: none !important;
       background: lighten($green,30);
-      height: 1em;
-      line-height: 26px;
-      padding: 0.2em 0em 1.3em;
-      line-height: 1em;
+      padding: 0.4em 0.75em;
       border: 1px dotted $purple;
       border-radius: 0.5em;
     }
@@ -265,33 +217,27 @@
   body.shop .shopBtn {
     background-image: url(../assets/img/buttons/shop_btn.svg);
 
-    @include media($mobile) {
+    @include breakpoint($SmMdLg) {
       color: $black;
-      background-image: none;
+      background-image: none !important;
       background: lighten($green,30);
-      height: 1em;
-      line-height: 26px;
-      padding: 0.2em 0em 1.3em;
-      line-height: 1em;
+      padding: 0.4em 0.75em;
       border: 1px dotted $purple;
       border-radius: 0.5em;
-      padding-right: 0em;
     }
   }
 
   body.contact .contactBtn {
     background-image: url(../assets/img/buttons/contact_btn.svg);
 
-    @include media($mobile) {
+    @include breakpoint($SmMdLg) {
       color: $black;
-      background-image: none;
+      background-image: none !important;
       background: lighten($green,30);
-      height: 1em;
-      line-height: 26px;
-      padding: 0.2em 0em 1.3em;
-      line-height: 1em;
+      padding: 0.4em 0.75em;
       border: 1px dotted $purple;
       border-radius: 0.5em;
     }
   }
+
 </style>

@@ -1,5 +1,5 @@
 .contact .content aside.col1 {
-  @include span-columns(3 of 10);
+  // @include span-columns(3 of 10);
   background-image: url(../assetsimg/contact_bird.png);
   background-repeat: no-repeat;
   background-position: -90px 20px;
@@ -7,7 +7,7 @@
   // background: $beige;
   height: 300px;
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     display: none;
     // @include shift(2);
   }
@@ -17,17 +17,17 @@
 .contactTable {
   width: 100%;
   // max-width: 600px;
-  @include media($mobile) {
-  width: 100%;
+  @include breakpoint($mobile) {
+    width: 100%;
   }
 }
 
 main.contactContent {
-  @include span-columns(6 of 10);
+  // @include span-columns(6 of 10);
   // @include shift(2);
 
-  @include media($mobile) {
-    @include span-columns(9 of 10);
+  @include breakpoint($mobile) {
+    // @include span-columns(9 of 10);
     // @include shift(2);
   }
 }
@@ -49,9 +49,9 @@ h2.emailHead {
 #contactForm .email {
   margin: 0;
   text-align: left;
-  @include media($mobile) {
-  font-size: 0.8em;
-  text-align: left;
+  @include breakpoint($mobile) {
+    font-size: 0.8em;
+    text-align: left;
   }
   a { text-decoration: none;
   }
@@ -61,10 +61,10 @@ h2.emailHead {
   margin: 0;
   text-align: left;
   margin-bottom: .5em;
-  @include media($mobile) {
-  font-size: 0.8em;
-  text-align: left;
-  margin-bottom: .5em;
+  @include breakpoint($mobile) {
+    font-size: 0.8em;
+    text-align: left;
+    margin-bottom: .5em;
   }
 }
 
@@ -131,7 +131,7 @@ h2.emailHead {
   outline: none;
   @include border-radius(6px);
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     width: 80%;
   }
 }

@@ -6,7 +6,7 @@
   padding: 0 0.6em;
   display: block !important;
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     padding: 0;
   }
 }
@@ -20,7 +20,7 @@ a.socialIcon {
   padding-bottom: 130%;
   display: block !important;
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;

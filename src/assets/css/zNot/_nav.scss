@@ -1,13 +1,13 @@
 .mainNav {
-  @include span-columns(8);
-  @include shift(2);
+  // @include span-columns(8);
+  // @include shift(2);
   position: relative;
   margin-top: -4em;
   // padding: 0;
 
-  @include media($mobile) {
-    @include span-columns(8);
-    @include shift(2);
+  @include breakpoint($mobile) {
+    // @include span-columns(8);
+    // @include shift(2);
     margin-top: -1.5em;
     margin-bottom: 1em;
   }
@@ -18,23 +18,23 @@
     margin: 0;
 
     li {
-      @include span-columns(2 of 10, block-collapse);
+      // @include span-columns(2 of 10, block-collapse);
       font-family: $header-font;
       font-size: 1.8em;
       padding: 0;
       margin: 0 0 0 .5em;
       &:last-child {
-        @include omega();
+        // @include omega();
       }
 
-      @include media($mobile) {
+      @include breakpoint($mobile) {
         font-size: 1.3em;
         padding-left: .1em;
         padding-right: .1em;
         height: 1.5em;
 
         &:last-child {
-          @include omega();
+          // @include omega();
         }
       }
 
@@ -61,7 +61,7 @@
     cursor: pointer;
   }
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     line-height: 26px;
     margin-top: -0em;
     padding: 0.2em 0em 1.3em;
@@ -96,7 +96,7 @@
     padding-right: .5em;
   }
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     padding-right: 0em;
     background-image: none;
@@ -114,7 +114,7 @@
     background-image: url(~assets/img/buttons/gallery_btn.svg);
     cursor: pointer;
   }
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     background-image: none;
 
@@ -131,7 +131,7 @@
     cursor: pointer;
   }
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     padding-left: 0em;
     color: $black;
     background-image: none;
@@ -149,7 +149,7 @@
     cursor: pointer;
   }
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     background-image: none;
 
@@ -165,7 +165,7 @@
     background-image: url(~assets/img/buttons/blog_btn.svg);
     cursor: pointer;
   }
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     background-image: none;
 
@@ -184,7 +184,7 @@
 body.index .homeBtn {
   background-image: url(~assets/img/buttons/home_btn.svg);
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     background-image: none;
     background: lighten($green,30);
@@ -200,7 +200,7 @@ body.index .homeBtn {
 body.artists-statement .homeBtn {
   background-image: url(~assets/img/buttons/home_btn.svg);
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     background-image: none;
     background: lighten($green,30);
@@ -218,7 +218,7 @@ body.digital-artwork .galleryBtn,
 body.patterns .galleryBtn {
   background-image: url(~assets/img/buttons/gallery_btn.svg);
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     background-image: none;
     background: lighten($green,30);
@@ -234,7 +234,7 @@ body.patterns .galleryBtn {
 body.shop .shopBtn {
   background-image: url(~assets/img/buttons/shop_btn.svg);
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     background-image: none;
     background: lighten($green,30);
@@ -251,7 +251,7 @@ body.shop .shopBtn {
 body.contact .contactBtn {
   background-image: url(~assets/img/buttons/contact_btn.svg);
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     color: $black;
     background-image: none;
     background: lighten($green,30);
