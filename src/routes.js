@@ -71,5 +71,10 @@ export default [
     path: '/EmailConfirm',
     name: 'EmailConfirm',
     component: EmailConfirm
+  },
+  {
+    path: '/404',
+    redirect: '/NotFound'
   }
+
 ]

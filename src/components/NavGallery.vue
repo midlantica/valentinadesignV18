@@ -17,6 +17,7 @@
 </script>
 
 <style lang="scss" scoped>
+
   .nav_gall {
     display: flex;
     flex-direction: row;
@@ -41,7 +42,8 @@
     bottom: 1px solid red;
 
     a {
-      color: $green;
+      color: darken($green, 10);
+      font-weight: bold;
       padding: .2em 0;
       border-bottom: 2px dotted $orange;
       // margin: 0 0 2em 0;
@@ -64,6 +66,7 @@
   .digital-artwork .nav_gall .da_art a,
   .patterns .nav_gall .patt_art a {
     color: $grey;
+    font-weight: bold;
   }
 
 </style>
