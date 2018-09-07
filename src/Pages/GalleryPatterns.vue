@@ -1,22 +1,23 @@
 <template>
-  <div>
 
-    <main>
+  <main>
+
+    <section class="twoCol">
 
       <NavGallery/>
 
-      <section class="twoColMain gallery">
-        <ul>
-          <li class = "galleryGrid" v-for="(image, index) in images">
-            <img
-              v-lazy="image.thumb"
-              style="@include fill-parent(),
-                     border-radius: 2px,
-                     cursor: pointer;"
-              @click="openGallery(index)"
-            >
-          </li>
-        </ul>
+      <div class="gallery">
+
+        <div class="galleryGrid" v-for="(image, index) in images">
+          <img
+            v-lazy="image.thumb"
+            style="width: 100%,
+                   border-radius: 2px,
+                   cursor: pointer;"
+            @click="openGallery(index)"
+          >
+        </div>
+
         <lightbox ref="lightbox"
           :showLightBox="false"
           :images="images"
@@ -26,15 +27,17 @@
           :autoPlay="false"
           :autoPlayTime=8000
         ></lightbox>
-      </section>
 
-      <aside class="col3 marT3">
-        <Social/>
-      </aside>
+      </div>
 
-    </main>
+    </section>
 
-  </div>
+    <aside class="col3 marT3">
+      <Social/>
+    </aside>
+
+  </main>
+
 </template>
 
 <script>

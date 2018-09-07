@@ -1,215 +1,77 @@
-section.gallery {
-  text-align: center;
-  // display: block;
-  // float:left;
-  // width:620px;
-  margin:0;
 
-  ul {
-    padding: 0;
-    margin: 0.5em;
-    @include clearfix;
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: flex-start;
+  // background: red;
 
-    @include media($mobile) {
-      margin: 0;
+  .galleryGrid {
+    flex-basis: 22%;
+    margin: 0 .5em 0em;
+
+    @include breakpoint($SmMdLg) {
+      flex-basis: 21%;
     }
 
-    li.hero {
-      @include span-columns(12);
-      // @include omega(4n);
+    @include breakpoint($SmMd) {
+      flex-basis: 43%;
+    }
+
+    @include breakpoint($sm) {
+      flex-basis: 100%;
+    }
+
+    img {
+      cursor: pointer;
+      width: 100%;
       background: $beige;
       margin-bottom: 1em;
-      // height: 180px;
-      // width: 100%;
-      // @include box-shadow($grey 0px 2px 6px -2px);
       border-radius: 2px;
       border: 1px solid $greyLighter;
-
-      a {
-        border: none;
-      }
-
-      @include media($mobile) {
-        @include span-columns(10 of 10);
-        // @include omega(6n);
-        // @include shift(1);
-        // box-shadow: none;
-        // margin-bottom: 0;
-        margin-bottom: 1em;
-        padding: 0;
-        &:nth-child(even) {
-          margin-right: 0em;
-        }
-      }
-
-      &.hero {
-        text-align: center;
-        // background: transparentize($orange,.5);
-
-        @include media($mobile) {
-          margin-bottom: 0.75em;
-        }
-        img {
-          @include fill-parent();
-          // border-top-left-radius: 0.5em;
-          // border-top-right-radius: 0.5em;
-          border-radius: 2px;
-          // margin: .5em .5em;
-        }
-        p {
-          margin: 0.5em auto;
-        }
-      }
     }
 
-    li {
-      @include span-columns(3);
-      @include omega(4n);
-      background: $beige;
-      margin-bottom: 1em;
-      // height: 180px;
-      // width: 100%;
-      // @include box-shadow($grey 0px 2px 6px -2px);
-      border-radius: 2px;
-      border: 1px solid $greyLighter;
-
-      // @include media($med-width) {
-      //   @include span-columns(1);
-      //   @include omega(2n);
-      //   margin-bottom: 1em;
-      // }
-
-      a {
-        border: none;
-      }
-
-      @include media($mobile) {
-        @include span-columns(5 of 10);
-        @include omega(6n);
-        // @include shift(1);
-        // box-shadow: none;
-        // margin-bottom: 0;
-        margin-bottom: 1em;
-        padding: 0;
-        &:nth-child(even) {
-          margin-right: 0em;
-        }
-      }
-
-      &.galleryGrid {
-        text-align: center;
-        // background: transparentize($orange,.5);
-
-        @include media($mobile) {
-          margin-bottom: 0.75em;
-        }
-        img {
-          @include fill-parent();
-          // border-top-left-radius: 0.5em;
-          // border-top-right-radius: 0.5em;
-          border-radius: 2px;
-          // margin: .5em .5em;
-          cursor: pointer;
-          margin-bottom: -4px; // BAD
-        }
-        p {
-          margin: 0.5em auto;
-        }
-      }
-    }
   }
 
 }
 
-.original-artwork,
-.digital-artwork,
-.patterns {
+
+.gallery {
   //
-  .col3 {
-    margin-top: .25em !important;
-    .socialIconsBox {
-      margin-top: .25em !important;
+  .vue-lb-container {
+    //
+    .vue-lb-content {
+      //
+      .vue-lb-header {
+        //
+      }
+
+      .vue-lb-figure {
+        //
+        .vue-lb-modal-image {
+          //
+        }
+
+        .vue-lb-info {
+          color: red !important;
+          background: green !important;
+        }
+
+        .vue-lb-footer {
+          color: red !important;
+          background: green !important;
+        }
+
+      }
     }
+
   }
 }
 
-/*
-    All of the CSS is customizable.
-    Every property is prefixed with a 'lightbox' keyword
-    All default CSS classes are:
-  */
-  // .lightbox {
-  //   background: red;
-  //   border: green solid 10px;
-  // }
-
-  // .lightbox__thumbnail {
-  //   // background: red;
-  //   // border: green solid 10px;
-  // }
-  // .lightbox__thumbnail img {
-
-  // }
-
-  // .lightbox__close {
-
-  // }
-
-  // .lightbox__arrow--invisible {
-
-  // }
-
-  // .lightbox__element {
-
-  // }
-
-  // .lightbox__arrow {
-  //     fill: red;
-  // }
-
-  // .lightbox__arrow svg {
-  //   fill: red;
-  // }
-
-  // .lightbox__image {
-
-  // }
-
-  // .lightbox__image img {
-
-  // }
-
-.vue-lb-figure {
-  box-shadow: 6px 6px 13px rgba(0, 0, 0, 0.5);
+html > .vue-lb-container .vue-lb-content .vue-lb-figure .vue-lb-info {
+  color: red !important;
+  background: green !important;
 }
 
-.vue-lb-info {
-  font-family: Register;
-  color: transparentize($white,.25);
-  font-size: 1em;
-  letter-spacing: 0.065em;
-  -webkit-font-smoothing: initial;
-  -moz-osx-font-smoothing: initial;
-  line-height: 2.4;
-  // bottom: -15px;
-  height: 40px;
-  // margin: 0 0 0 0;
-  margin-bottom: -40px;
-  background: rgba(0, 0, 0, .85);
-}
-
-.vue-lb-footer-count {
-  font-family: Register;
-  color: transparentize($white,.5);
-  font-size: .75em;
-  letter-spacing: 0.065em;
-  -webkit-font-smoothing: initial;
-  -moz-osx-font-smoothing: initial;
-  // line-height: 2.4;
-  // bottom: -12px;
-  z-index: 10;
-  // padding-right: .25em;
-  // padding-top: .25em;
-  padding-right: 1em;
-  // height: 40px;
-}

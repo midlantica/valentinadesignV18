@@ -1,51 +1,40 @@
 <template>
-  <div>
-    <main class="twoColMain shop">
-      <ul>
-        <li class="shopGrid">
-          <a href="http://society6.com/valentinaramos" target="_blank">
-            <img src="../../static/img/shop/prints.jpg" alt="Prints">
-            <p>Prints</p>
-          </a>
-        </li>
-        <li class="shopGrid">
-          <a href="http://www.denydesigns.com/collections/artist/ar-valentina-ramos" target="_blank">
-            <img src="../../static/img/shop/duvet.jpg" alt="Home Decor">
-            <p>Home Decor</p>
-          </a>
-        </li>
-        <li class="shopGrid">
-          <a href="https://www.decalgirl.com/artists/Valentina_Ramos" target="_blank">
-            <img src="../../static/img/shop/decal.jpg" alt="Phone Decals">
-            <p>Phone Decals</p>
-          </a>
-        </li>
-        <li class="shopGrid">
-          <a href="http://www.amazon.com/Valentina-Harper/e/B00MCMCYIA/ref=sr_ntt_srch_lnk_1?qid=1430838770&sr=8-1" target="_blank">
-            <img src="../../static/img/shop/books.jpg" alt="Books">
-            <p>Books</p>
-          </a>
-        </li>
-        <li class="shopGrid">
-          <a href="http://www.spoonflower.com/profiles/valentinaharper" target="_blank">
-            <img src="../../static/img/shop/fabric.jpg" alt="Fabrics">
-            <p>Fabrics</p>
-          </a>
-        </li>
-        <li class="shopGrid">
-          <a href="http://www.mywonderfulwalls.com/collections/valentina-harper" target="_blank">
-            <img src="../../static/img/shop/mural.jpg" alt="Wall Decal">
-            <p>Wall Decal</p>
-          </a>
-        </li>
-      </ul>
-    </main>
+
+  <main>
+
+    <section class="shop">
+      <a href="http://society6.com/valentinaramos" target="_blank">
+        <img src="/static/img/shop/prints.jpg" alt="Prints">
+        <p>Prints</p>
+      </a>
+      <a href="http://www.denydesigns.com/collections/artist/ar-valentina-ramos" target="_blank">
+        <img src="/static/img/shop/duvet.jpg" alt="Home Decor">
+        <p>Home Decor</p>
+      </a>
+      <a href="https://www.decalgirl.com/artists/Valentina_Ramos" target="_blank">
+        <img src="/static/img/shop/decal.jpg" alt="Phone Decals">
+        <p>Phone Decals</p>
+      </a>
+      <a href="http://www.amazon.com/Valentina-Harper/e/B00MCMCYIA/ref=sr_ntt_srch_lnk_1?qid=1430838770&sr=8-1" target="_blank">
+        <img src="/static/img/shop/books.jpg" alt="Books">
+        <p>Books</p>
+      </a>
+      <a href="http://www.spoonflower.com/profiles/valentinaharper" target="_blank">
+        <img src="/static/img/shop/fabric.jpg" alt="Fabrics">
+        <p>Fabrics</p>
+      </a>
+      <a href="http://www.mywonderfulwalls.com/collections/valentina-harper" target="_blank">
+        <img src="/static/img/shop/mural.jpg" alt="Wall Decal">
+        <p>Wall Decal</p>
+      </a>
+    </section>
 
     <aside class="col3">
       <Social/>
     </aside>
 
-  </div>
+  </main>
+
 </template>
 
 <script>
@@ -62,92 +51,57 @@
   }
 </script>
 
-<style lang="scss">
-  // @import '../static/css/base';
-  main.shop {
-    @include span-columns(9);
-    // @include shift(1);
-    padding: 0;
-    @include clearfix;
-    // overflow: hidden;
+<style lang="scss" scoped>
 
-    ul {
-      padding: 0;
-      margin: 0.5em;
+  section.shop {
+    // @include clearfix;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: flex-start;
 
-      @include media($mobile) {
-        margin: 0;
+    a {
+      flex-basis: 30%;
+      // @include span-columns(3 of 9);
+      // @include omega(3n);
+      background: $beige;
+      margin-bottom: 1em;
+      // height: 180px;
+      // width: 100%;
+      // @include box-shadow($grey 0px 2px 6px -2px);
+      border-radius: 2px;
+      border: 1px solid $greyLightest;
+
+      @include breakpoint($SmMdLg) {
+        flex-basis: 40%;
       }
 
-      li {
-        @include media($med-width) {
-          @include span-columns(3 of 9);
-          @include omega(3n);
-          background: $beige;
-          margin-bottom: 1em;
-          // height: 180px;
-          // width: 100%;
-          // @include box-shadow($grey 0px 2px 6px -2px);
-          border-radius: 2px;
-          border: 1px solid $greyLightest;
-        }
+      @include breakpoint($SmMd) {
+        flex-basis: 90%;
+      }
 
-        @include media($mobile) {
-          @include span-columns(5 of 10);
-          @include omega(6n);
-          // @include shift(1);
-          // box-shadow: none;
-          // margin-bottom: 0;
-          margin-bottom: 1em;
-          padding: 0;
-          background: $beige;
-          // @include box-shadow($grey 0px 2px 6px -2px);
-          border-radius: 2px;
-          &:nth-child(even) {
-            margin-right: 0em;
-          }
-        }
-
-        @include media($mobileMini) {
-          @include span-columns(9 of 10);
-          @include omega(6n);
-          // @include shift(1);
-          // box-shadow: none;
-          // margin-bottom: 0;
-          margin-bottom: 1em;
-          background: $beige;
-          // @include box-shadow($grey 0px 2px 6px -2px);
-          border-radius: 2px;
-          &:nth-child(even) {
-            margin-right: 0em;
-          }
-        }
-
-        &.shopGrid {
-          text-align: center;
-          // background: transparentize($orange,.5);
-
-          @include media($mobile) {
-
-          }
-          img {
-            @include fill-parent();
-            border-top-left-radius: 2px;
-            border-top-right-radius: 2px;
-          }
-          p {
-            margin: 0.5em auto;
-            font-size: 0.7em;
-          }
-        }
+      img {
+        width: 100%;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+      }
+      p {
+        margin: 0.5em auto;
+        font-size: 0.7em;
+        text-align: center;
       }
 
     }
+
+
   }
 
   aside {
-    @include span-columns(1);
-    @include omega();
+    // @include span-columns(1);
+    // @include omega();
   }
 
   .socialIconsBox {

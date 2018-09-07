@@ -16,14 +16,16 @@
 
   .socialIconsBox {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: stretch;
     float: right;
+    flex-direction: column;
+    // flex-wrap: nowrap;
+    // justify-content: flex-end;
+    // align-items: flex-start;
+    // align-content: stretch;
+    // float: right;
     width: 40px;
-    height: 250px;
+    // height: 250px;
+    margin-top: .5em;
 
     a.socialIcon {
       width: 40px;
@@ -32,41 +34,40 @@
       background-repeat: no-repeat;
       padding: 0;
       margin-bottom: .5em;
-      display: block;
       // flex-basis: 1;
       border-bottom: none;
       // flex-grow: 1;
       // @include clearfix;
 
       &.facebook {
-        background-image: url(../assets/img/iconsPNG/facebook.png);
+        background-image: url(~/static/img/icons/facebook.svg);
 
         &:hover {
-          background-image: url(../assets/img/iconsPNG/facebook_hv.png);
+          background-image: url(~/static/img/icons/facebook_hv.svg);
         }
       }
 
       &.instagram {
-        background-image: url(../assets/img/iconsPNG/instagram.png);
+        background-image: url(~/static/img/icons/instagram.svg);
 
         &:hover {
-          background-image: url(../assets/img/iconsPNG/instagram_hv.png);
+          background-image: url(~/static/img/icons/instagram_hv.svg);
         }
       }
 
       &.flickr {
-        background-image: url(../assets/img/iconsPNG/flickr.png);
+        background-image: url(~/static/img/icons/flickr.svg);
 
         &:hover {
-          background-image: url(../assets/img/iconsPNG/flickr_hv.png);
+          background-image: url(~/static/img/icons/flickr_hv.svg);
         }
       }
 
       &.pinterest {
-        background-image: url(../assets/img/iconsPNG/pinterest.png);
+        background-image: url(~/static/img/icons/pinterest.svg);
 
         &:hover {
-          background-image: url(../assets/img/iconsPNG/pinterest_hv.png);
+          background-image: url(~/static/img/icons/pinterest_hv.svg);
         }
       }
     }

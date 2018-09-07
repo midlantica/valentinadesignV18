@@ -1,132 +1,144 @@
-// @import "~assets/css/_base.scss";
-
-//  GRID SETTINGS
-
-// $local-max-width: 400px;
-$max-width: em(1024) !default;
-$med-width: new-breakpoint(min-width 760px);
-// $med-width: new-breakpoint(min-width 800);
-$mobile: new-breakpoint(max-width 760px);
-// $mobile: new-breakpoint(max-width 480px 4);
-$mobileMini: new-breakpoint(max-width 650px);
-
 html {
   // background: red;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  @include span-columns(12);
-  // @include outer-container;
   background: $purple;
+  padding: 0;
+  margin: 0;
 
-  @include media($mobile) {
-      // @include span-columns(12);
-      background: $white;
-  }
+  // @include breakpoint($SmMdLg) {
+  //   background: $white;
+  //   padding: 0;
+  //   margin: 0;
+  // }
 }
 
 .wrapper {
-  // @include span-columns(12);
-  @include outer-container;
-  // margin: 0 auto;
-  // text-align: center;
-  background-image: url(/static/img/white_back_patt.png);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1450px;
+  // grid-template-rows: auto;
   background-repeat: repeat-y;
   background-position: center top;
-  margin-top: -8px;
-  // position: absolute;
-  @include media($mobile) {
+  margin: -1px auto 0px;
+  padding: 0 0 10px 0;
+  background-image: url(/static/img/white_back_patt.png);
+
+  @include breakpoint($SmMdLg) {
     background: $white;
-    background-image: none;
   }
 }
 
 header, footer {
-  @include span-columns(12);
-  // background: aqua;
-  clear: both;
-  @include clearfix;
-  text-align: center;
+  grid-column: 2 / span 10;
 
-  @include media($mobile) {
-    // @include span-columns(12);
+  @include breakpoint($SmMdLg) {
+    grid-column: 1 / span 12;
   }
 }
 
-main {
-  @include span-columns(10);
-  @include shift(1);
-  padding: 0;
-  @include clearfix;
-  overflow: hidden;
+header {
+  grid-row: 1;
+}
 
-  // @media screen and (max-width: 760px) {
-  //   margin-left: inherit;
-  // }
+footer {
+  grid-row: 5;
+}
+
+nav {
+  grid-column: 3 / span 8;
+  margin-top: -3em;
+  margin-bottom: 1em;
+
+
+  @include breakpoint($SmMdLg) {
+    grid-column: 2 / span 10;
+    margin-top: -1.5em;
+    // margin-bottom: 1em;
+  }
+
+}
+
+.nav_gall {
+  grid-column: 4 / span 6;
+  grid-row: 3;
+}
+
+// ###########################
+// ###########################
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column: 3 / span 8;
+  grid-row: 4;
+  grid-auto-flow: row;
+  max-width: 1000px;
+  // margin: auto;
+
+  @include breakpoint($SmMdLg) {
+    grid-column: 2 / span 10;
+  }
 
   aside.col1 {
-    @include span-columns(3 of 10);
-    // @include shift(1);
-    // background: pink;
+    grid-column: 1 / span 3;
 
-    @include media($mobile) {
-      @include span-columns(12);
-      // @include shift(2);
-      margin-bottom: 1em;
+    @include breakpoint($SmMdLg) {
+      grid-column: 1 / span 12;
+      margin: 1em 0;
     }
 
-    @include media($mobileMini) {
-      @include span-columns(12);
-      // @include shift(2);
-      margin-bottom: 1em;
-    }
   }
 
   // Home
   section.home {
-    @include span-columns(6 of 10);
-    // background: $greyLightest;
+    grid-column: span 8;
+    padding: 0 1em 0 1em;
 
-    @include media($mobile) {
-      @include span-columns(9 of 10);
+    @include breakpoint($SmMdLg) {
+      grid-column: span 11;
+      padding: 0 1em 0 0em;
     }
 
-    @include media($mobileMini) {
-      @include span-columns(8 of 10);
-    }
   }
 
   // 2 Columns
-  section.twoColMain {
-    @include span-columns(9 of 10);
+  section.shop,
+  section.twoCol {
+    grid-column: span 11;
 
-    @include media($mobile) {
-      @include span-columns(9 of 10);
+    @include breakpoint($SmMdLg) {
+      // @include span-columns(9 of 10);
     }
 
-    @include media($mobileMini) {
-      @include span-columns(8 of 10);
-    }
   }
+
+  section.contactContent {
+    grid-column: 6 / span 6;
+      // background: DarkSeaGreen;
+
+      @include breakpoint($SmMdLg) {
+        grid-column: 3 / span 9;
+      }
+
+      @include breakpoint($sm) {
+        grid-column: 1;
+      }
+    }
 
   // 3rd Column - Social Icons
   aside.col3 {
-    @include span-columns(1 of 10);
-    @include omega();
-    float: right;
-    // background: aliceblue;
+    grid-column: 12 / 13;
 
-    @include media($mobile) {
-      @include span-columns(1 of 10);
-      @include omega();
+    @include breakpoint($sm) {
+      //
     }
 
-    @include media($mobileMini) {
-      @include span-columns(2 of 10);
-      @include omega();
-      float: right;
-    }
   }
+
 }
 

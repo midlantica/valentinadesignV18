@@ -4,14 +4,14 @@ main.shop {
     padding: 0;
     margin: 0.5em;
 
-    @include media($mobile) {
+    @include breakpoint($mobile) {
       margin: 0;
     }
 
     li {
-      @include media($med-width) {
-        @include span-columns(3 of 9);
-        @include omega(3n);
+      @include breakpoint($med-width) {
+        // @include span-columns(3 of 9);
+        // @include omega(3n);
         background: $beige;
         margin-bottom: 1em;
         // height: 180px;
@@ -21,9 +21,9 @@ main.shop {
         border: 1px solid $greyLightest;
       }
 
-      @include media($mobile) {
-        @include span-columns(5 of 10);
-        @include omega(6n);
+      @include breakpoint($mobile) {
+        // @include span-columns(5 of 10);
+        // @include omega(6n);
         // @include shift(1);
         // box-shadow: none;
         // margin-bottom: 0;
@@ -41,14 +41,16 @@ main.shop {
         text-align: center;
         // background: transparentize($orange,.5);
 
-        @include media($mobile) {
+        @include breakpoint($mobile) {
 
         }
+
         img {
-          @include fill-parent();
+          width: 100%;
           border-top-left-radius: 2px;
           border-top-right-radius: 2px;
         }
+
         p {
           margin: 0.5em auto;
           font-size: 0.7em;

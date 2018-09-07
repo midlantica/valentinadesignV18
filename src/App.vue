@@ -1,5 +1,4 @@
 <template>
-<div>
   <div class="wrapper">
     <headerTop/>
     <Navvy/>
@@ -8,7 +7,6 @@
     <!-- </transition> -->
     <Footy/>
   </div>
-</div>
 </template>
 
 <script>
@@ -34,5 +32,8 @@
 </script>
 
 <style lang="scss">
+  // main.scss imported in build/utils.scss like so:
+  //
+  // @import "./assets/css/main.scss";
 
 </style>

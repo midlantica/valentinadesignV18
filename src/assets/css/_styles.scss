@@ -14,7 +14,7 @@ h1, h2, h3 {
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: initial;
 
-    @include media($mobile) {
+    @include breakpoint($mobile) {
       font-size: 1.05em;
     }
 }

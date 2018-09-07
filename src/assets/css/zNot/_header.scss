@@ -8,7 +8,7 @@
   padding-bottom: 33%;
   margin-top: -2px;
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     background-image: url(../img/header_mobile.svg);
     // background-image: url(../img/headerC.svg);
     background-size: contain;

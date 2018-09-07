@@ -1,5 +1,5 @@
 <template>
-<div>
+
   <main>
 
     <aside class="col1">
@@ -15,7 +15,7 @@
     </aside>
 
   </main>
-</div>
+
 </template>
 
 <script>

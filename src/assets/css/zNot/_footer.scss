@@ -10,7 +10,7 @@
   // margin-top: 1em;
   background-position-y: 0.7em;
 
-  @include media($mobile) {
+  @include breakpoint($mobile) {
     background-image: url(../img/footer.svg);
     background-size: contain;
     background-repeat: no-repeat;
