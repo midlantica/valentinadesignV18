@@ -40,19 +40,22 @@
       border-bottom: none;
       align-self: center;
 
-      @include breakpoint($SmMdLg) {
-        font-family: $copy;
-        font-size: 1.25em;
-        width: initial;
-        height: initial;
-        margin: 0;
-        // background: pink; ///////////// ------>>>>>>>
-      }
+      // @include breakpoint($SmMdLg) {
+      //   font-family: $header-font;
+      //   // font-size: 2em;
+      //   margin: 0 .25em;
+      //   width: initial;
+      //   height: initial;
+      //   margin: 0;
+      //   // background: pink; ///////////// ------>>>>>>>
+      // }
 
       @include breakpoint($SmMd) {
         font-family: $copy;
-        font-size: .85em;
+        font-size: .775em;
         width: initial;
+        height: initial;
+        margin: 0 0em;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         // background: pink; ///////////// ------>>>>>>>
@@ -78,25 +81,36 @@
     }
 
     @include breakpoint($SmMdLg) {
-      width: initial;
-      height: initial;
-      padding: 0.3em 0.75em;
-      border: 1px dotted transparent;
-      border-radius: 0.5em;
-      background-image: none !important;
-      text-align: center;
-      margin: 0 1em;
+      // color: $black;
+      // width: 120px;
+      // height: 120px;
+      // text-decoration: none;
+      // text-align: center;
+      // vertical-align: middle;
+      // background-repeat: no-repeat;
+      // background-position: center;
+      // background-size: contain;
+      // padding: 1.6em 0.5em 0 0em;
       // background: $green;
 
       @include breakpoint($SmMd) {
-        margin: 1em 1em;
+        width: initial;
+        height: initial;
+        padding: 0.3em 0.75em;
+        border: 1px dotted transparent;
+        border-radius: 0.5em;
+        background-image: none !important;
+        text-align: center;
+        margin: 0 1em;
+        margin: .5em .25em;
+
+        &:hover {
+          background-image: none !important;
+          background: lighten($green,30);
+          border: 1px dotted $purple;
+        }
       }
 
-      &:hover {
-        background-image: none !important;
-        background: lighten($green,30);
-        border: 1px dotted $purple;
-      }
     }
 
     a {
@@ -113,7 +127,7 @@
       // padding-right: .5em;
     }
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       padding: 0.4em 0.75em;
       background-image: none !important;
     }
@@ -127,7 +141,7 @@
       cursor: pointer;
     }
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       padding: 0.4em 0.75em;
       background-image: none !important;
     }
@@ -141,7 +155,7 @@
       cursor: pointer;
     }
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       padding: 0.4em 0.75em;
       background-image: none !important;
     }
@@ -154,7 +168,7 @@
       background-image: url(../assets/img/buttons/contact_btn.svg);
     }
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       padding: 0.4em 0.75em;
       background-image: none !important;
     }
@@ -167,7 +181,7 @@
       background-image: url(../assets/img/buttons/blog_btn.svg);
     }
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       padding: 0.4em 0.75em;
       background-image: none !important;
     }
@@ -178,7 +192,7 @@
   body.index .homeBtn {
     background-image: url(../assets/img/buttons/home_btn.svg);
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       background-image: none !important;
       background: lighten($green,30);
       padding: 0.4em 0.75em;
@@ -190,7 +204,7 @@
   body.artists-statement .homeBtn {
     background-image: url(../assets/img/buttons/home_btn.svg);
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       color: $black;
       background-image: none !important;
       background: lighten($green,30);
@@ -205,7 +219,7 @@
   body.patterns .galleryBtn {
     background-image: url(../assets/img/buttons/gallery_btn.svg);
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       background-image: none !important;
       background: lighten($green,30);
       padding: 0.4em 0.75em;
@@ -217,7 +231,7 @@
   body.shop .shopBtn {
     background-image: url(../assets/img/buttons/shop_btn.svg);
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       color: $black;
       background-image: none !important;
       background: lighten($green,30);
@@ -230,7 +244,7 @@
   body.contact .contactBtn {
     background-image: url(../assets/img/buttons/contact_btn.svg);
 
-    @include breakpoint($SmMdLg) {
+    @include breakpoint($SmMd) {
       color: $black;
       background-image: none !important;
       background: lighten($green,30);

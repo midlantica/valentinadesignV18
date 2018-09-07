@@ -1,10 +1,10 @@
 <template>
   <nav class="nav_gall">
     <div class="oe_art">
-      <router-link to="./GalleryOriginalArtwork" title="Original Artwork">Original Artwork</router-link>
+      <router-link to="./GalleryOriginalArtwork" title="Original Artwork">Original Art</router-link>
     </div>
     <div class="da_art">
-      <router-link to="./GalleryDigitalArtwork" title="Digital Artwork">Digital Artwork</router-link>
+      <router-link to="./GalleryDigitalArtwork" title="Digital Artwork">Digital Art</router-link>
     </div>
     <div class="patt_art">
       <router-link to="./GalleryPatterns" title="Patterns">Patterns</router-link>
@@ -30,9 +30,9 @@
   }
 
   .nav_gall div {
-    font-family: $copy-bold, Arial, sans-serif;
+    font-family: $copy, Arial, sans-serif;
     font-size: 1em;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.085em;
     background-image: none;
     list-style-type: none;
     // padding: .25em .5em ;
@@ -49,10 +49,15 @@
         color: $purple;
       }
     }
+
+    @include breakpoint($SmMd) {
+      margin: 1em .5em;
+    }
   }
 
   .nav_gall li a:hover {
     color: $purple;
+    font-size: .75em;
   }
 
   .original-artwork .nav_gall .oe_art a,
