@@ -3,7 +3,7 @@
   <main>
 
     <section class="shop">
-      <a href="http://society6.com/valentinaramos" target="_blank">
+      <a href="https://www.etsy.com/shop/valentinadesign" target="_blank">
         <img src="/static/img/shop/prints.jpg" alt="Prints">
         <p>Prints</p>
       </a>
@@ -90,7 +90,7 @@
       }
       p {
         margin: 0.5em auto;
-        font-size: 0.7em;
+        font-size: 0.85em;
         text-align: center;
       }
 
