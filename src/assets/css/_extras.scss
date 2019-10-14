@@ -32,7 +32,7 @@ body:after {
   }
 
   .col2 {
-    width: span(1 of 2 last);;
+    width: span(1 of 2 last);
     @include breakpoint($sm) {
       width: span(12 narrow);
     }
