@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "mem": "^5.1.1",
     "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-image-lightbox": "^5.7.0",
