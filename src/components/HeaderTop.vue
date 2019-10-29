@@ -15,7 +15,7 @@
     //
   }
   .headerArt {
-    background-image: url(/static/img/headerC.svg);
+    background-image: url(~/static/img/headerC.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,7 +23,7 @@
     padding-bottom: 32.5%; // 3:1
 
     @include breakpoint($SmMdLg) {
-      background-image: url(/static/img/header_mobile.svg);
+      background-image: url(~/static/img/header_mobile.svg);
       background-size: cover;
       // background-size: 85% 76%;
       margin-top: -4em;
@@ -32,7 +32,7 @@
     }
 
     @include breakpoint($SmMd) {
-      background-image: url(/static/img/header_mobile.svg);
+      background-image: url(~/static/img/header_mobile.svg);
       background-size: cover;
       // background-size: 85% 76%;
       margin-top: -3em;
@@ -41,7 +41,7 @@
     }
 
     @include breakpoint($sm) {
-      background-image: url(/static/img/header_mobile.svg);
+      background-image: url(~/static/img/header_mobile.svg);
       background-size: cover;
       // background-size: 85% 76%;
       margin-top: -2em;
