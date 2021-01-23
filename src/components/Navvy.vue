@@ -93,22 +93,23 @@
       // padding: 1.6em 0.5em 0 0em;
       // background: $green;
 
-      @include breakpoint($SmMd) {
-        width: initial;
-        height: initial;
-        padding: 0.3em 0.75em;
-        border: 1px dotted transparent;
-        border-radius: 0.5em;
-        background-image: none !important;
-        text-align: center;
-        margin: 0 1em;
-        margin: .5em .25em;
+      }
+      
+    @include breakpoint($SmMd) {
+      width: initial;
+      height: initial;
+      padding: 0.3em 0.75em;
+      border: 1px dotted transparent;
+      border-radius: 0.5em;
+      background-image: none !important;
+      text-align: center;
+      margin: 0 1em;
+      margin: .5em .25em;
 
-        &:hover {
-          background-image: none !important;
-          background: lighten($green,30);
-          border: 1px dotted $purple;
-        }
+      &:hover {
+        background-image: none !important;
+        background: lighten($green,30);
+        border: 1px dotted $purple;
       }
 
     }
