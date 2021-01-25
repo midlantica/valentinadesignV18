@@ -33,7 +33,7 @@ h2:first-child {
   letter-spacing: 0.05em;
 }
 
-p {
+p, ul, li {
   font-family: Register;
   color: $grey;
   font: 1em;
@@ -43,8 +43,12 @@ p {
   line-height: 1.4;
   // margin: 0 0 0 0;
 
-  b {
+  b, {
     color: $grey;
+  }
+
+  & a {
+    font-weight: bold;
   }
 
 }

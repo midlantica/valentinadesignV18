@@ -2,19 +2,27 @@
   <nav class="mainNav">
 
     <router-link to="/" title="home">
-      <div class="navBtns homeBtn">Home</div>
+      <div class="navBtns homeBtn">home</div>
     </router-link>
 
-    <router-link to="/GalleryOriginalArtwork" title="Gallery">
-      <div class="navBtns galleryBtn">Gallery</div>
+    <router-link to="/Portfolio" title="Portfolio">
+      <div class="navBtns galleryBtn">portfolio</div>
     </router-link>
 
     <router-link to="/Shop" title="Shop">
-      <div class="navBtns shopBtn">Shop</div>
+      <div class="navBtns shopBtn">shop</div>
+    </router-link>
+
+    <router-link to="/Licensing" title="Licensing">
+      <div class="navBtns licensingBtn">licensing</div>
+    </router-link>
+
+    <router-link to="/Wholesale" title="Wholesale">
+      <div class="navBtns wholesaleBtn">wholesale</div>
     </router-link>
 
     <router-link to="/Contact" title="Contact">
-      <div class="navBtns contactBtn">Contact</div>
+      <div class="navBtns contactBtn">contact</div>
     </router-link>
 
   </nav>
@@ -94,7 +102,7 @@
       // background: $green;
 
       }
-      
+
     @include breakpoint($SmMd) {
       width: initial;
       height: initial;

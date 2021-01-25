@@ -4,7 +4,7 @@
     <aside class="col1">
       <div class="centerContent">
         <router-link to="/" title="home">
-          <img class="valPic" src="../assets/img/val_pic.jpg">
+          <img class="valPic" src="../assets/img/Valentina_Harper.jpg">
           <p class="statement">
             < back
           </p>

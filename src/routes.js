@@ -1,12 +1,10 @@
 import Home from './Pages/Index'
-import Shop from './Pages/Shop'
-import Contact from './Pages/Contact'
 import ArtistStatement from './Pages/ArtistStatement'
-
-import GalleryDigitalArtwork from './Pages/GalleryDigitalArtwork'
-import GalleryOriginalArtwork from './Pages/GalleryOriginalArtwork'
-import GalleryPatterns from './Pages/GalleryPatterns'
-
+import Portfolio from './Pages/Portfolio'
+import Shop from './Pages/Shop'
+import Licensing from './Pages/Licensing'
+import Wholesale from './Pages/Wholesale'
+import Contact from './Pages/Contact'
 import EmailConfirm from './Pages/EmailConfirm'
 import NotFound from './Pages/NotFound'
 
@@ -43,29 +41,29 @@ export default [
     component: ArtistStatement
   },
   {
+    path: '/Portfolio',
+    name: 'Portfolio',
+    component: Portfolio
+  },
+  {
     path: '/Shop',
     name: 'Shop',
     component: Shop
   },
   {
+    path: '/Licensing',
+    name: 'Licensing',
+    component: Licensing
+  },
+  {
+    path: '/Wholesale',
+    name: 'Wholesale',
+    component: Wholesale
+  },
+  {
     path: '/Contact',
     name: 'Contact',
     component: Contact
-  },
-  {
-    path: '/GalleryDigitalArtwork',
-    name: 'GalleryDigitalArtwork',
-    component: GalleryDigitalArtwork
-  },
-  {
-    path: '/GalleryOriginalArtwork',
-    name: 'GalleryOriginalArtwork',
-    component: GalleryOriginalArtwork
-  },
-  {
-    path: '/GalleryPatterns',
-    name: 'GalleryPatterns',
-    component: GalleryPatterns
   },
   {
     path: '/EmailConfirm',

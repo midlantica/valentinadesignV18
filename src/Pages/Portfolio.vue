@@ -1,14 +1,8 @@
 <template>
-
   <main>
-
     <section class="twoCol">
-
-      <NavGallery/>
-
       <div class="gallery">
-
-        <div class="galleryGrid" v-for="(image, index) in images">
+        <div class="galleryGrid" v-for="(image, index) in images" :key="image">
           <img
             v-lazy="image.thumb"
             style="width: 100%,
@@ -29,7 +23,6 @@
         ></lightbox>
 
       </div>
-
     </section>
 
     <aside class="col3 marT3">
@@ -37,11 +30,9 @@
     </aside>
 
   </main>
-
 </template>
 
 <script>
-  import NavGallery from '../components/NavGallery'
   import Lightbox from 'vue-image-lightbox'
   import siteLoading from '../../static/img/siteloading.gif'
   import Social from '../components/Social'
@@ -256,7 +247,6 @@
 
   export default {
     components: {
-      NavGallery,
       Lightbox,
       Social
     },

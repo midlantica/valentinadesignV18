@@ -3,11 +3,11 @@
   <main>
 
     <section class="shop">
-      <a href="https://www.etsy.com/shop/valentinadesign" target="_blank">
+      <a href="http://www.valentinaharper.com/" target="_blank">
         <img src="/static/img/shop/prints.jpg" alt="Prints">
         <p>Prints</p>
       </a>
-      <a href="http://www.denydesigns.com/collections/artist/ar-valentina-ramos" target="_blank">
+      <a href="https://society6.com/valentinaramos" target="_blank">
         <img src="/static/img/shop/duvet.jpg" alt="Home Decor">
         <p>Home Decor</p>
       </a>

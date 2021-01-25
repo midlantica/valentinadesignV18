@@ -1,7 +1,7 @@
 <template>
   <div class="centerContent">
     <router-link to="ArtistStatement">
-      <img class="valPic" src="../assets/img/val_pic.jpg">
+      <img class="valPic" src="../assets/img/Valentina_Harper.jpg">
       <p class="statement">See Artist's Statement</p>
     </router-link>
   </div>
