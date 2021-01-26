@@ -42,7 +42,7 @@
       font-family: $header-font;
       font-size: 1.8em;
       display: block;
-      width: 120px;
+      width: 106px;
       height: 106px;
       margin: 0 0em;
       border-bottom: none;
