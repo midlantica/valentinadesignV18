@@ -57,7 +57,7 @@
   }
 
   p.largeCopy {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: 0 0 1rem;
     letter-spacing: 0.9px;
   }

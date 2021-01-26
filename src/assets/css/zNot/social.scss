@@ -1,9 +1,10 @@
 .socialIconsBox  {
-  margin: 0em auto 0;
+  margin: 0em auto 0 1rem;
   text-align: center;
   // width: 33px;
   // margin-top: 0.5em;
   padding: 0 0.6em;
+  margin-left: 1rem;
   display: block !important;
 
   @include breakpoint($mobile) {

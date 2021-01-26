@@ -25,7 +25,7 @@
       </div>
     </section>
 
-    <aside class="col3 marT3">
+    <aside class="col3">
       <Social/>
     </aside>
 

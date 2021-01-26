@@ -23,9 +23,10 @@
     // align-items: flex-start;
     // align-content: stretch;
     // float: right;
+    margin-left: 1rem;
     width: 40px;
     // height: 250px;
-    margin-top: .5em;
+    // margin-top: .5em;
 
     a.socialIcon {
       width: 40px;

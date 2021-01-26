@@ -18,11 +18,11 @@
     </router-link>
 
     <router-link to="/Wholesale" title="Wholesale">
-      <div class="navBtns wholesaleBtn">wholesale</div>
+      <div class="navBtns wholesaleBtn marLH">wholesale</div>
     </router-link>
 
     <router-link to="/Contact" title="Contact">
-      <div class="navBtns contactBtn">contact</div>
+      <div class="navBtns contactBtn  marLH">contact</div>
     </router-link>
 
   </nav>

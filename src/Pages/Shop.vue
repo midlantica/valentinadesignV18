@@ -106,7 +106,8 @@
   }
 
   .socialIconsBox {
-    margin-top: .5em !important;
+    // margin-top: .5em !important;
+    margin-left: 1rem;
   }
 
 </style>
