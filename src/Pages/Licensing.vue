@@ -22,7 +22,7 @@
     },
     metaInfo: {
       bodyAttrs: {
-        class: 'licensing'
+        class: 'license'
       }
     }
   }

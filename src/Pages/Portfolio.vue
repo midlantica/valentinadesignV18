@@ -252,7 +252,7 @@
     },
     metaInfo: {
       bodyAttrs: {
-        class: 'original-artwork'
+        class: 'portfolio'
       }
     },
     data () {

@@ -6,7 +6,7 @@
     </router-link>
 
     <router-link to="/Portfolio" title="Portfolio">
-      <div class="navBtns galleryBtn">portfolio</div>
+      <div class="navBtns portfolioBtn">portfolio</div>
     </router-link>
 
     <router-link to="/Shop" title="Shop">
@@ -43,8 +43,8 @@
       font-size: 1.8em;
       display: block;
       width: 120px;
-      height: 120px;
-      margin: 0 .5em;
+      height: 106px;
+      margin: 0 0em;
       border-bottom: none;
       align-self: center;
 
@@ -74,14 +74,14 @@
 
   .navBtns {
     color: $black;
-    width: 120px;
-    height: 120px;
+    // width: 672px;
+    height: 106px;
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-position: top left;
+    background-size: 672px 106px;
     padding: 1.6em 0.5em 0 0em;
 
     &:hover {
@@ -130,9 +130,12 @@
 
   .homeBtn {
     padding-right: .5em;
+    width: 100px;
 
     &:hover {
-      background-image: url(../assets/img/buttons/home_btn.svg);
+      // background-image: url(../assets/img/buttons/home_btn.svg);
+      background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+      background-position-x: 0px;
       // padding-right: .5em;
     }
 
@@ -142,11 +145,14 @@
     }
   }
 
-  .galleryBtn {
+  .portfolioBtn {
     padding: 1.6em 0.5em 0 0.3em;
+    width: 100px;
 
     &:hover {
-      background-image: url(../assets/img/buttons/gallery_btn.svg);
+      // background-image: url(../assets/img/buttons/gallery_btn.svg);
+      background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+      background-position-x: -100px;
       cursor: pointer;
     }
 
@@ -158,9 +164,46 @@
 
   .shopBtn {
     padding: 1.6em 0.5em 0 0.7em;
+    width: 100px;
 
     &:hover {
-      background-image: url(../assets/img/buttons/shop_btn.svg);
+      // background-image: url(../assets/img/buttons/shop_btn.svg);
+      background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+      background-position-x: -196px;
+      background-position-y: 2px;
+    }
+
+    @include breakpoint($SmMd) {
+      padding: 0.4em 0.75em;
+      background-image: none !important;
+    }
+  }
+
+  .licensingBtn {
+    padding: 1.6em 0.5em 0 0.7em;
+    width: 115px;
+
+    &:hover {
+      // background-image: url(../assets/img/buttons/shop_btn.svg);
+      background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+      background-position-x: -307px;
+      background-position-y: 2px;
+    }
+
+    @include breakpoint($SmMd) {
+      padding: 0.4em 0.75em;
+      background-image: none !important;
+    }
+  }
+
+  .wholesaleBtn {
+    padding: 1.6em 0.5em 0 0.7em;
+    width: 103px;
+
+    &:hover {
+      // background-image: url(../assets/img/buttons/shop_btn.svg);
+      background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+      background-position-x: -433px;
       cursor: pointer;
     }
 
@@ -171,23 +214,13 @@
   }
 
   .contactBtn {
-    //
+    // padding: 0;
+    width: 120px;
 
     &:hover {
-      background-image: url(../assets/img/buttons/contact_btn.svg);
-    }
-
-    @include breakpoint($SmMd) {
-      padding: 0.4em 0.75em;
-      background-image: none !important;
-    }
-  }
-
-  .blogBtn {
-    padding-left: 0.1em;
-
-    &:hover {
-      background-image: url(../assets/img/buttons/blog_btn.svg);
+      // background-image: url(../assets/img/buttons/contact_btn.svg);
+      background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+      background-position-x: -552px;
     }
 
     @include breakpoint($SmMd) {
@@ -199,7 +232,9 @@
   // ############################
   // UPSTATES ON INDIVIDUAL PAGES
   body.index .homeBtn {
-    background-image: url(../assets/img/buttons/home_btn.svg);
+    // background-image: url(../assets/img/buttons/home_btn.svg);
+    background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+    background-position-x: 0px;
 
     @include breakpoint($SmMd) {
       background-image: none !important;
@@ -211,7 +246,9 @@
   }
 
   body.artists-statement .homeBtn {
-    background-image: url(../assets/img/buttons/home_btn.svg);
+    // background-image: url(../assets/img/buttons/home_btn.svg);
+    background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+    background-position-x: 0px;
 
     @include breakpoint($SmMd) {
       color: $black;
@@ -223,10 +260,10 @@
     }
   }
 
-  body.original-artwork .galleryBtn,
-  body.digital-artwork .galleryBtn,
-  body.patterns .galleryBtn {
-    background-image: url(../assets/img/buttons/gallery_btn.svg);
+  body.portfolio .portfolioBtn {
+    // background-image: url(../assets/img/buttons/gallery_btn.svg);
+    background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+    background-position-x: -100px;
 
     @include breakpoint($SmMd) {
       background-image: none !important;
@@ -238,7 +275,41 @@
   }
 
   body.shop .shopBtn {
-    background-image: url(../assets/img/buttons/shop_btn.svg);
+    // background-image: url(../assets/img/buttons/shop_btn.svg);
+    background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+    background-position-x: -196px;
+    background-position-y: 2px;
+
+    @include breakpoint($SmMd) {
+      color: $black;
+      background-image: none !important;
+      background: lighten($green,30);
+      padding: 0.4em 0.75em;
+      border: 1px dotted $purple;
+      border-radius: 0.5em;
+    }
+  }
+
+  body.license .licensingBtn {
+    // background-image: url(../assets/img/buttons/shop_btn.svg);
+    background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+    background-position-x: -307px;
+    background-position-y: 2px;
+
+    @include breakpoint($SmMd) {
+      color: $black;
+      background-image: none !important;
+      background: lighten($green,30);
+      padding: 0.4em 0.75em;
+      border: 1px dotted $purple;
+      border-radius: 0.5em;
+    }
+  }
+
+  body.wholesale .wholesaleBtn {
+    // background-image: url(../assets/img/buttons/shop_btn.svg);
+    background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+    background-position-x: -433px;
 
     @include breakpoint($SmMd) {
       color: $black;
@@ -251,7 +322,9 @@
   }
 
   body.contact .contactBtn {
-    background-image: url(../assets/img/buttons/contact_btn.svg);
+    // background-image: url(../assets/img/buttons/contact_btn.svg);
+    background-image: url(../assets/img/buttons/nav_buttons_01.svg);
+    background-position-x: -552px;
 
     @include breakpoint($SmMd) {
       color: $black;

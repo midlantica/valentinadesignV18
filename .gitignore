@@ -5,6 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+
 # Log files
 npm-debug.log*
 yarn-debug.log*
@@ -13,6 +14,7 @@ yarn-error.log*
 # Editor directories and files
 .idea
 .vscode
+*.icloud
 *.suo
 *.ntvs*
 *.njsproj
