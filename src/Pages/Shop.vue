@@ -11,9 +11,9 @@
         <img src="/static/img/shop/duvet.jpg" alt="Home Decor">
         <p>Home Decor</p>
       </a>
-      <a href="https://www.decalgirl.com/artists/Valentina_Ramos" target="_blank">
-        <img src="/static/img/shop/decal.jpg" alt="Phone Decals">
-        <p>Phone Decals</p>
+      <a href="https://www.teepublic.com/user/valentina-harper" target="_blank">
+        <img src="/static/img/shop/t-shirt.png" alt="T-Shirts">
+        <p>T-Shirts</p>
       </a>
       <a href="http://www.amazon.com/Valentina-Harper/e/B00MCMCYIA/ref=sr_ntt_srch_lnk_1?qid=1430838770&sr=8-1" target="_blank">
         <img src="/static/img/shop/books.jpg" alt="Books">
@@ -85,6 +85,7 @@
 
       img {
         width: 100%;
+        height: calc(100% - 2.5rem);
         border-top-left-radius: 2px;
         border-top-right-radius: 2px;
       }
