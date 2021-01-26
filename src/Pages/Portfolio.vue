@@ -39,209 +39,254 @@
 
   const images = [
     {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/nashville_airport_2016_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/nashville_airport_2016.jpg',
-      caption: 'Nashville Airport Show'
+      thumb: '../../static/img/lightbox/gallery/portfolio/you_got_this_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/you_got_this.jpg',
+      caption: 'You Got This'
     },
     {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/aaron_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/aaron.jpg',
-      caption: 'Aaron'
+      thumb: '../../static/img/lightbox/gallery/portfolio/wrapping_paper_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/wrapping_paper.jpg',
+      caption: 'Wrapping Paper'
     },
     {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/alexis_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/alexis.jpg',
-      caption: 'Alexis'
+      thumb: '../../static/img/lightbox/gallery/portfolio/watercolor_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/watercolor.jpg',
+      caption: 'Watercolor'
     },
     {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/arabella2_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/arabella2.jpg',
+      thumb: '../../static/img/lightbox/gallery/portfolio/unicorn_planter_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/unicorn_planter.jpg',
+      caption: 'Unicorn Planter'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/today_is_going_to_be_awesome_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/today_is_going_to_be_awesome.jpg',
+      caption: 'Today Is Going To Be Awesome'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/tennessee_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/tennessee.jpg',
+      caption: 'Tennessee'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/table_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/table.jpg',
+      caption: 'Table'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/shop_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/shop.jpg',
+      caption: 'Shop'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/pumpkins_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/pumpkins.jpg',
+      caption: 'Pumpkins'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/prints_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/prints.jpg',
+      caption: 'Prints'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/plate_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/plate.jpg',
+      caption: 'Plate'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/planner_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/planner.jpg',
+      caption: 'Planner'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/pins_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/pins.jpg',
+      caption: 'Pins'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/pineapple_pen_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/pineapple_pen.jpg',
+      caption: 'Pineapple Pen'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/phone_case_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/phone_case.jpg',
+      caption: 'Phone Case'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/pete_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/pete.jpg',
+      caption: 'Pete'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/pereza_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/pereza.jpg',
+      caption: 'Pereza'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/octopus_bloom_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/octopus_bloom.jpg',
+      caption: 'Octopus Bloom'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/notebooks_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/notebooks.jpg',
+      caption: 'Notebooks'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/nativity_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/nativity.jpg',
+      caption: 'Nativity'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/mug_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/mug.jpg',
+      caption: 'Mug'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/maya_quotes_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/maya_quotes.jpg',
+      caption: 'Maya Quotes'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/magdalena_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/magdalena.jpg',
+      caption: 'Magdalena'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/little_planter_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/little_planter.jpg',
+      caption: 'Little Planter'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/little_deer_flowers_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/little_deer_flowers.jpg',
+      caption: 'Little Deer Flowers'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/lets_do_this_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/lets_do_this.jpg',
+      caption: 'Lets Do This'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/hello_person_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/hello_person.jpg',
+      caption: 'Hello Person'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/helios_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/helios.jpg',
+      caption: 'Helios'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/guitar_02_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/guitar_02.jpg',
+      caption: 'Guitar 02'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/guitar_01_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/guitar_01.jpg',
+      caption: 'Guitar 01'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/german_shepherd_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/german_shepherd.jpg',
+      caption: 'German Shepherd'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/flying_mural_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/flying_mural.jpg',
+      caption: 'Flying Mural'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/flying_mural_details_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/flying_mural_details.jpg',
+      caption: 'Flying Mural Details'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/flowers_mural_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/flowers_mural.jpg',
+      caption: 'Flowers Mural'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/eva_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/eva.jpg',
+      caption: 'Eva'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/el_mago_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/el_mago.jpg',
+      caption: 'El Mago'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/decal_01_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/decal_01.jpg',
+      caption: 'Decal 01'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/conexion_americas_mural_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/conexion_americas_mural.jpg',
+      caption: 'Conexion Americas Mural'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/coloring_book_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/coloring_book.jpg',
+      caption: 'Coloring Book'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/coin_bag_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/coin_bag.jpg',
+      caption: 'Coin Bag'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/coffee_cup_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/coffee_cup.jpg',
+      caption: 'Coffee Cup'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/candle_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/candle.jpg',
+      caption: 'Candle'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/calendar_lang_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/calendar_lang.jpg',
+      caption: 'Calendar Lang'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/box_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/box.jpg',
+      caption: 'Box'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/beer_glass_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/beer_glass.jpg',
+      caption: 'Beer Glass'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/bee_awesome_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/bee_awesome.jpg',
+      caption: 'Bee Awesome'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/bags_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/bags.jpg',
+      caption: 'Bags'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/backpack_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/backpack.jpg',
+      caption: 'Backpack'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/arabella_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/arabella.jpg',
       caption: 'Arabella'
     },
     {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/babette_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/babette.jpg',
-      caption: 'Babette'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/be_awesome_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/be_awesome.jpg',
-      caption: 'Be Awesome'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/eric_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/eric.jpg',
-      caption: 'Eric'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/goldbug_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/goldbug.jpg',
-      caption: 'Goldbug'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/hedwig_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/hedwig.jpg',
-      caption: 'Hedwig'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/juanita_color_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/juanita_color.jpg',
-      caption: 'Juanita'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/la_pluma_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/la_pluma.jpg',
-      caption: 'La Pluma'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/levy_deborah_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/levy_deborah.jpg',
-      caption: 'Levy & Deborah'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/seahorse_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/seahorse.jpg',
-      caption: 'Seahorse'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/under_the_sea_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/under_the_sea.jpg',
-      caption: 'Under The Sea'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/arabella_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/arabella.jpg',
-      caption: 'Arabella'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/billy_01_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/billy_01.jpg',
-      caption: 'Billy'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/azure_treasure_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/azure_treasure.jpg',
-      caption: 'Azure Treasure'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/karol_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/karol.jpg',
-      caption: 'Karol'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/born_to_fly_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/born_to_fly.jpg',
-      caption: 'Born To Fly'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/lianne_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/lianne.jpg',
-      caption: 'Lianne'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/brown_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/brown.jpg',
-      caption: 'Brown'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/buddha_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/buddha.jpg',
-      caption: 'Buddha'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/bravebird_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/bravebird.jpg',
-      caption: 'Bravebird'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/coi_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/coi.jpg',
-      caption: 'Coi'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/dakota_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/dakota.jpg',
-      caption: 'Dakota'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/dreams_of_india_vr_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/dreams_of_india_vr.jpg',
-      caption: 'Dreams Of India'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/penny_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/penny.jpg',
-      caption: 'Penny'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/frog_in_the_log_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/frog_in_the_log.jpg',
-      caption: 'Frog In The Log'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/gordita_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/gordita.jpg',
-      caption: 'Gordita'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/green_detail01_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/green_detail01.jpg',
-      caption: 'Green Detail'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/henry_the_horse_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/henry_the_horse.jpg',
-      caption: 'Henry The Horse'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/liz_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/liz.jpg',
-      caption: 'Liz'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/missy_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/missy.jpg',
-      caption: 'Missy'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/lysander_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/lysander.jpg',
-      caption: 'Lysander'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/mr_pop_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/mr_pop.jpg',
-      caption: 'Mr Pop'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/mrwoody_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/mrwoody.jpg',
-      caption: 'Mr Woody'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/randy_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/randy.jpg',
-      caption: 'Randy'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/tarquin_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/tarquin.jpg',
-      caption: 'Tarquin'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/the_van_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/the_van.jpg',
-      caption: 'The VW Van'
-    },
-    // {
-    //   thumb: '../../static/img/lightbox/gallery/original_artwork/melissa_sm.jpg',
-    //   src: '../../static/img/lightbox/gallery/original_artwork/melissa.jpg',
-    //   caption: 'Melissa'
-    // },
-    {
-      thumb: '../../static/img/lightbox/gallery/original_artwork/why_hello_there_gorgeous_sm.jpg',
-      src: '../../static/img/lightbox/gallery/original_artwork/why_hello_there_gorgeous.jpg',
-      caption: 'Why Hello There Gorgeous'
+      thumb: '../../static/img/lightbox/gallery/portfolio/address_book_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/address_book.jpg',
+      caption: 'Address Book'
     }
   ]
 
