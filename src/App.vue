@@ -35,5 +35,4 @@
   // main.scss imported in build/utils.scss like so:
   //
   // @import "./assets/css/main.scss";
-
 </style>

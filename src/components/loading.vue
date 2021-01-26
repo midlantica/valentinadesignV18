@@ -21,19 +21,19 @@ export default {
 </script>
 
 <style scoped>
-.loading-page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  padding-top: 200px;
-  font-size: 30px;
-  background: #906290;
-  padding-top: 200px;
-  font-size: 4em;
-  z-index:    1000;
-  font-family: sans-serif;
-}
+  .loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 200px;
+    font-size: 30px;
+    background: #906290;
+    padding-top: 200px;
+    font-size: 4em;
+    z-index:    1000;
+    font-family: sans-serif;
+  }
 </style>

@@ -118,15 +118,16 @@ main {
   }
 
   section.contactContent {
-    grid-column: 6 / span 6;
+    grid-column: 3 / span 9;
       // background: DarkSeaGreen;
 
       @include breakpoint($SmMdLg) {
-        grid-column: 3 / span 9;
+        grid-column: 1 / span 11;
       }
 
       @include breakpoint($sm) {
         grid-column: 1;
+        grid-column: 1 / span 11;
       }
     }
 

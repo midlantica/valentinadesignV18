@@ -1,18 +1,11 @@
 <template>
   <main>
 
-    <aside class="col1">
-      &nbsp;
-    </aside>
-
     <section class="contactContent">
-
       <h2>Send an email</h2>
-
       <p>
         <a href="mailto:valentina@valentinadesign.com">valentina@valentinadesign.com</a>
       </p>
-
       <h3>Or simply use this form</h3>
 
       <!-- Begin myContactForm.com Form HTML -->
@@ -74,7 +67,7 @@
   main {
     // display: grid;
     // grid-template-columns: repeat(12, 1fr);
-    // grid-column: 3 / span 8;
+    grid-column: 3 / span 9;
     // background: lightgrey;
 
     aside.col1 {
