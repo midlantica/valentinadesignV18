@@ -67,7 +67,7 @@
   main {
     // display: grid;
     // grid-template-columns: repeat(12, 1fr);
-    grid-column: 3 / span 9;
+    grid-column: 3 / span 8;
     // background: lightgrey;
 
     aside.col1 {
