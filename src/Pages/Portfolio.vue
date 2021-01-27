@@ -39,9 +39,19 @@
 
   const images = [
     {
+      thumb: '../../static/img/lightbox/gallery/portfolio/aaron_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/aaron.jpg',
+      caption: 'Aaron'
+    },
+    {
       thumb: '../../static/img/lightbox/gallery/portfolio/today_is_going_to_be_awesome_sm.jpg',
       src: '../../static/img/lightbox/gallery/portfolio/today_is_going_to_be_awesome.jpg',
       caption: 'Today Is Going To Be Awesome'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/pins_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/pins.jpg',
+      caption: 'Pins'
     },
     {
       thumb: '../../static/img/lightbox/gallery/portfolio/arabella_sm.jpg',
@@ -49,9 +59,24 @@
       caption: 'Arabella'
     },
     {
+      thumb: '../../static/img/lightbox/gallery/portfolio/sugar_skull_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/sugar_skull.jpg',
+      caption: 'Sugar Skull'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/tennessee_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/tennessee.jpg',
+      caption: 'Tennessee'
+    },
+    {
       thumb: '../../static/img/lightbox/gallery/portfolio/backpack_sm.jpg',
       src: '../../static/img/lightbox/gallery/portfolio/backpack.jpg',
       caption: 'Backpack'
+    },
+    {
+      thumb: '../../static/img/lightbox/gallery/portfolio/beer_glass_sm.jpg',
+      src: '../../static/img/lightbox/gallery/portfolio/beer_glass.jpg',
+      caption: 'Beer Glass'
     },
     {
       thumb: '../../static/img/lightbox/gallery/portfolio/bags_sm.jpg',
@@ -62,11 +87,6 @@
       thumb: '../../static/img/lightbox/gallery/portfolio/bee_awesome_sm.jpg',
       src: '../../static/img/lightbox/gallery/portfolio/bee_awesome.jpg',
       caption: 'Bee Awesome'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/portfolio/beer_glass_sm.jpg',
-      src: '../../static/img/lightbox/gallery/portfolio/beer_glass.jpg',
-      caption: 'Beer Glass'
     },
     {
       thumb: '../../static/img/lightbox/gallery/portfolio/box_sm.jpg',
@@ -219,11 +239,6 @@
       caption: 'Pineapple Pen'
     },
     {
-      thumb: '../../static/img/lightbox/gallery/portfolio/decal_sm.jpg',
-      src: '../../static/img/lightbox/gallery/portfolio/decal.jpg',
-      caption: 'Decal'
-    },
-    {
       thumb: '../../static/img/lightbox/gallery/portfolio/planner_sm.jpg',
       src: '../../static/img/lightbox/gallery/portfolio/planner.jpg',
       caption: 'Planner'
@@ -252,11 +267,6 @@
       thumb: '../../static/img/lightbox/gallery/portfolio/table_sm.jpg',
       src: '../../static/img/lightbox/gallery/portfolio/table.jpg',
       caption: 'Table'
-    },
-    {
-      thumb: '../../static/img/lightbox/gallery/portfolio/tennessee_sm.jpg',
-      src: '../../static/img/lightbox/gallery/portfolio/tennessee.jpg',
-      caption: 'Tennessee'
     },
     {
       thumb: '../../static/img/lightbox/gallery/portfolio/unicorn_planter_sm.jpg',

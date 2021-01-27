@@ -118,7 +118,7 @@ main {
   }
 
   section.contactContent {
-    grid-column: 2 / span 9;
+    grid-column: 3 / span 7;
       // background: DarkSeaGreen;
 
       @include breakpoint($SmMdLg) {
@@ -126,14 +126,13 @@ main {
       }
 
       @include breakpoint($sm) {
-        grid-column: 1;
         grid-column: 1 / span 11;
       }
     }
 
   // 3rd Column - Social Icons
   aside.col3 {
-    grid-column: 12 / 13;
+    grid-column: span 1;
 
     @include breakpoint($sm) {
       //
@@ -144,7 +143,8 @@ main {
 
 }
 
+
 body.contact aside.col3 {
-  grid-column: 11 / 12;
+  grid-column: span 1;
   // background: red;
 }
