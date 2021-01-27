@@ -118,7 +118,7 @@ main {
   }
 
   section.contactContent {
-    grid-column: 3 / span 9;
+    grid-column: 2 / span 10;
       // background: DarkSeaGreen;
 
       @include breakpoint($SmMdLg) {

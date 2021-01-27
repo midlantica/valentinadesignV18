@@ -182,7 +182,7 @@
         font-size: 1em;
         font-family: $copy-bold;
         color: $purple;
-        height: 1.7em;
+        height: 1.4em;
         flex-basis: 5em;
       }
 
@@ -208,15 +208,15 @@
         background: tint(orange, 95%);
         padding: 0 0 0 .3em;
         outline: none;
-        flex-basis: 60%;
+        flex-basis: 70%;
         @include border-radius(6px);
 
         @include breakpoint($SmMd) {
-          flex-basis: 70%;
+          flex-basis: 100%;
         }
 
         @include breakpoint($sm) {
-          flex-basis: 80%;
+          flex-basis: 100%;
         }
 
       }

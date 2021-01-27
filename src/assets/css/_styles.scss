@@ -15,7 +15,7 @@ h1, h2, h3 {
   -moz-osx-font-smoothing: initial;
 
     @include breakpoint($mobile) {
-      font-size: 1.05em;
+      font-size: 1.15em;
     }
 }
 

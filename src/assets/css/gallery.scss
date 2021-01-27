@@ -45,43 +45,46 @@
 
 }
 
-
-.gallery {
-  //
-  .vue-lb-container {
-    //
-    .vue-lb-content {
-      //
-      .vue-lb-header {
-        //
-      }
-
-      .vue-lb-figure {
-        //
-        .vue-lb-modal-image {
-          //
-        }
-
-        .vue-lb-info {
-          color: red !important;
-          background: green !important;
-            padding: 0.5em 0 0 !important;
-
-        }
-
-        .vue-lb-footer {
-          color: red !important;
-          background: green !important;
-        }
-
-      }
-    }
-
-  }
+ html body div main section .vue-lb-info{
+  padding-top: 0.6rem !important;
 }
 
-html > .vue-lb-container .vue-lb-content .vue-lb-figure .vue-lb-info {
-  color: red !important;
-  background: green !important;
-}
+// .gallery {
+//   //
+//   .vue-lb-container {
+//     //
+//     .vue-lb-content {
+//       //
+//       .vue-lb-header {
+//         //
+//       }
+
+//       .vue-lb-figure {
+//         //
+//         .vue-lb-modal-image {
+//           //
+//         }
+
+//         .vue-lb-info {
+//           color: red !important;
+//           background: green !important;
+//             padding: 0.5em 0 0 !important;
+
+//         }
+
+//         .vue-lb-footer {
+//           color: red !important;
+//           background: green !important;
+//         }
+
+//       }
+//     }
+
+//   }
+// }
+
+// html > .vue-lb-container .vue-lb-content .vue-lb-figure .vue-lb-info {
+//   color: red !important;
+//   background: green !important;
+// }
 
