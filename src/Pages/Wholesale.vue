@@ -3,7 +3,7 @@
 
     <section class="twoCol">
 
-      <p class="largeCopy">Thanks for your interest in carrying my products!</p>
+      <p class="largeCopy">Thanks for your interest in carrying my products 😀</p>
 
       <h3 class="marT0 marBH marT1">Prints</h3>
       <p>You can order prints at <a href="http://www.valentinaharper.com">ValentinaHarper.com</a>. If you would like to purchase prints wholesale, please email me at <a href="mailto:valentina@valentinadesign.com">valentina@valentinadesign.com</a> with your name, email, and shop information and I will send a Wholesale discount code to shop.</p>
