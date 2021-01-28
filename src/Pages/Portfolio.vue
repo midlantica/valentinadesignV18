@@ -334,4 +334,33 @@
     padding-top: 0.6rem !important;
   }
 
+  body.portfolio section.twoCol {
+    grid-column: 1 / span 11;
+    // background: red;
+
+    @include breakpoint($SmMdLg) {
+      // grid-column: 2 / span 9;
+    }
+
+    @include breakpoint($sm) {
+      // grid-column: 2 / span 9;
+    }
+
+  }
+
+  .portfolio main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 2 / span 10;
+    grid-row: 4;
+    grid-auto-flow: row;
+    max-width: 1000px;
+    // margin: auto;
+
+    @include breakpoint($SmMdLg) {
+      // grid-column: 2 / span 11;
+    }
+  }
+
+
 </style>

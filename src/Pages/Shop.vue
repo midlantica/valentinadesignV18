@@ -96,8 +96,6 @@
       }
 
     }
-
-
   }
 
   aside {
@@ -108,6 +106,20 @@
   .socialIconsBox {
     // margin-top: .5em !important;
     margin-left: 1rem;
+  }
+
+  .shop main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 2 / span 11;
+    grid-row: 4;
+    grid-auto-flow: row;
+    max-width: 1000px;
+    // margin: auto;
+
+    @include breakpoint($SmMdLg) {
+      grid-column: 2 / span 11;
+    }
   }
 
 </style>

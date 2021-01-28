@@ -74,14 +74,14 @@ nav {
 main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column: 3 / span 8;
+  grid-column: 3 / span 9;
   grid-row: 4;
   grid-auto-flow: row;
   max-width: 1000px;
   // margin: auto;
 
   @include breakpoint($SmMdLg) {
-    grid-column: 2 / span 10;
+    grid-column: 2 / span 11;
   }
 
   aside.col1 {
@@ -104,15 +104,23 @@ main {
       padding: 0 1em 0 0em;
     }
 
+    @include breakpoint($sm) {
+      grid-column: 1 / span 11;
+    }
+
   }
 
   // 2 Columns
   section.shop,
   section.twoCol {
-    grid-column: span 11;
+    grid-column: 2 / span 9;
 
     @include breakpoint($SmMdLg) {
-      // @include span-columns(9 of 10);
+      grid-column: 2 / span 9;
+    }
+
+    @include breakpoint($sm) {
+      grid-column: 2 / span 9;
     }
 
   }
