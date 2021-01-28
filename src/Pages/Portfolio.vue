@@ -351,7 +351,7 @@
   .portfolio main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column: 2 / span 10;
+    grid-column: 3 / span 9;
     grid-row: 4;
     grid-auto-flow: row;
     max-width: 1000px;
